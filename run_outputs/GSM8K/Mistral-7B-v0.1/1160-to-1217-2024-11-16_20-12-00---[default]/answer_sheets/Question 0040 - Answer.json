@@ -1,0 +1,1 @@
+{"id": 1200, "problem": "Eight more than four times the number of coffee mugs in the teacher\u2019s lounge is 40. How many coffee mugs are in the teacher\u2019s lounge?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "Let m be the number of mugs\n8+4*m=40\n4*m=40-8=32\n4m=<<32=32>>32\nm=<<8=8>>8\n#### 8", "gold_answer": "8"}

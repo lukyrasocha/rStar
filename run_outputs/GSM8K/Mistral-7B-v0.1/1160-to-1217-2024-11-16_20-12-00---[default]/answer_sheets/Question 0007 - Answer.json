@@ -1,0 +1,1 @@
+{"id": 1167, "problem": "Jack had $100. Sophia gave him 1/5 of her $100. How many dollars does Jack have now?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "Sophia gave 100 * 1/5 =<<100*1/5=20>>20 $ to Jack.\nJack now has 100 + 20 = <<100+20=120>>120$\n#### 120", "gold_answer": "120"}
