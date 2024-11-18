@@ -1,1 +1,0 @@
-{"id": 1104, "problem": "Caroline is three times older than Ben. Ben is two times older than Chris. If Chris is 4, how old is Caroline?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "Ben is 4*2 = <<4*2=8>>8 years old\nCaroline is 8*3 = <<8*3=24>>24 years old\n#### 24", "gold_answer": "24"}
