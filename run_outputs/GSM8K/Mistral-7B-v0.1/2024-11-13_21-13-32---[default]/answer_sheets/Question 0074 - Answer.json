@@ -1,1 +1,0 @@
-{"id": 134, "problem": "Tom gets 4 car washes a month.  If each car wash costs $15 how much does he pay in a year?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "He gets 4*12=<<4*12=48>>48 car washes a year\nThat means it cost 48*15=$<<48*15=720>>720\n#### 720", "gold_answer": "720"}
