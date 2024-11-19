@@ -1,0 +1,1 @@
+{"id": 312, "problem": "Trent is 5 years older than Jane, and Jane is 3 years younger than Quinn. If Quinn is 30, how old is Trent?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "Jane is 30-3=<<30-3=27>>27 years old\nTrent is 27+5=<<27+5=32>>32 years old\n#### 32", "gold_answer": "32"}

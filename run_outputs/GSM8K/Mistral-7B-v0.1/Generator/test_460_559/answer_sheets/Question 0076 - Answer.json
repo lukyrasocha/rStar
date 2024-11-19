@@ -1,0 +1,1 @@
+{"id": 536, "problem": "Chenny is 10 years old. Alyana is 4 years younger than Chenny. How old is Anne if she is 2 years older than Alyana?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "Alyana is 10 - 4 = <<10-4=6>>6 years old.\nSo, Anne is 6 + 2 = <<6+2=8>>8 years old.\n#### 8", "gold_answer": "8"}

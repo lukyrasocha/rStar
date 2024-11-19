@@ -1,0 +1,1 @@
+{"id": 105, "problem": "Cody eats three times as many cookies as Amir eats. If Amir eats 5 cookies,\u00a0how many cookies do both of them eat together?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "Cody eats 5*3 = <<5*3=15>>15 cookies.\nCody and Amir eat 15+5 = <<15+5=20>>20 cookies together.\n#### 20", "gold_answer": "20"}

@@ -1,0 +1,1 @@
+{"id": 454, "problem": "Marin and his neighbor Nancy each eat 4 apples a day. How many apples do they eat in 30 days?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "In one day, Marin and Nancy eat 4 + 1 = <<4+1=5>>5 apples.\nIn 30 days, they eat 30 * 5 = <<30*5=150>>150 apples.\n#### 150", "gold_answer": "150"}

@@ -1,0 +1,72 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23198332: <mistral_discriminate> in cluster <dcc> Exited
+
+Job <mistral_discriminate> was submitted from host <hpclogin1> by user <s240466> in cluster <dcc> at Mon Nov 18 12:41:32 2024
+Job was executed on host(s) <4*n-62-18-8>, in queue <c02516>, as user <s240466> in cluster <dcc> at Mon Nov 18 12:41:32 2024
+</zhome/26/8/209207> was used as the home directory.
+</dtu/blackhole/17/209207/DL_project/rStar/run_outputs/GSM8K/Mistral-7B-v0.1> was used as the working directory.
+Started at Mon Nov 18 12:41:32 2024
+Terminated at Mon Nov 18 12:41:35 2024
+Results reported at Mon Nov 18 12:41:35 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q c02516
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -J mistral_discriminate
+#BSUB -n 4
+#BSUB -R "span[hosts=1]"
+#BSUB -R "rusage[mem=10GB]"
+#BSUB -W 12:00
+#BSUB -o mistral_discriminate_%J.out
+#BSUB -e mistral_discriminate_%J.err
+
+# Activate conda environment
+source /dtu/blackhole/17/209207/miniconda3/bin/activate
+conda activate DL_project
+
+#### Set environment variables ####
+export TMPDIR=/dtu/blackhole/17/209207/tmp
+export TEMP=/dtu/blackhole/17/209207/tmp
+export TMP=/dtu/blackhole/17/209207/tmp
+
+export HF_HOME=/dtu/blackhole/17/209207/huggingface_cache
+export HUGGING_FACE_HUB_TOKEN=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  # Replace with your actual token
+
+unset TRANSFORMERS_CACHE
+
+# Run your script with --half_precision
+
+python eval_src/do_eval.py --dataset_name GSM8K --exp_dir_path /dtu/blackhole/17/209207/DL_project/rStar/run_outputs/GSM8K/Mistral-7B-v0.1/test_0_29
+
+
+------------------------------------------------------------
+
+Exited with exit code 2.
+
+Resource usage summary:
+
+    CPU time :                                   1.13 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     40960.00 MB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   41 sec.
+    Turnaround time :                            3 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <mistral_discriminate_23198332.err> for stderr output of this job.
+

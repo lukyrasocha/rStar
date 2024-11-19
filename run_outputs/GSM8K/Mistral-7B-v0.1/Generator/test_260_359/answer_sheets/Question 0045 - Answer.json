@@ -1,0 +1,1 @@
+{"id": 305, "problem": "John arm wrestles 20 people.  He beats 80%.  How many people did he lose to?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "He beats 20*.8=<<20*.8=16>>16 people\nSo he loses to 20-16=<<20-16=4>>4 people\n#### 4", "gold_answer": "4"}

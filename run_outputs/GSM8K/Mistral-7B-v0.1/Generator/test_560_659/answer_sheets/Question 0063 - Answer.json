@@ -1,0 +1,1 @@
+{"id": 623, "problem": "Charmaine will be 16 years old in 12 years. How old will she be 4 years from now?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "Charmaine's present age is 16 - 12 = <<16-12=4>>4 years old.\nSo she will be 4 + 4 = <<4+4=8>>8 years old 4 years from now.\n#### 8", "gold_answer": "8"}

@@ -1,0 +1,1 @@
+{"id": 302, "problem": "Annika brought $50 to the town fair. She spent half of it on food and snacks, and an additional $10 for rides. How much, in dollars, is left?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "She spent 50/2=$<<50/2=25>>25 on the food.\nThen 50-25-10=$<<50-25-10=15>>15 are left.\n#### 15", "gold_answer": "15"}

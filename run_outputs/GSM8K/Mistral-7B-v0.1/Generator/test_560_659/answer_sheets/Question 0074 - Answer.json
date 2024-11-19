@@ -1,0 +1,1 @@
+{"id": 634, "problem": "Tommy caught 3 more fish than Darren and Darren caught 6 less than Naomi. If Naomi caught 17 fish, how many fish did Tommy catch?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "Darren caught 17 - 6 = <<17-6=11>>11 fish\nTommy caught 11 + 3 = <<11+3=14>>14 fish\n#### 14", "gold_answer": "14"}

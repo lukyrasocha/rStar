@@ -1,0 +1,1 @@
+{"id": 269, "problem": "A juggler can juggle 16 balls.  Half of the balls are golf balls, and half of the golf balls are blue.  How many blue golf balls are there?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "Golf Balls:16/2=<<16/2=8>>8\nBlue Golf Balls:8/2=<<8/2=4>>4 balls\n#### 4", "gold_answer": "4"}

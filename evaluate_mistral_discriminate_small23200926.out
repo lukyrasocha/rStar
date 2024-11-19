@@ -1,0 +1,88 @@
+Namespace(note='default', seed=42, api='vllm', model_ckpt='microsoft/Phi-3-mini-4k-instruct', root_dir='r/dtu/blackhole/17/209207/DL_project/rStar/run_outputs/GSM8K/Mistral-7B-v0.1/test_0_29', dataset_name='GSM8K', resume=None, threshold=0.999, max_num_seqs=256, multi_choice_prompt_type=None, mask_left_boundary=0.2, mask_right_boundary=0.5, num_masked_solution_traces=4, rc_mode='mid', rc_temperature=1.0, rc_n_completions=1, rc_criteria='reward', cutoff_rollout=-1, start_idx=-1, end_idx=-1, fewshot_config_path='prompts/GSM8K/fewshot_cot/fewshot_cot_config.json', fewshot_prompt_path='prompts/GSM8K/fewshot_cot/fewshot_cot_prompt.txt')
+INFO 11-18 22:53:13 llm_engine.py:237] Initializing an LLM engine (v0.6.3.post1) with config: model='microsoft/Phi-3-mini-4k-instruct', speculative_config=None, tokenizer='microsoft/Phi-3-mini-4k-instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=42, served_model_name=microsoft/Phi-3-mini-4k-instruct, num_scheduler_steps=1, chunked_prefill_enabled=False multi_step_stream_outputs=True, enable_prefix_caching=False, use_async_output_proc=True, use_cached_outputs=False, mm_processor_kwargs=None)
+INFO 11-18 22:53:13 selector.py:247] Cannot use FlashAttention-2 backend due to sliding window.
+INFO 11-18 22:53:13 selector.py:115] Using XFormers backend.
+INFO 11-18 22:53:15 model_runner.py:1056] Starting to load model microsoft/Phi-3-mini-4k-instruct...
+INFO 11-18 22:53:15 selector.py:247] Cannot use FlashAttention-2 backend due to sliding window.
+INFO 11-18 22:53:15 selector.py:115] Using XFormers backend.
+INFO 11-18 22:53:16 weight_utils.py:243] Using model weights format ['*.safetensors']
+INFO 11-18 22:53:19 model_runner.py:1067] Loading model weights took 7.1183 GB
+INFO 11-18 22:53:19 gpu_executor.py:122] # GPU blocks: 4767, # CPU blocks: 2730
+INFO 11-18 22:53:19 gpu_executor.py:126] Maximum concurrency for 4096 tokens per request: 18.62x
+INFO 11-18 22:53:29 model_runner.py:1395] Capturing the model for CUDA graphs. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 11-18 22:53:29 model_runner.py:1399] CUDA graphs can take additional 1~3 GiB memory per GPU. If you are running out of memory, consider decreasing `gpu_memory_utilization` or enforcing eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 11-18 22:53:43 model_runner.py:1523] Graph capturing finished in 14 secs.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23200926: <evaluate_mistral_discriminate_small> in cluster <dcc> Exited
+
+Job <evaluate_mistral_discriminate_small> was submitted from host <hpclogin1> by user <s240466> in cluster <dcc> at Mon Nov 18 22:41:02 2024
+Job was executed on host(s) <4*n-62-12-22>, in queue <gpua100>, as user <s240466> in cluster <dcc> at Mon Nov 18 22:53:01 2024
+</zhome/26/8/209207> was used as the home directory.
+</dtu/blackhole/17/209207/DL_project/rStar> was used as the working directory.
+Started at Mon Nov 18 22:53:01 2024
+Terminated at Mon Nov 18 22:53:47 2024
+Results reported at Mon Nov 18 22:53:47 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpua100
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -J evaluate_mistral_discriminate_small
+#BSUB -n 4
+#BSUB -R "span[hosts=1]"
+#BSUB -R "rusage[mem=10GB]"
+#BSUB -W 06:00
+#BSUB -o evaluate_mistral_discriminate_small%J.out
+#BSUB -e evaluate_mistral_discriminate_small%J.err
+
+# Activate conda environment
+source /dtu/blackhole/17/209207/miniconda3/bin/activate
+conda activate DL_project
+
+#### Set environment variables ####
+export TMPDIR=/dtu/blackhole/17/209207/tmp
+export TEMP=/dtu/blackhole/17/209207/tmp
+export TMP=/dtu/blackhole/17/209207/tmp
+
+export HF_HOME=/dtu/blackhole/17/209207/huggingface_cache
+export HUGGING_FACE_HUB_TOKEN=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  # Replace with your actual token
+
+unset TRANSFORMERS_CACHE
+
+# Run your script with --half_precision
+python run_src/do_discriminate.py \
+    --model_ckpt microsoft/Phi-3-mini-4k-instruct \
+    --root_dir r/dtu/blackhole/17/209207/DL_project/rStar/run_outputs/GSM8K/Mistral-7B-v0.1/test_0_29 \
+    --dataset_name GSM8K \
+    --note default \
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   51.00 sec.
+    Max Memory :                                 394 MB
+    Average Memory :                             394.00 MB
+    Total Requested Memory :                     40960.00 MB
+    Delta Memory :                               40566.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                9
+    Run time :                                   46 sec.
+    Turnaround time :                            765 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <evaluate_mistral_discriminate_small23200926.err> for stderr output of this job.
+
