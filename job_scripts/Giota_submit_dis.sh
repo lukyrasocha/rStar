@@ -22,7 +22,7 @@ export TEMP=/dtu/blackhole/04/184612/tmp
 export TMP=/dtu/blackhole/04/184612/tmp
 
 export HF_HOME=/dtu/blackhole/04/184612/huggingface_cache
-export HUGGING_FACE_HUB_TOKEN=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  
+export HUGGING_FACE_HUB_TOKEN=
 
 unset TRANSFORMERS_CACHE
 
