@@ -1,0 +1,1 @@
+{"id": 758, "problem": "A bag has a 5% discount. If it is marked $140, how much will you pay after the discount?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "The discount amounts to $140 x 5/100 = $<<140*5/100=7>>7.\nHence, you will pay $140 - $7 = $<<140-7=133>>133 for the discounted bag.\n#### 133", "gold_answer": "133"}

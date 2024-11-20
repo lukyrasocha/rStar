@@ -1,0 +1,1 @@
+{"id": 673, "problem": "Janey has 3 more than twice the number of books that Sally has. If Janey has 21 books, how many does Sally have?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "Let x be the number of books that Sally has\nJaney has 3+2x books\n3+2x=21\n2x=18\nx=<<9=9>>9\n#### 9", "gold_answer": "9"}
