@@ -1,0 +1,1 @@
+{"id": 776, "problem": "The price of a laptop is $1000. If you get a 20% discount, how much do you have to pay?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "You will get a discount of 20/100 x $1000 = $<<20/100*1000=200>>200.\nTherefore, you will have to pay $1000 - $200 = $<<1000-200=800>>800.\n#### 800", "gold_answer": "800"}
