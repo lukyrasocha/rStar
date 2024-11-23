@@ -1,0 +1,21 @@
+{
+  "id": 1108,
+  "problem": "My {relation} went to a gardening shop. She bought a set of pots for ${x} and a sack of garden soil for ${y}. At checkout, she used a coupon for ${z} off. How much money did my {relation} spend at the gardening shop?",
+  "variables": {
+    "relation": ["sister", "niece", "aunt", "grandma"],
+    "numerical": {
+      "x": [1, 100],
+      "y": [1, 100],
+      "z": [1, 100]
+    }
+  },
+  "conditions": {
+    "price": [1, 1000],
+    "ans": [1, 1000]
+  },
+  "calculations": {
+    "price": "x+y",
+    "ans": "price-z"
+  },
+  "solution": "The total cost of the pots and a sack of garden soil is ${x} + ${y} = $<<{x}+{y}={price}>>{price}.\nSo, my {relation} spent ${price} - ${z} = $<<{price}-{z}={ans}>>{ans} at the gardening store.\n#### {ans}"
+}
