@@ -3,7 +3,7 @@
     "seed": 42,
     "api": "vllm",
     "model_ckpt": "microsoft/Phi-3-mini-4k-instruct",
-    "root_dir": "/dtu/blackhole/17/209207/rStar/run_outputs/GSM8K/Mistral-7B-v0.1/test_460_559",
+    "root_dir": "/dtu/blackhole/17/209207/rStar/run_outputs/GSM8K/Mistral-7B-v0.1/test_360_459",
     "dataset_name": "GSM8K",
     "resume": null,
     "threshold": 0.999,
@@ -21,13 +21,13 @@
     "end_idx": -1,
     "fewshot_config_path": "prompts/GSM8K/fewshot_cot/fewshot_cot_config.json",
     "fewshot_prompt_path": "prompts/GSM8K/fewshot_cot/fewshot_cot_prompt.txt",
-    "discriminate_results_dir": "/dtu/blackhole/17/209207/rStar/run_outputs/GSM8K/Mistral-7B-v0.1/test_460_559/dis_2024-11-21_02-17-54---default/results",
-    "num_correct": 69,
-    "num_correct_majvote": 63,
+    "discriminate_results_dir": "/dtu/blackhole/17/209207/rStar/run_outputs/GSM8K/Mistral-7B-v0.1/test_360_459/dis_2024-11-21_11-45-51---default/results",
+    "num_correct": 67,
+    "num_correct_majvote": 59,
     "num_correct_limit": 93,
     "num_tested": 100,
-    "accuracy": 0.69,
-    "majority_vote_accuracy": 0.63,
+    "accuracy": 0.67,
+    "majority_vote_accuracy": 0.59,
     "limit_accuracy": 0.93,
-    "avg_num_candidates": 81.74
+    "avg_num_candidates": 83.7
 }
