@@ -1,0 +1,491 @@
+[
+    {
+        "id": 0,
+        "problem": "{name}\u2019s ducks lay {x} eggs per day. She eats {y} for breakfast every morning and bakes muffins for her {people} every day with {z}. She sells the remainder at the {place} daily for ${a} per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+        "variables": {
+            "name":["Janet", "Josh", "James", "Kylar"],
+            "people":["friends", "sister", "brother"],
+            "place":["farmers' market", "store", "Toulouse"],
+            "numerical":{
+                "x":[1, 100],
+                "y":[1, 100],
+                "z":[1, 100],
+                "a":[1, 100]
+            }
+        },
+        "conditions":{
+            "tot_eggs":[1, 100],
+            "ans":[1, 10000]
+        },
+        "calculations":{
+            "tot_eggs":"x-y-z",
+            "ans":"tot_eggs*a"
+        },
+        "solution": "Janet sells {x} - {y} - {z} = <<{x}-{y}-{z}={tot_eggs}>>{tot_eggs} duck eggs a day.\nShe makes {tot_eggs} * {a} = $<<{tot_eggs}*{a}={ans}>>{ans} every day at the farmer\u2019s market.\n#### {ans}"
+    },
+    {
+        "id": 1,
+        "problem": "A robe takes {x} bolts of blue fiber and {y} that much white fiber.  How many bolts in total does it take?",
+        "variables":{
+            "name":["Janet", "Josh", "James", "Kylar"],
+            "people":["friends", "sister", "brother"],
+            "place":["farmers' market", "store", "Toulouse"],
+            "numerical":{
+                "x":[1, 100],
+                "y":[1, 100]
+            }
+        },
+        "conditions":{
+            "white":[1, 10000],
+            "ans":[2, 1100]
+        },
+        "calculations":{
+            "white":"x*y",
+            "ans":"x+white"
+        },
+        "solution": "It takes {x}*{y}=<<{x}*{y}={white}>>{white} bolt of white fiber\nSo the total amount of fabric is {x}+{white}=<<{x}+{white}={ans}>>{ans} bolts of fabric\n#### {ans}"
+    },
+    {
+        "id": 303,
+        "problem": "{name} has been selling her {people}'s collection of {x} books for three years. Each book sells at {y}$, and she sold {z} times as many books in the first year as she has sold in the current year. There are currently {a} unsold books, and her sales number this year is {b}. What's the total amount of money she earned in the second year?",
+        "variables":{
+            "name":["Janet", "Josh", "James", "Kylar"],
+            "people":["friends", "sister", "brother"],
+            "place":["farmers' market", "store", "Toulouse"],
+            "numerical":{
+                "x":[1, 1000],
+                "y":[1, 100],
+                "z":[1, 10],
+                "a":[1, 100],
+                "b":[1, 100]
+            }
+        },
+        "conditions":{
+            "books_first":[1, 1000],
+            "books_first_cur":[1, 1000],
+            "books_second":[1, 1000],
+            "ans":[1, 10000]
+        },
+        "calculations":{
+            "books_first":"b*z",
+            "books_first_cur":"books_first+b",
+            "books_second":"x-books_first_cur-a",
+            "ans":"books_second*y"
+        },
+        "solution": "If her sales in the current year are {b}, she sold {b}*{z} = <<{b}*{z}={books_first}>>{books_first} books in the first year.\nThe total number of books sold in the first and current year is {books_first}+{b} = <<{books_first}+{b}={books_first_cur}>>{books_first_cur}.\nThe total number of books sold in the second year is {x} of the original number of books - {books_first_cur} sold books - {a} unsold books = <<{x}-{books_first_cur}-{a}={books_second}>>{books_second} books.\nIf each book sells at {y}$, then she earned {y}*{books_second} = $<<{y}*{books_second}={ans}>>{ans} in the second year\n#### {ans}"
+    },
+    {
+        "id": 524,
+        "problem": "{name} is planting tulips. He can fit {x} red tulips in a row and {y} blue tulips in a row. If {name} buys {z} red tulips and {a} blue tulips, how many rows of flowers will he plant?",
+        "variables":{
+            "name":["Janet", "Josh", "James", "Kylar"],
+            "people":["friends", "sister", "brother"],
+            "place":["farmers' market", "store", "Toulouse"],
+            "numerical":{
+                "x":[1, 50],
+                "y":[1, 50],
+                "z":[50, 1000],
+                "a":[50, 1000]
+            }
+        },
+        "conditions":{
+            "red_rows":[1, 1000],
+            "blue_rows":[1, 1000],
+            "ans":[2, 2000]
+        },
+        "calculations":{
+            "red_rows":"z/x",
+            "blue_rows":"a/y",
+            "ans":"red_rows+blue_rows"
+        },
+        "solution": "First, divide the number of red tulips by the number of red tulips per row: {z} / {x} = <<{z}/{x}={red_rows}>>{red_rows} rows.\nNext, divide the number of blue tulips by the number of blue tulips per row: {a} / {y} = <<{a}/{y}={blue_rows}>>{blue_rows} rows.\nNow add the number of rows of each color to find the total: {red_rows} + {blue_rows} = <<{red_rows}+{blue_rows}={ans}>>{ans} rows.\n#### {ans}"
+    },
+    {
+        "id": 275,
+        "problem": "{name} is practicing for his role in a theater production. He has to memorize his lines for two scenes and the lyrics to one solo song. His solo song has {x} lines in the lyrics. The first scene has {y} times the number of lines, but only {z}/{a} of them are his lines. The second scene has {b} more lines than the song, and {c}/{d} of them are his. How many lines does {name} have to memorize?",
+        "variables":{
+            "name":["Janet", "Josh", "James", "Kylar"],
+            "people":["friends", "sister", "brother"],
+            "place":["farmers' market", "store", "Toulouse"],
+            "numerical":{
+                "x":[1, 100],
+                "y":[1, 10],
+                "z":[1, 10],
+                "a":[1, 10],
+                "b":[1, 10],
+                "c":[1,10],
+                "d":[1,10]
+            }
+        },
+        "conditions":{
+            "first_lines":[1, 1000],
+            "his_first_lines":[1, 1000],
+            "second_lines":[1, 1100],
+            "his_second_lines":[1, 1100],
+            "ans":[1, 2200]
+        },
+        "calculations":{
+            "first_lines":"y*x",
+            "his_first_lines":"z*first_lines/a",
+            "second_lines":"x+b",
+            "his_second_lines":"c*second_lines/d",
+            "ans":"x+his_first_lines+his_second_lines"
+        },
+        "solution": "The first scene has {y} times the number of lines as his solo song, so it has {y} * {x} = <<{y}*{x}={first_lines}>>{first_lines} lines.\nA {z}/{a} of them are {name}\u2019s lines, so he has to memorize {z} * {first_lines} / {a} = <<{z}*{first_lines}/{a}={his_first_lines}>>{his_first_lines} lines.\nThe second scene has {x} + {b} = <<{x}+{b}={second_lines}>>{second_lines} lines.\n{c}/{d} of the second scene\u2019s lines are {name}\u2019s, so he has to memorize {c} * {second_lines} / {d} = <<{c}*{second_lines}/{d}={his_second_lines}>>{his_second_lines} lines.\n{name} has to memorize his entire solo song, so he has to memorize {x} + {his_first_lines} + {his_second_lines} = <<{x}+{his_first_lines}+{his_second_lines}={ans}>>{ans} lines in all.\n#### {ans}"
+    },
+    {
+        "id": 32,
+        "problem": "{name} takes care of {x} dogs.  Each dog takes {y} hours a day to walk and take care of their business.  How many hours a week does he spend taking care of dogs?",
+        "variables":{
+            "name":["Janet", "Josh", "James", "Kylar"],
+            "people":["friends", "sister", "brother"],
+            "place":["farmers' market", "store", "Toulouse"],
+            "numerical":{
+                "x":[2, 6],
+                "y":[1, 4]
+            }
+        },
+        "conditions":{
+            "h_per_d":[2, 24],
+            "ans":[2, 168]
+        },
+        "calculations":{
+            "h_per_d":"x*y",
+            "ans":"h_per_d*7"
+        },
+        "solution": "He spends {x}*{y}=<<{x}*{y}={h_per_d}>>{h_per_d} hours per day\nThat means he spends {h_per_d}*7=<<{h_per_d}*7={ans}>>{ans} hours per week\n#### {ans}"
+    },
+    {
+        "id": 104,
+        "problem": "{name} is solving a {x}-piece jigsaw puzzle. She places 1/{y} of the pieces on the board, then her {people} places 1/{z} of the remaining pieces. How many jigsaw pieces are left to be placed?",
+        "variables":{
+            "name":["Janet", "Josh", "James", "Kylar"],
+            "people":["friends", "sister", "brother"],
+            "place":["farmers' market", "store", "Toulouse"],
+            "numerical":{
+                "x":[100, 10000],
+                "y":[1, 10],
+                "z":[1, 10]
+            }
+        },
+        "conditions":{
+            "pop_pieces":[1, 10000],
+            "rest":[1, 10000],
+            "mom_pieces":[1, 10000],
+            "ans":[1, 10000]
+        },
+        "calculations":{
+            "pop_pieces":"x/y",
+            "rest":"x-pop_pieces",
+            "mom_pieces":"rest/z",
+            "ans":"rest-mom_pieces"
+        },
+        "solution": "{name} has placed {x} pieces / {y} = <<{x}/{y}={pop_pieces}>>{pop_pieces} pieces.\nThis means there are {x} \u2013 {pop_pieces} = <<{x}-{pop_pieces}={rest}>>{rest} pieces remaining.\nHer {people} therefore places {rest} / {z} = <<{rest}/{z}={mom_pieces}>>{mom_pieces} pieces.\nThis leaves a total of {rest} \u2013 {mom_pieces} = <<{rest}-{mom_pieces}={ans}>>{ans} jigsaw pieces left to be placed.\n#### {ans}"
+    },
+    {
+        "id": 1145,
+        "problem": "{name} owns a flower shop. He sells a sunflower that costs ${x} each and a bouquet of sunflower that costs ${y}. If {name} earned ${z} from the sunflower and ${a} from the bouquet per day, and if each bouquet has {b} sunflowers, how many sunflowers was {name} able to sell after {c} days?",
+        "variables":{
+            "name":["Janet", "Josh", "James", "Kylar"],
+            "people":["friends", "sister", "brother"],
+            "place":["farmers' market", "store", "Toulouse"],
+            "numerical":{
+                "x":[1, 10],
+                "y":[1, 50],
+                "z":[1, 100],
+                "a":[1, 100],
+                "b":[1, 20],
+                "c":[1,10]
+            }
+        },
+        "conditions":{
+            "num_boq":[1, 100],
+            "num_sun":[1, 2000],
+            "sun":[1, 100],
+            "tot_sun":[1, 2100],
+            "ans":[1, 21000]
+        },
+        "calculations":{
+            "num_boq":"a/y",
+            "num_sun":"b*num_boq",
+            "sun":"z/x",
+            "tot_sun":"num_sun+sun",
+            "ans":"tot_sun*c"
+        },
+        "solution": "{name} sold ${a} / ${y} = <<{a}/{y}={num_boq}>>{num_boq} bouquets of sunflower.\nSo he was able to sell a total of {b} x {num_boq} = <<{b}*{num_boq}={num_sun}>>{num_sun} sunflowers from the bouquets.\nAnd he was able to sell a total of ${z}/${x}= <<{z}/{x}={sun}>>{sun} Sunflowers.\nThe sum of sunflowers {name} was able to sell is {num_sun} + {sun} = <<{num_sun}+{sun}={tot_sun}>>{tot_sun}.\nTherefore, the total of sunflowers he sold after {c} days is {tot_sun} x {c} = <<{tot_sun}*{c}={ans}>>{ans}.\n#### {ans}"
+    },
+    {
+        "id": 529,
+        "problem": "{name} bought a CD for ${x}, and a headphone set. In total, he paid ${y}. How many more CDs would {name} have been able to buy if he had decided not to buy the headphone set?",
+        "variables":{
+            "name":["Janet", "Josh", "James", "Kylar"],
+            "people":["friends", "sister", "brother"],
+            "place":["farmers' market", "store", "Toulouse"],
+            "numerical":{
+                "x":[1, 10],
+                "y":[1, 100]
+            }
+        },
+        "conditions":{
+            "head":[1, 99],
+            "ans":[1, 99]
+        },
+        "calculations":{
+            "head":"y-x",
+            "ans":"head/x"
+        },
+        "solution": "The headphone set cost was {y} - {x} = $<<{y}-{x}={head}>>{head}.\nThat means, for that money {name} would be able to buy {head} / {x} = <<{head}/{x}={ans}>>{ans} more CDs.\n#### {ans}"
+    },
+    {
+        "id": 424,
+        "problem": "The employees of Google went on a day trip. {x} buses were rented that have the capacity of holding {y} employees. {z} minibusses that can hold {a} employees, and {b} minivans that can hold {c} employees. How many employees can join the day trip?",
+        "variables":{
+            "name":["Janet", "Josh", "James", "Kylar"],
+            "people":["friends", "sister", "brother"],
+            "place":["farmers' market", "store", "Toulouse"],
+            "numerical":{
+                "x":[2, 10],
+                "y":[50, 100],
+                "z":[2, 10],
+                "a":[20, 49],
+                "b":[2, 10],
+                "c":[2, 19]
+            }
+        },
+        "conditions":{
+            "bus":[100, 1000],
+            "mini":[40, 490],
+            "van":[4, 190],
+            "ans":[144, 1680]
+        },
+        "calculations":{
+            "bus":"y*x",
+            "mini":"a*z",
+            "van":"c*b",
+            "ans":"bus+mini+van"
+        },
+        "solution": "{y} x {x} = <<{y}*{x}={bus}>>{bus} employees can ride on the bus.\n{a} x {z} = <<{a}*{z}={mini}>>{mini} employees can ride on the minibusses.\n{c} x {b} = <<{c}*{b}={van}>>{van} employees can ride on the minivans.\nTherefore {bus} + {mini} + {van} = <<{bus}+{mini}+{van}={ans}>>{ans} employees can join the day trip.\n#### {ans}"
+    },
+
+
+    {
+        "id": 170,
+        "problem": "{name} is ordering new uniforms. Each uniform comes with a hat that costs {x}, a jacket that costs {a} times as much as the hat, and pants that cost the average of the costs of the hat and jacket. How much does each uniform cost total?",
+        "variables": {
+        "name": ["Giota", "Petr", "Luky", "Jone", "Robert"],
+        "numerical": {
+            "x": [10, 200], 
+            "a": [1, 4]
+        }
+        },
+        "conditions": {
+        "jacket_cost": [10, 800],  
+        "pants_cost": [10, 800],   
+        "total_cost": [20, 2000]    
+        },
+        "calculations": {
+        "jacket_cost": "x * a",
+        "pants_cost": "(x + jacket_cost) / 2",
+        "total_cost": "x + jacket_cost + pants_cost"
+        },
+        "solution": "The cost of the jacket is {x} * {a} = <<{x}*{a}={jacket_cost}>>{jacket_cost}.\nThe cost of the pants is the average of the hat and jacket: ({x} + {jacket_cost}) / 2 = <<({x}+{jacket_cost})/2={pants_cost}>>{pants_cost}.\nThe total cost of the uniform is {x} + {jacket_cost} + {pants_cost} = <<{x}+{jacket_cost}+{pants_cost}={total_cost}>>{total_cost}.\n#### {total_cost}"
+    },
+  
+  
+  
+  
+    {
+        "id": 990,
+        "problem": "An air conditioner cools a room {x} degrees an hour on low and {y} degrees an hour on high. The room will warm up at {z} degrees an hour with no air conditioner running. The air conditioner ran on low for {low_hours} hours, then it was turned up to high for {high_hours} hours. Afterward, it was turned off for {off_hours} hours. How many degrees lower than the starting temperature was the final temperature?",
+        "variables": {
+        "numerical": {
+            "x": [1, 5],  
+            "y": [2, 6],  
+            "z": [1, 3],  
+            "low_hours": [1, 5], 
+            "high_hours": [2, 6], 
+            "off_hours": [1, 3]   
+        }
+        },
+        "conditions": {
+        "low_cool": [1, 25],   
+        "high_cool": [2, 36],   
+        "warm_rise": [1, 9],  
+        "ans": [-50, 50]    
+        },
+        "calculations": {
+        "low_cool": "x * low_hours",
+        "high_cool": "y * high_hours",
+        "warm_rise": "z * off_hours",
+        "ans": "low_cool + high_cool - warm_rise"
+        },
+        "solution": "The air conditioner ran on low for {low_hours} hours, so the temperature dropped {x} * {low_hours} = <<{x}*{low_hours}={low_cool}>>{low_cool} degrees.\nIt then ran on high for {high_hours} hours, so the temperature dropped another {y} * {high_hours} = <<{y}*{high_hours}={high_cool}>>{high_cool} degrees.\nWhile off, the temperature rose {z} * {off_hours} = <<{z}*{off_hours}={warm_rise}>>{warm_rise} degrees.\nThus, the final temperature difference is {low_cool} + {high_cool} - {warm_rise} = <<{low_cool}+{high_cool}-{warm_rise}={ans}>>{ans} degrees lower than the starting temperature.\n#### {ans}"
+    },
+  
+  
+  
+  
+    {
+        "id": 27,
+        "problem": "{name} eats one serving of ice cream every night. They buy cartons of ice cream with {servings_per_carton} servings per carton at a cost of ${carton_cost} per carton. After {days} days, how much will they spend on ice cream?",
+        "variables": {
+        "name": ["Cynthia", "John", "Emma", "Liam"],
+        "numerical": {
+            "servings_per_carton": [10, 20],  
+            "carton_cost": [2, 5],           
+            "days": [30, 90]                 
+        }
+        },
+        "conditions": {
+        "cartons_needed": [1, 10],        
+        "ans": [2, 50]                   
+        },
+        "calculations": {
+        "cartons_needed": "days / servings_per_carton",
+        "ans": "cartons_needed * carton_cost"
+        },
+        "solution": "Each carton has {servings_per_carton} servings, and {name} eats 1 serving a night. So after {days} days, they will need {days} / {servings_per_carton} = <<{days}/{servings_per_carton}={cartons_needed}>>{cartons_needed} cartons of ice cream.\nIf each carton costs ${carton_cost}, then the total cost is {cartons_needed} * {carton_cost} = $<<{cartons_needed}*{carton_cost}={ans}>>{ans}.\n#### {ans}"
+    },
+  
+  
+  
+    {
+        "id": 1244,
+        "problem": "{name} has to take two math tests to pass {grade} grade. They must correctly answer {pass_rate}% of the total questions to move on to the next grade. The first test has {test1_questions} questions, and they get {test1_accuracy}% of them correct. The second test has {test2_questions} questions. How many questions do they need to get right on the second test to pass?",
+        "variables": {
+        "name": ["Audrey", "James", "Liam", "Olivia"],
+        "grade": [6, 7],
+        "numerical": {
+            "pass_rate": [60, 80],          
+            "test1_questions": [50, 80],   
+            "test1_accuracy": [50, 70],    
+            "test2_questions": [30, 50]     
+        }
+        },
+        "conditions": {
+        "total_questions": [80, 130],     
+        "required_correct": [50, 104],  
+        "test1_correct": [25, 56],      
+        "ans": [10, 50]                 
+        },
+        "calculations": {
+        "total_questions": "test1_questions + test2_questions",
+        "required_correct": "total_questions * pass_rate / 100",
+        "test1_correct": "test1_questions * test1_accuracy / 100",
+        "ans": "required_correct - test1_correct"
+        },
+        "solution": "There are {test1_questions} + {test2_questions} = <<{test1_questions}+{test2_questions}={total_questions}>>{total_questions} questions in total.\n{name} needs to get {total_questions} * {pass_rate}% = <<{total_questions}*{pass_rate}/100={required_correct}>>{required_correct} questions correct to pass.\nThey got {test1_questions} * {test1_accuracy}% = <<{test1_questions}*{test1_accuracy}/100={test1_correct}>>{test1_correct} questions correct on the first test.\nThey need {required_correct} - {test1_correct} = <<{required_correct}-{test1_correct}={ans}>>{ans} questions correct on the second test.\n#### {ans}"
+    },
+  
+  
+  
+  
+  
+    {
+        "id": 34,
+        "problem": "{name1} has {x} fewer jewels than {name2}. {name2} has {y} more jewels than half of {name3}'s jewels. If {name3} has {total_jewels} jewels, how many jewels does {name1} have?",
+        "variables": {
+        "name1": ["Siobhan", "Emily", "Liam"],
+        "name2": ["Aaron", "David", "Chris"],
+        "name3": ["Raymond", "Oliver", "Noah"],
+        "numerical": {
+            "x": [1, 5],            
+            "y": [3, 7],            
+            "total_jewels": [20, 100]   
+        }
+        },
+        "conditions": {
+        "half_jewels": [10, 50],     
+        "name2_jewels": [13, 57], 
+        "ans": [10, 55]           
+        },
+        "calculations": {
+        "half_jewels": "total_jewels / 2",
+        "name2_jewels": "half_jewels + y",
+        "ans": "name2_jewels - x"
+        },
+        "solution": "Half of {name3}'s jewels is {total_jewels} / 2 = <<{total_jewels}/2={half_jewels}>>{half_jewels}.\nSince {name2} has {y} more jewels than half of {name3}'s jewels, they have {half_jewels} + {y} = <<{half_jewels}+{y}={name2_jewels}>>{name2_jewels} jewels.\n{name1} has {name2_jewels} - {x} = <<{name2_jewels}-{x}={ans}>>{ans} jewels.\n#### {ans}"
+    },
+  
+  
+  
+  
+    {
+        "id": 930,
+        "problem": "When {name} watches her {family_member}, she gets out a variety of toys. The bag of building blocks has {x} blocks in it. The bin of stuffed animals has {y} stuffed animals inside. The tower of stacking rings has {z} multicolored rings on it. {name} recently bought a tube of bouncy balls, bringing the total number of toys to {total_toys}. How many bouncy balls came in the tube?",
+        "variables": {
+        "name": ["Sophie", "Emma", "Liam", "Noah"],
+        "family_member": ["nephew", "niece", "cousin", "sibling"],
+        "numerical": {
+            "x": [20, 50],           
+            "y": [5, 15],  
+            "z": [5, 15],    
+            "total_toys": [50, 100]      
+        }
+        },
+        "conditions": {
+        "toys_without_balls": [30, 80], 
+        "ans": [10, 50]               
+        },
+        "calculations": {
+        "toys_without_balls": "x + y + z",
+        "ans": "total_toys - toys_without_balls"
+        },
+        "solution": "Let T be the number of bouncy balls in the tube.\nThe total number of toys without the bouncy balls is {x} + {y} + {z} = <<{x}+{y}+{z}={toys_without_balls}>>{toys_without_balls}.\nAfter buying the tube of balls, {name} has {toys_without_balls} + T = {total_toys} toys.\nThus, T = {total_toys} - {toys_without_balls} = <<{total_toys}-{toys_without_balls}={ans}>>{ans} bouncy balls came in the tube.\n#### {ans}"
+    },
+  
+  
+  
+  
+    {
+        "id": 787,
+        "problem": "{name} owns an appliance store. For this week, one-fourth of their sales are smart TVs, one-eighth are analog TVs, and the rest are OLED TVs. If they were able to sell a total of {x} TVs, how many OLED TVs were they able to sell?",
+        "variables": {
+        "name": ["Samwell", "Jordan", "Alex", "Taylor"],
+        "numerical": {
+            "x": [30, 100]  
+        }
+        },
+        "conditions": {
+        "smart_tvs": [7, 25],    
+        "analog_tvs": [4, 12],   
+        "non_oled_tvs": [10, 37], 
+        "ans": [15, 70]         
+        },
+        "calculations": {
+        "smart_tvs": "x / 4",
+        "analog_tvs": "x / 8",
+        "non_oled_tvs": "smart_tvs + analog_tvs",
+        "ans": "x - non_oled_tvs"
+        },
+        "solution": "{name} sold 1/4 of the TVs as Smart TVs: {x} / 4 = <<{x}/4={smart_tvs}>>{smart_tvs} Smart TVs.\nThey sold 1/8 of the TVs as Analog TVs: {x} / 8 = <<{x}/8={analog_tvs}>>{analog_tvs} Analog TVs.\nSo, the total number of Smart and Analog TVs is {smart_tvs} + {analog_tvs} = <<{smart_tvs}+{analog_tvs}={non_oled_tvs}>>{non_oled_tvs}.\nTherefore, the total number of OLED TVs sold is {x} - {non_oled_tvs} = <<{x}-{non_oled_tvs}={ans}>>{ans}.\n#### {ans}"
+    },
+  
+  
+  
+    {
+        "id": 835,
+        "problem": "If it takes {x} kangaroos traveling at the same speed a total of {total_kangaroo_time} hours to travel across a highway, how many hours will it take {num_turtles} turtles, each traveling at half the speed of a kangaroo, to do so?",
+        "variables": {
+        "numerical": {
+            "x": [2, 5],                   
+            "total_kangaroo_time": [10, 30],
+            "num_turtles": [2, 6]         
+        }
+        },
+        "conditions": {
+        "x": [2, 5],
+        "total_kangaroo_time": [10, 30],
+        "num_turtles": [2, 6],
+        "kangaroo_time": [5, 15],       
+        "turtle_time": [10, 30],        
+        "ans": [20, 180]                
+        },
+        "calculations": {
+        "kangaroo_time": "total_kangaroo_time / x",
+        "turtle_time": "kangaroo_time * 2",
+        "ans": "num_turtles * turtle_time"
+        },
+        "solution": "If it takes {x} kangaroos traveling at the same speed a total of {total_kangaroo_time} hours to travel across the highway, one kangaroo takes {total_kangaroo_time} / {x} = <<{total_kangaroo_time}/{x}={kangaroo_time}>>{kangaroo_time} hours to cross the highway.\nA turtle traveling at half the speed of a kangaroo will take 2 * {kangaroo_time} = <<2*{kangaroo_time}={turtle_time}>>{turtle_time} hours to cross the highway.\nThus, {num_turtles} turtles will take a total of {num_turtles} * {turtle_time} = <<{num_turtles}*{turtle_time}={ans}>>{ans} hours to travel across the highway.\n#### {ans}"
+    }
+]

@@ -24,6 +24,7 @@ def resolve_calculations(variables, calculations):
     return resolved_values
 
 # Validates the conditions
+# Validates the conditions
 def validate_conditions(resolved_calculations, conditions):
     for key, condition in conditions.items():
         value = resolved_calculations.get(key)
@@ -40,18 +41,28 @@ def validate_conditions(resolved_calculations, conditions):
             print(f"No interval given for {condition}")
     return True
 
-# Generate a single variation
 def generate_variation(template, variation_id, parent_id):
     variables = template["variables"]
-    numerical = variables["numerical"]
-    conditions = template["conditions"]
-
+    numerical = variables.get("numerical", {})
+    conditions = template.get("conditions", {})
+    
     while True:  # Retry until conditions are met
         current_vars = {}
 
         # Randomly assign values to numerical variables
         for var, range_ in numerical.items():
-            current_vars[var] = random.randint(*range_)
+            if isinstance(range_, list):
+                if len(range_) == 3:
+                    # Range with step size
+                    start, stop, step = range_
+                    possible_values = list(range(start, stop + 1, step))
+                    current_vars[var] = random.choice(possible_values)
+                else:
+                    # Simple range
+                    current_vars[var] = random.randint(*range_)
+            else:
+                # Single value
+                current_vars[var] = range_
 
         # Randomly assign values to list variables
         for var, values in variables.items():
@@ -59,14 +70,19 @@ def generate_variation(template, variation_id, parent_id):
                 current_vars[var] = random.choice(values)
 
         # Resolve calculations
-        resolved_calculations = resolve_calculations(current_vars, template["calculations"])
+        resolved_calculations = resolve_calculations(current_vars, template.get("calculations", {}))
 
         # Merge calculations into variables for formatting
         current_vars.update(resolved_calculations)
 
+        #print("="*50)
+        #print(current_vars)
+        #print("="*50)
+
         # Validate conditions
-        if validate_conditions(resolved_calculations, conditions):
+        if validate_conditions(current_vars, conditions):
             break  # Exit loop if conditions are met
+
 
     # Fill the problem and solution templates
     problem = template["problem"].format(**convert_all_to_int(current_vars))
@@ -94,14 +110,36 @@ def generate_variations_for_templates(templates, n_per_template, starting_id=0):
     return variations
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="Generate variations for GSM-Symbolic")
+    parser.add_argument(
+        "--templates", 
+        type=str, 
+        required=True,
+        help="Filename of the templates (without extension, should be in the 'data/GSM-Symbolic/templates' folder)"
+    )
+    parser.add_argument(
+        "--output", 
+        type=str, 
+        required=True, 
+        help="Output filename (without extension, outputs into the 'data/GSM-Symbolic/variations/' folder)"
+    )
+    parser.add_argument(
+        "--n_per_template", 
+        type=int, 
+        default=2, 
+        help="Number of variations per template"
+    )
+
+    args = parser.parse_args()
     
-    # Load templates
-    templates = read_json("data/GSM8K-Symbolic/templates.json")
+    templates = read_json(f"data/GSM-Symbolic/templates/{args.templates}.json")
     # Generate variations
-    variations = generate_variations_for_templates(templates, 10)
+    variations = generate_variations_for_templates(templates, args.n_per_template)
 
     # Save to JSON file
-    output_filename = "data/GSM8K-Symbolic/variations.json"
+    output_filename = f"data/GSM-Symbolic/variations/{args.output}.json"
+
     with open(output_filename, "w") as file:
         json.dump(variations, file, indent=4)
 

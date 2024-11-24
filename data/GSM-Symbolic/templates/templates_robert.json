@@ -1,0 +1,130 @@
+[
+    {
+    "id": 3,
+    "problem": "{name} decides to run {x} sprints {y} times a week.  He runs {z} meters each sprint.  How many total meters does he run a week?",
+    "variables": {
+        "name": ["Josh", "John", "Jack", "Hose"],
+        "numerical": {
+        "x":[2,7],
+        "y":[2,9],
+        "z":[10,100]
+        }
+    },
+    "conditions": {},
+    "calculations": {
+        "sprints_per_week": "x*y",
+        "ans": "sprints_per_week*z"
+    },
+    "solution": "He sprints {x}*{y}=<<{x}*{y}={sprints_per_week}>>{sprints_per_week} times\nSo he runs {sprints_per_week}*{z}=<<{sprints_per_week}*{z}={ans}>>{ans} meters\n#### {ans}"
+    },
+    {
+    "id": 215,
+    "problem": "{name} wants to buy a ${x}.00 pair of shoes and a matching belt that is ${y}.00.  Her part-time job pays her ${z}.00 an hour.  How many hours will she have to work before she can make her purchase?",
+    "variables": {
+        "name":["Lara, Lucia, Natasha, Samantha"],
+        "numerical": {
+        "x":[1, 1000],
+        "y":[1, 100],
+        "z":[5, 25]
+        }
+    },
+    "conditions": {
+        "total_price":[1, 1100]
+    },
+    "calculations": {
+        "total_price":"x+y",
+        "ans":"total_price/z"
+    },
+    "solution": "She wants to buy a pair of shoes for ${x}.00 and a belt for ${y}.00 for a total of {x}+{y} = $<<{x}+{y}={total_price}.00>>{total_price}.00\nHer purchase will total ${total_price}.00 and she makes ${z}.00 at her part-time job so she'll have to work {total_price}/{z} = <<{total_price}/{z}={ans}>>{ans} hours\n#### {ans}"
+    },
+    {
+    "id": 314,
+    "problem": "A {sport} team has {x} members.  There are twice as many players on the offense as there is on the defense. There is half the number of players on the special teams as there is on the defense.  How many players are on the defense?",
+    "variables": {
+        "sport": ["soccer", "waterpolo", "handball", "basketball"],
+        "numerical": {
+        "x": [1, 200]
+        }
+    },
+    "conditions": {},
+    "calculations": {
+        "ans":"2/7*x"
+    },
+    "solution": "Let x represent the number of players on the defense\nOffense:2x\nSpecial Teams:(1/2)x\nTotal:x+2x+(1/2)x={x}\n(7/2)x={x}\nx={x}(2/7)={ans} players\n#### {ans}"
+    },
+    {
+    "id": 421,
+    "problem": "{name} injured his back and needs to go to physical therapy.  He went to physical therapy for {x} weeks.  Each week he went twice for {z} hours at a time.  If the sessions cost ${y} per hour how much did the physical therapy cost?",
+    "variables": {
+        "name": ["Jack", "James", "Ivan", "Peter"],
+        "numerical": {
+        "x":[2, 40],
+        "y":[100, 1000],
+        "z": [2, 6]
+        }
+    },
+    "conditions": {},
+    "calculations": {
+        "hours_per_week": "2*z",
+        "price_per_week": "hours_per_week*y",
+        "ans": "price_per_week*x"
+    },
+    "solution": "Each week he did 2*{z}=<<2*{z}={hours_per_week}>>{hours_per_week} hours of physical therapy\nSo it cost {hours_per_week}*{y}=$<<{hours_per_week}*{y}={price_per_week}>>{price_per_week} per week\nThis means he spent {price_per_week}*{x}=$<<{price_per_week}*{x}={ans}>>{ans}\n#### {ans}"
+    },
+    {
+    "id": 741,
+    "problem": "{name} saw {x} birds in their backyard and threw a stone at them, scaring away 1/{y} of that number. A few minutes later, {z} more birds joined the fearless birds. How many birds are now in the backyard?",
+    "variables": {
+        "name": ["Jamie, Jethro, Joseph, Jesus"],
+        "numerical": {
+        "x":[10, 100],
+        "y":[2, 5],
+        "z":[1, 100]
+        }
+    },
+    "conditions": {},
+    "calculations": {
+        "birds_scared": "x/y",
+        "birds_remaining":"x-birds_scared",
+        "ans":"birds_remaining+z"
+    },
+    "solution": "The total number of birds scared away after he threw the stone at them is 1/{y} * {x} = <<1/{y}*{x}={birds_scared}>>{birds_scared} birds.\nThe total number of birds remaining is {x} - {birds_scared} = <<{x}-{birds_scared}={birds_remaining}>>{birds_remaining} birds.\nIf {z} more birds joined, the total number of birds in the backyard will become {birds_remaining} + {z} = <<{birds_remaining}+{z}={ans}>>{ans} birds.\n#### {ans}"
+    },
+    {
+    "id": 1108,
+    "problem": "My {relation} went to a gardening shop. She bought a set of pots for ${x} and a sack of garden soil for ${y}. At checkout, she used a coupon for ${z} off. How much money did my {relation} spend at the gardening shop?",
+    "variables": {
+        "relation": ["sister", "niece", "aunt", "grandma"],
+        "numerical": {
+        "x": [1, 100],
+        "y": [1, 100],
+        "z": [1, 100]
+        }
+    },
+    "conditions": {
+        "price": [1, 1000],
+        "ans": [1, 1000]
+    },
+    "calculations": {
+        "price": "x+y",
+        "ans": "price-z"
+    },
+    "solution": "The total cost of the pots and a sack of garden soil is ${x} + ${y} = $<<{x}+{y}={price}>>{price}.\nSo, my {relation} spent ${price} - ${z} = $<<{price}-{z}={ans}>>{ans} at the gardening store.\n#### {ans}"
+    },
+    {
+    "id": 1194,
+    "problem": "From her science class study, {name} learned that each whale in the sea has {x} gallons of blood. She also learned that a shark has three times as much blood as a whale. Calculate the number of gallons of blood that ten sharks swimming in the sea have.",
+    "variables": {
+        "name": ["Chelsea", "Susan", "Maja", "Anna"],
+        "numerical": {
+        "x":[2,100]
+        }
+    },
+    "conditions": {},
+    "calculations": {
+        "shark_blood": "3*x",
+        "ans": "10*shark_blood"
+    },
+    "solution": "Since a shark has three times as much blood as a whale, then a shark has 3*{x} = <<3*{x}={shark_blood}>>{shark_blood} gallons of blood.\n10 sharks swimming in the sea will have 10*{shark_blood} = <<10*{shark_blood}={ans}>>{ans} gallons of blood.\n#### {ans}"
+    }
+]
