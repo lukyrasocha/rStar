@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "parent_id": 0,
+        "problem": "Josh\u2019s ducks lay 84 eggs per day. She eats 52 for breakfast every morning and bakes muffins for her brother every day with 19. She sells the remainder at the store daily for $65 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+        "solution": "Janet sells 84 - 52 - 19 = <<84-52-19=13>>13 duck eggs a day.\nShe makes 13 * 65 = $<<13*65=845>>845 every day at the farmer\u2019s market.\n#### 845"
+    },
+    {
+        "id": 1,
+        "parent_id": 1,
+        "problem": "A robe takes 57 bolts of blue fiber and 9 that much white fiber.  How many bolts in total does it take?",
+        "solution": "It takes 57*9=<<57*9=513>>513 bolt of white fiber\nSo the total amount of fabric is 57+513=<<57+513=570>>570 bolts of fabric\n#### 570"
+    },
+    {
+        "id": 2,
+        "parent_id": 303,
+        "problem": "Janet has been selling her friends's collection of 253 books for three years. Each book sells at 81$, and she sold 3 times as many books in the first year as she has sold in the current year. There are currently 84 unsold books, and her sales number this year is 39. What's the total amount of money she earned in the second year?",
+        "solution": "If her sales in the current year are 39, she sold 39*3 = <<39*3=117>>117 books in the first year.\nThe total number of books sold in the first and current year is 117+39 = <<117+39=156>>156.\nThe total number of books sold in the second year is 253 of the original number of books - 156 sold books - 84 unsold books = <<253-156-84=13>>13 books.\nIf each book sells at 81$, then she earned 81*13 = $<<81*13=1053>>1053 in the second year\n#### 1053"
+    },
+    {
+        "id": 3,
+        "parent_id": 524,
+        "problem": "Kylar is planting tulips. He can fit 3 red tulips in a row and 1 blue tulips in a row. If Kylar buys 402 red tulips and 639 blue tulips, how many rows of flowers will he plant?",
+        "solution": "First, divide the number of red tulips by the number of red tulips per row: 402 / 3 = <<402/3=134>>134 rows.\nNext, divide the number of blue tulips by the number of blue tulips per row: 639 / 1 = <<639/1=639>>639 rows.\nNow add the number of rows of each color to find the total: 134 + 639 = <<134+639=773>>773 rows.\n#### 773"
+    },
+    {
+        "id": 4,
+        "parent_id": 275,
+        "problem": "Kylar is practicing for his role in a theater production. He has to memorize his lines for two scenes and the lyrics to one solo song. His solo song has 18 lines in the lyrics. The first scene has 8 times the number of lines, but only 1/6 of them are his lines. The second scene has 7 more lines than the song, and 9/1 of them are his. How many lines does Kylar have to memorize?",
+        "solution": "The first scene has 8 times the number of lines as his solo song, so it has 8 * 18 = <<8*18=144>>144 lines.\nA 1/6 of them are Kylar\u2019s lines, so he has to memorize 1 * 144 / 6 = <<1*144/6=24>>24 lines.\nThe second scene has 18 + 7 = <<18+7=25>>25 lines.\n9/1 of the second scene\u2019s lines are Kylar\u2019s, so he has to memorize 9 * 25 / 1 = <<9*25/1=225>>225 lines.\nKylar has to memorize his entire solo song, so he has to memorize 18 + 24 + 225 = <<18+24+225=267>>267 lines in all.\n#### 267"
+    },
+    {
+        "id": 5,
+        "parent_id": 32,
+        "problem": "Janet takes care of 5 dogs.  Each dog takes 2 hours a day to walk and take care of their business.  How many hours a week does he spend taking care of dogs?",
+        "solution": "He spends 5*2=<<5*2=10>>10 hours per day\nThat means he spends 10*7=<<10*7=70>>70 hours per week\n#### 70"
+    },
+    {
+        "id": 6,
+        "parent_id": 104,
+        "problem": "Janet is solving a 7550-piece jigsaw puzzle. She places 1/2 of the pieces on the board, then her friends places 1/5 of the remaining pieces. How many jigsaw pieces are left to be placed?",
+        "solution": "Janet has placed 7550 pieces / 2 = <<7550/2=3775>>3775 pieces.\nThis means there are 7550 \u2013 3775 = <<7550-3775=3775>>3775 pieces remaining.\nHer friends therefore places 3775 / 5 = <<3775/5=755>>755 pieces.\nThis leaves a total of 3775 \u2013 755 = <<3775-755=3020>>3020 jigsaw pieces left to be placed.\n#### 3020"
+    },
+    {
+        "id": 7,
+        "parent_id": 1145,
+        "problem": "Janet owns a flower shop. He sells a sunflower that costs $3 each and a bouquet of sunflower that costs $24. If Janet earned $21 from the sunflower and $72 from the bouquet per day, and if each bouquet has 6 sunflowers, how many sunflowers was Janet able to sell after 4 days?",
+        "solution": "Janet sold $72 / $24 = <<72/24=3>>3 bouquets of sunflower.\nSo he was able to sell a total of 6 x 3 = <<6*3=18>>18 sunflowers from the bouquets.\nAnd he was able to sell a total of $21/$3= <<21/3=7>>7 Sunflowers.\nThe sum of sunflowers Janet was able to sell is 18 + 7 = <<18+7=25>>25.\nTherefore, the total of sunflowers he sold after 4 days is 25 x 4 = <<25*4=100>>100.\n#### 100"
+    },
+    {
+        "id": 8,
+        "parent_id": 529,
+        "problem": "Josh bought a CD for $3, and a headphone set. In total, he paid $33. How many more CDs would Josh have been able to buy if he had decided not to buy the headphone set?",
+        "solution": "The headphone set cost was 33 - 3 = $<<33-3=30>>30.\nThat means, for that money Josh would be able to buy 30 / 3 = <<30/3=10>>10 more CDs.\n#### 10"
+    },
+    {
+        "id": 9,
+        "parent_id": 424,
+        "problem": "The employees of Google went on a day trip. 7 buses were rented that have the capacity of holding 64 employees. 4 minibusses that can hold 49 employees, and 8 minivans that can hold 3 employees. How many employees can join the day trip?",
+        "solution": "64 x 7 = <<64*7=448>>448 employees can ride on the bus.\n49 x 4 = <<49*4=196>>196 employees can ride on the minibusses.\n3 x 8 = <<3*8=24>>24 employees can ride on the minivans.\nTherefore 448 + 196 + 24 = <<448+196+24=668>>668 employees can join the day trip.\n#### 668"
+    }
+]
