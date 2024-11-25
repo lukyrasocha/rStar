@@ -117,7 +117,7 @@
         "price": "x+y",
         "ans": "price-z"
     },
-    "solution": "The total cost of the pots and a sack of garden soil is ${x} + ${y} = $<<{x}+{y}={price}>>{price}.\nSo, my {relation} spent ${price} - ${z} = $<<{price}-{z}={ans}>>{ans} at the gardening store.\n#### {ans}"
+    "solution": "The total cost of the pots and a sack of garden soil is ${x} + ${y} = $<<{x}+{y}={price}>>{price}.\nSo, my mom spent ${price} - ${z} = $<<{price}-{z}={ans}>>{ans} at the gardening store.\n#### {ans}"
     },
     {
     "id": 1194,
