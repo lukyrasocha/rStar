@@ -391,90 +391,93 @@
   },
   "solution": "Each carton has {servings_per_carton} servings, and {name_f_0} eats 1 serving a night. So after {days} days, they will need {days} / {servings_per_carton} = <<{days}/{servings_per_carton}={cartons_needed}>>{cartons_needed} cartons of ice cream.\nIf each carton costs ${carton_cost}, then the total cost is {cartons_needed} * {carton_cost} = $<<{cartons_needed}*{carton_cost}={ans}>>{ans}.\n#### {ans}"
 },
-{
-  "id": 1180,
-  "problem": "A company sold {total_gallons} gallons of milk in jars to Mr. {name_m_0}'s store at the cost of ${price_per_gallon} per gallon. However, Mr. {name_m_0} later realized {expired_fraction_numerator}/{expired_fraction_denominator} of the amount of milk he purchased had passed the expiry date and could not be sold. He returned the sour milk to the company and ordered a refund. Calculate how much he got in refunds.",
-  "variables": {
-      "numerical": {
-          "total_gallons": [1000, 5000],
-          "price_per_gallon": [2, 5],
-          "expired_fraction_numerator": [1, 4],
-          "expired_fraction_denominator": [5, 8]
-      }
-  },
-  "calculations": {
-      "expired_fraction": "expired_fraction_numerator / expired_fraction_denominator",
-      "expired_gallons": "expired_fraction * total_gallons",
-      "refund_amount": "price_per_gallon * expired_gallons"
-  },
-  "conditions": {
-      "expired_gallons": [1, 1000],
-      "refund_amount": [1, 5000]
-  },
-  "solution": "If he purchased {total_gallons} gallons, the number of gallons expired is {expired_fraction_numerator}/{expired_fraction_denominator} * {total_gallons} gallons = <<{expired_fraction_numerator}/{expired_fraction_denominator}*{total_gallons}={expired_gallons}>>{expired_gallons} gallons.\nIf each gallon costs ${price_per_gallon}, and he returned {expired_gallons} gallons for refund, the total amount he got from the refund is ${price_per_gallon}/gallon * {expired_gallons} gallons = $<<{price_per_gallon}*{expired_gallons}={refund_amount}>>{refund_amount}\n#### {refund_amount}"
-},
-{
-  "id": 376,
-  "problem": "There are {total_pupils} pupils in a class. Half of the class likes blue. One-fourth of the remaining likes green and the rest likes yellow. How many pupils like the color yellow?",
-  "variables": {
-      "numerical": {
-          "total_pupils": [20, 100]
-      }
-  },
-  "calculations": {
-      "like_blue": "total_pupils / 2",
-      "remaining_after_blue": "total_pupils - like_blue",
-      "like_green": "remaining_after_blue / 4",
-      "like_yellow": "remaining_after_blue - like_green"
-  },
-  "conditions": {
-      "like_blue": [1, 100],
-      "like_green": [1, 100],
-      "like_yellow": [1, 100]
-  },
-  "solution": "There are {total_pupils}/2 = <<{total_pupils}/2={like_blue}>>{like_blue} pupils who like blue.\nSo, there are now {total_pupils} - {like_blue} = <<{total_pupils}-{like_blue}={remaining_after_blue}>>{remaining_after_blue} pupils who like either green or yellow.\nHence, {remaining_after_blue}/4 = <<{remaining_after_blue}/4={like_green}>>{like_green} pupils like green.\nThus, {remaining_after_blue} - {like_green} = <<{remaining_after_blue}-{like_green}={like_yellow}>>{like_yellow} pupils like yellow.\n#### {like_yellow}"
-},
-{
-  "id": 1254,
-  "problem": "{name_f_0} is an artist and needs to apply a coat of varnish to her latest paintings. Usually it takes {old_time} minutes for the coat of varnish to dry on one painting. However, today she is using a new varnish and it takes {new_time} minutes for the coat to dry. How much longer will it take for the coat of varnish on {number_of_paintings} paintings with the new varnish to dry as it would with the old varnish?",
-  "variables": {
-      "numerical": {
-          "old_time": [5, 15],
-          "new_time": [16, 30],
-          "number_of_paintings": [2, 10]
-      }
-  },
-  "calculations": {
-      "total_old_time": "old_time * number_of_paintings",
-      "total_new_time": "new_time * number_of_paintings",
-      "extra_time": "total_new_time - total_old_time"
-  },
-  "conditions": {
-      "extra_time": [1, 300]
-  },
-  "solution": "Usually, the varnish on all {number_of_paintings} paintings would be dry in {old_time} * {number_of_paintings} = <<{old_time}*{number_of_paintings}={total_old_time}>>{total_old_time} minutes\nWith the new varnish, all {number_of_paintings} paintings would be dry in {new_time} * {number_of_paintings} = <<{new_time}*{number_of_paintings}={total_new_time}>>{total_new_time} minutes\nWith the new varnish, it will take {total_new_time} - {total_old_time} = <<{total_new_time}-{total_old_time}={extra_time}>>{extra_time} more minutes\n#### {extra_time}"
-},
-{
-  "id": 367,
-  "problem": "{initial_customers} customers were kicked out of the Walmart for refusing to wear masks. A number equals to four times that many minus {subtract_value} were kicked out for shoplifting. Three times the number of shoplifters were kicked out for physical violence over goods on sale. If a total of {total_customers} people were kicked out of the Walmart, how many were kicked out for other reasons?",
-  "variables": {
-      "numerical": {
-          "initial_customers": [2, 10],
-          "subtract_value": [1, 5],
-          "total_customers": [40, 100]
-      }
-  },
-  "calculations": {
-      "shoplifters_initial": "4 * initial_customers",
-      "shoplifters": "shoplifters_initial - subtract_value",
-      "violence": "shoplifters * 3",
-      "others": "total_customers - initial_customers - shoplifters - violence"
-  },
-  "conditions": {
-      "shoplifters": [1, 100],
-      "violence": [1, 300],
-      "others": [0, 100]
-  },
-  "solution": "First quadruple the number of customers kicked out for not wearing masks: 4 * {initial_customers} customers = <<4*{initial_customers}={shoplifters_initial}>>{shoplifters_initial} customers\nThen subtract {subtract_value} from this number: {shoplifters_initial} customers - {subtract_value} customers = <<{shoplifters_initial}-{subtract_value}={shoplifters}>>{shoplifters} customers\nThen triple that number to find the number of people kicked out for violence: {shoplifters} customers * 3 = <<{shoplifters}*3={violence}>>{violence} customers\nThen subtract the number of customers kicked out for each known reason to find the number kicked out for other reasons: {total_customers} customers - {initial_customers} customers - {shoplifters} customers - {violence} customers = <<{total_customers}-{initial_customers}-{shoplifters}-{violence}={others}>>{others} customers\n#### {others}"
-}
+
+    {
+        "id": 1180,
+        "problem": "A company sold {total_gallons} gallons of milk in jars to Mr. {name_m_0}'s store at the cost of ${price_per_gallon} per gallon. However, Mr. {name_m_0} later realized {expired_fraction_numerator}/{expired_fraction_denominator} of the amount of milk he purchased had passed the expiry date and could not be sold. He returned the sour milk to the company and ordered a refund. Calculate how much he got in refunds.",
+        "variables": {
+            "numerical": {
+                "total_gallons": [1000, 5000],
+                "price_per_gallon": [2, 5],
+                "expired_fraction_numerator": [1, 4],
+                "expired_fraction_denominator": [5, 8]
+            }
+        },
+        "calculations": {
+            "expired_fraction": "expired_fraction_numerator / expired_fraction_denominator",
+            "expired_gallons": "expired_fraction * total_gallons",
+            "refund_amount": "price_per_gallon * expired_gallons"
+        },
+        "conditions": {
+            "expired_gallons": [1, 1000],
+            "refund_amount": [1, 5000]
+        },
+        "solution": "If he purchased {total_gallons} gallons, the number of gallons expired is {expired_fraction_numerator}/{expired_fraction_denominator} * {total_gallons} gallons = <<{expired_fraction_numerator}/{expired_fraction_denominator}*{total_gallons}={expired_gallons}>>{expired_gallons} gallons.\nIf each gallon costs ${price_per_gallon}, and he returned {expired_gallons} gallons for refund, the total amount he got from the refund is ${price_per_gallon}/gallon * {expired_gallons} gallons = $<<{price_per_gallon}*{expired_gallons}={refund_amount}>>{refund_amount}\n#### {refund_amount}"
+    },
+
+    {
+        "id": 376,
+        "problem": "There are {total_pupils} pupils in a class. Half of the class likes blue. One-fourth of the remaining likes green and the rest likes yellow. How many pupils like the color yellow?",
+        "variables": {
+            "numerical": {
+                "total_pupils": [20, 100]
+            }
+        },
+        "calculations": {
+            "like_blue": "total_pupils / 2",
+            "remaining_after_blue": "total_pupils - like_blue",
+            "like_green": "remaining_after_blue / 4",
+            "like_yellow": "remaining_after_blue - like_green"
+        },
+        "conditions": {
+            "like_blue": [1, 100],
+            "like_green": [1, 100],
+            "like_yellow": [1, 100]
+        },
+        "solution": "There are {total_pupils}/2 = <<{total_pupils}/2={like_blue}>>{like_blue} pupils who like blue.\nSo, there are now {total_pupils} - {like_blue} = <<{total_pupils}-{like_blue}={remaining_after_blue}>>{remaining_after_blue} pupils who like either green or yellow.\nHence, {remaining_after_blue}/4 = <<{remaining_after_blue}/4={like_green}>>{like_green} pupils like green.\nThus, {remaining_after_blue} - {like_green} = <<{remaining_after_blue}-{like_green}={like_yellow}>>{like_yellow} pupils like yellow.\n#### {like_yellow}"
+    },
+
+    {
+        "id": 1254,
+        "problem": "{name_f_0} is an artist and needs to apply a coat of varnish to her latest paintings. Usually it takes {old_time} minutes for the coat of varnish to dry on one painting. However, today she is using a new varnish and it takes {new_time} minutes for the coat to dry. How much longer will it take for the coat of varnish on {number_of_paintings} paintings with the new varnish to dry as it would with the old varnish?",
+        "variables": {
+            "numerical": {
+                "old_time": [5, 15],
+                "new_time": [16, 30],
+                "number_of_paintings": [2, 10]
+            }
+        },
+        "calculations": {
+            "total_old_time": "old_time * number_of_paintings",
+            "total_new_time": "new_time * number_of_paintings",
+            "extra_time": "total_new_time - total_old_time"
+        },
+        "conditions": {
+            "extra_time": [1, 300]
+        },
+        "solution": "Usually, the varnish on all {number_of_paintings} paintings would be dry in {old_time} * {number_of_paintings} = <<{old_time}*{number_of_paintings}={total_old_time}>>{total_old_time} minutes\nWith the new varnish, all {number_of_paintings} paintings would be dry in {new_time} * {number_of_paintings} = <<{new_time}*{number_of_paintings}={total_new_time}>>{total_new_time} minutes\nWith the new varnish, it will take {total_new_time} - {total_old_time} = <<{total_new_time}-{total_old_time}={extra_time}>>{extra_time} more minutes\n#### {extra_time}"
+    },
+    {
+        "id": 367,
+        "problem": "{initial_customers} customers were kicked out of the Walmart for refusing to wear masks. A number equals to four times that many minus {subtract_value} were kicked out for shoplifting. Three times the number of shoplifters were kicked out for physical violence over goods on sale. If a total of {total_customers} people were kicked out of the Walmart, how many were kicked out for other reasons?",
+        "variables": {
+            "numerical": {
+                "initial_customers": [2, 10],
+                "subtract_value": [1, 5],
+                "total_customers": [40, 100]
+            }
+        },
+        "calculations": {
+            "shoplifters_initial": "4 * initial_customers",
+            "shoplifters": "shoplifters_initial - subtract_value",
+            "violence": "shoplifters * 3",
+            "others": "total_customers - initial_customers - shoplifters - violence"
+        },
+        "conditions": {
+            "shoplifters": [1, 100],
+            "violence": [1, 300],
+            "others": [0, 100]
+        },
+        "solution": "First quadruple the number of customers kicked out for not wearing masks: 4 * {initial_customers} customers = <<4*{initial_customers}={shoplifters_initial}>>{shoplifters_initial} customers\nThen subtract {subtract_value} from this number: {shoplifters_initial} customers - {subtract_value} customers = <<{shoplifters_initial}-{subtract_value}={shoplifters}>>{shoplifters} customers\nThen triple that number to find the number of people kicked out for violence: {shoplifters} customers * 3 = <<{shoplifters}*3={violence}>>{violence} customers\nThen subtract the number of customers kicked out for each known reason to find the number kicked out for other reasons: {total_customers} customers - {initial_customers} customers - {shoplifters} customers - {violence} customers = <<{total_customers}-{initial_customers}-{shoplifters}-{violence}={others}>>{others} customers\n#### {others}"
+    }
 ]

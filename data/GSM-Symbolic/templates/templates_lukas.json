@@ -5,7 +5,7 @@
         "variables": {
             "numerical": {
                 "pages_per_inch": [50, 200],
-                "thickness": [1.0, 5.0]
+                "thickness": [2.0, 5.0]
             }
         },
         "calculations": {
@@ -47,7 +47,7 @@
         "variables": {
             "numerical": {
                 "sold_to_red": [2, 10],
-                "vacuum_left": [1, 20]
+                "vacuum_left": [2, 20]
             }
         },
         "calculations": {
@@ -65,8 +65,8 @@
         "problem": "{name_m_0} plans to watch two movies this weekend. The first movie is {first_hours} hour and {first_minutes} minutes long while the second movie is {second_hours} hours and {second_minutes} minutes long. How many minutes will it take {name_m_0} to watch the two movies?",
         "variables": {
             "numerical": {
-                "first_hours": [1, 2],
-                "first_minutes": [30, 59],
+                "first_hours": [1],
+                "first_minutes": [10, 59],
                 "second_hours": [2, 3],
                 "second_minutes": [1, 59]
             }
