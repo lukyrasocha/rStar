@@ -20,9 +20,8 @@
     },
     {
     "id": 1139,
-    "problem": "{name} orders his favorite bagels online. Each pack of bagels costs ${pack_cost} and has {bagels_per_pack} bagels in the pack. If he orders {num_packs} packs of bagels, he will receive a {discount_percentage}% discount. After ordering {num_packs} packs, how much will each single bagel cost?",
+    "problem": "{name_m_0} orders his favorite bagels online. Each pack of bagels costs ${pack_cost} and has {bagels_per_pack} bagels in the pack. If he orders {num_packs} packs of bagels, he will receive a {discount_percentage}% discount. After ordering {num_packs} packs, how much will each single bagel cost?",
     "variables": {
-        "name": ["Russell", "Michael", "David", "John"],
         "numerical": {
             "pack_cost": [10, 10],  
             "bagels_per_pack": [5, 10, 5],  
@@ -44,11 +43,12 @@
 },
     {
         "id": 13,
-        "problem": "{name} is a door-to-door saleswoman. She sold a third of her vacuum cleaners at the green house, {sold_to_red} more to the red house, and half of what was left at the orange house. If {name} has {vacuum_left} vacuum cleaners left, how many did she start with?",
+        "problem": "{name_f_0} is a door-to-door saleswoman. She sold a third of her vacuum cleaners at the green house, {sold_to_red} more to the red house, and half of what was left at the orange house. If {name_f_0} has {vacuum_left} vacuum cleaners left, how many did she start with?",
         "variables": {
-            "name": ["Melanie", "Sophia", "Emma", "Olivia"],
-            "sold_to_red": [2, 10],
-            "vacuum_left": [1, 20]
+            "numerical": {
+                "sold_to_red": [2, 10],
+                "vacuum_left": [1, 20]
+            }
         },
         "calculations": {
             "before_orange": "vacuum_left * 2",
@@ -58,17 +58,18 @@
         "conditions": {
             "original_total": [1, 1000]
         },
-        "solution": "First multiply the {vacuum_left} remaining vacuum cleaners by two to find out how many {name} had before she visited the orange house: {vacuum_left} * 2 = <<{vacuum_left}*2={before_orange}>>{before_orange}\nThen add {sold_to_red} to figure out how many vacuum cleaners she had before visiting the red house: {before_orange} + {sold_to_red} = <<{before_orange}+{sold_to_red}={before_red}>>{before_red}\nNow we know that 2/3 * x = {before_red}, where x is the number of vacuum cleaners {name} started with. We can find x by dividing each side of the equation by 2/3, which produces x = {original_total}\n#### {original_total}"
+        "solution": "First multiply the {vacuum_left} remaining vacuum cleaners by two to find out how many {name_f_0} had before she visited the orange house: {vacuum_left} * 2 = <<{vacuum_left}*2={before_orange}>>{before_orange}\nThen add {sold_to_red} to figure out how many vacuum cleaners she had before visiting the red house: {before_orange} + {sold_to_red} = <<{before_orange}+{sold_to_red}={before_red}>>{before_red}\nNow we know that 2/3 * x = {before_red}, where x is the number of vacuum cleaners {name_f_0} started with. We can find x by dividing each side of the equation by 2/3, which produces x = {original_total}\n#### {original_total}"
     },
     {
         "id": 581,
-        "problem": "{name} plans to watch two movies this weekend. The first movie is {first_hours} hour and {first_minutes} minutes long while the second movie is {second_hours} hours and {second_minutes} minutes long. How many minutes will it take {name} to watch the two movies?",
+        "problem": "{name_m_0} plans to watch two movies this weekend. The first movie is {first_hours} hour and {first_minutes} minutes long while the second movie is {second_hours} hours and {second_minutes} minutes long. How many minutes will it take {name_m_0} to watch the two movies?",
         "variables": {
-            "name": ["Max", "Alex", "Chris", "Sam"],
-            "first_hours": [1, 2],
-            "first_minutes": [30, 59],
-            "second_hours": [2, 3],
-            "second_minutes": [1, 59]
+            "numerical": {
+                "first_hours": [1, 2],
+                "first_minutes": [30, 59],
+                "second_hours": [2, 3],
+                "second_minutes": [1, 59]
+            }
         },
         "calculations": {
             "first_movie_hours_in_minutes": "first_hours * 60",
@@ -80,7 +81,7 @@
         "conditions": {
             "total_time": [100, 400]
         },
-        "solution": "One hour has 60 minutes.\nThe first movie is {first_movie_hours_in_minutes} + {first_minutes} = <<{first_movie_hours_in_minutes}+{first_minutes}={first_movie_length}>>{first_movie_length} minutes long.\n{second_hours} hours is equal to {second_hours} x 60 = <<{second_hours}*60={second_movie_hours_in_minutes}>>{second_movie_hours_in_minutes} minutes.\nThe second movie is {second_movie_hours_in_minutes} + {second_minutes} = <<{second_movie_hours_in_minutes}+{second_minutes}={second_movie_length}>>{second_movie_length} minutes long.\n{name} will take {first_movie_length} + {second_movie_length} = <<{first_movie_length}+{second_movie_length}={total_time}>>{total_time} minutes to watch the two movies.\n#### {total_time}"
+        "solution": "One hour has 60 minutes.\nThe first movie is {first_movie_hours_in_minutes} + {first_minutes} = <<{first_movie_hours_in_minutes}+{first_minutes}={first_movie_length}>>{first_movie_length} minutes long.\n{second_hours} hours is equal to {second_hours} x 60 = <<{second_hours}*60={second_movie_hours_in_minutes}>>{second_movie_hours_in_minutes} minutes.\nThe second movie is {second_movie_hours_in_minutes} + {second_minutes} = <<{second_movie_hours_in_minutes}+{second_minutes}={second_movie_length}>>{second_movie_length} minutes long.\n{name_m_0} will take {first_movie_length} + {second_movie_length} = <<{first_movie_length}+{second_movie_length}={total_time}>>{total_time} minutes to watch the two movies.\n#### {total_time}"
     },
     {
         "id": 367,
@@ -107,9 +108,8 @@
     },
     {
         "id": 1180,
-        "problem": "A company sold {total_gallons} gallons of milk in jars to Mr. {name}'s store at the cost of ${price_per_gallon} per gallon. However, Mr. {name} later realized {expired_fraction_numerator}/{expired_fraction_denominator} of the amount of milk he purchased had passed the expiry date and could not be sold. He returned the sour milk to the company and ordered a refund. Calculate how much he got in refunds.",
+        "problem": "A company sold {total_gallons} gallons of milk in jars to Mr. {name_m_0}'s store at the cost of ${price_per_gallon} per gallon. However, Mr. {name_m_0} later realized {expired_fraction_numerator}/{expired_fraction_denominator} of the amount of milk he purchased had passed the expiry date and could not be sold. He returned the sour milk to the company and ordered a refund. Calculate how much he got in refunds.",
         "variables": {
-            "name": ["Marcellus", "Johnson", "Smith", "Brown"],
             "numerical": {
                 "total_gallons": [1000, 5000],
                 "price_per_gallon": [2, 5],
@@ -151,9 +151,8 @@
     },
     {
         "id": 1254,
-        "problem": "{name} is an artist and needs to apply a coat of varnish to her latest paintings. Usually it takes {old_time} minutes for the coat of varnish to dry on one painting. However, today she is using a new varnish and it takes {new_time} minutes for the coat to dry. How much longer will it take for the coat of varnish on {number_of_paintings} paintings with the new varnish to dry as it would with the old varnish?",
+        "problem": "{name_f_0} is an artist and needs to apply a coat of varnish to her latest paintings. Usually it takes {old_time} minutes for the coat of varnish to dry on one painting. However, today she is using a new varnish and it takes {new_time} minutes for the coat to dry. How much longer will it take for the coat of varnish on {number_of_paintings} paintings with the new varnish to dry as it would with the old varnish?",
         "variables": {
-            "name": ["Louise", "Emma", "Sophia", "Olivia"],
             "numerical": {
                 "old_time": [5, 15],
                 "new_time": [16, 30],
