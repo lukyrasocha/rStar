@@ -10,7 +10,10 @@
         "z":[10,100]
         }
     },
-    "conditions": {},
+    "conditions": {
+        "sprints_per_week":[1, 100],
+        "ans":[10, 10000]
+    },
     "calculations": {
         "sprints_per_week": "x*y",
         "ans": "sprints_per_week*z"
@@ -29,13 +32,14 @@
         }
     },
     "conditions": {
-        "total_price":[1, 1100]
+        "total_price":[1, 1100],
+        "ans":[1, 220]
     },
     "calculations": {
         "total_price":"x+y",
         "ans":"total_price/z"
     },
-    "solution": "She wants to buy a pair of shoes for ${x}.00 and a belt for ${y}.00 for a total of {x}+{y} = $<<{x}+{y}={total_price}.00>>{total_price}.00\nHer purchase will total ${total_price}.00 and she makes ${z}.00 at her part-time job so she'll have to work {total_price}/{z} = <<{total_price}/{z}={ans}>>{ans} hours\n#### {ans}"
+    "solution": "She wants to buy a pair of shoes for ${x}.00 and a belt for ${y}.00 for a total of {x}+{y} = $<<{x}+{y}={total_price}>>{total_price}.00\nHer purchase will total ${total_price}.00 and she makes ${z}.00 at her part-time job so she'll have to work {total_price}/{z} = <<{total_price}/{z}={ans}>>{ans} hours\n#### {ans}"
     },
     {
     "id": 314,
@@ -46,7 +50,9 @@
         "x": [1, 200]
         }
     },
-    "conditions": {},
+    "conditions": {
+        "ans":[1, 200]
+    },
     "calculations": {
         "ans":"2/7*x"
     },
@@ -63,7 +69,11 @@
         "z": [2, 6]
         }
     },
-    "conditions": {},
+    "conditions": {
+        "hours_per_week":[4, 12],
+        "price_per_week":[400, 12000],
+        "ans":[800, 500000]
+    },
     "calculations": {
         "hours_per_week": "2*z",
         "price_per_week": "hours_per_week*y",
@@ -82,7 +92,11 @@
         "z":[1, 100]
         }
     },
-    "conditions": {},
+    "conditions": {
+        "birds_scared":[2, 50],
+        "birds_remaining":[1, 100],
+        "ans":[1, 200]
+    },
     "calculations": {
         "birds_scared": "x/y",
         "birds_remaining":"x-birds_scared",
@@ -120,7 +134,10 @@
         "x":[2,100]
         }
     },
-    "conditions": {},
+    "conditions": {
+        "shark_blood":[6, 300],
+        "ans":[60, 3000]
+    },
     "calculations": {
         "shark_blood": "3*x",
         "ans": "10*shark_blood"

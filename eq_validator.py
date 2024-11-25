@@ -29,8 +29,19 @@ def validate_eqs(templates):
         print("No errors found!")
 
 def main():
-    templates = read_json("data/GSM8K-Symbolic/variations.json")
-    validate_eqs(templates)
+    import argparse
+    parser = argparse.ArgumentParser(description="Check equations of GSM-Symbolic variations")
+    parser.add_argument(
+        "--variations", 
+        type=str, 
+        required=True,
+        help="Filename of the variations (without extension, should be in the 'data/GSM-Symbolic/variations' folder)"
+    )
+    args = parser.parse_args()
+    
+    variations = read_json(f"data/GSM-Symbolic/variations/{args.variations}.json")
+    #templates = read_json("data/GSM8K-Symbolic/variations.json")
+    validate_eqs(variations)
 
 if __name__ == "__main__":
     main()
