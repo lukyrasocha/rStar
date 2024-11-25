@@ -1,5 +1,5 @@
 from common.utils import *
-#from exp1-2_generator import *
+from exp12_generator import *
 
 # Convert dict floats to ints
 def convert_all_to_int(data):
@@ -157,19 +157,19 @@ def main():
         default=10, 
         help="Number of variations per template"
     )
-    #parser.add_argument(
-    #    "--exp", 
-    #    type=int, 
-    #    required=True
-    #    help="Experiment number (1: change names, 2: change numbers, 3: change both, 4: NoOp)"
-    #)
+    parser.add_argument(
+        "--exp", 
+        type=int, 
+        required=True,
+        help="Experiment number (1: change names, 2: change numbers, 3: change both, 4: NoOp)"
+    )
     
     args = parser.parse_args()
     
     templates = read_json(f"data/GSM-Symbolic/templates/{args.templates}.json")
     
-    #if args.exp == 1 or 2:
-    #    templates = generate_templates(templates, args.exp)
+    if args.exp == 1 or 2:
+        templates = generate_templates(templates, args.exp)
     
     # Generate variations
     variations = generate_variations_for_templates(templates, args.n_per_template)
