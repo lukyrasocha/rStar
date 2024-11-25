@@ -39,7 +39,8 @@
         },
         "conditions": {
             "remaining_calories": [1, 2500],
-            "servings_can_eat": [0.1, 10],
+            "serving_size": [1, 25],
+            "servings_can_eat": [1, 10],
             "grams_can_eat": [1, 1000],
             "ans": [1, 1000]
         },
