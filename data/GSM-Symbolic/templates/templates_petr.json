@@ -32,7 +32,7 @@
             "numerical": {
                 "calories_per_serving": [100, 500],
                 "bag_weight": [100, 1000],
-                "servings_per_bag": [1, 10],
+                "servings_per_bag": [2, 10],
                 "daily_calorie_target": [1500, 3000],
                 "calories_consumed": [500, 1500]
             }
@@ -58,7 +58,7 @@
         "problem": "{name_m_0} buys {number_per_person} shoes for each of his {number_of_people} children. They cost ${item_cost} each. How much did {name_m_0} pay?",
         "variables": {
             "numerical": {
-                "number_per_person": [1, 5],
+                "number_per_person": [2, 5],
                 "number_of_people": [2, 6],
                 "item_cost": [10, 100]
             }
@@ -112,10 +112,10 @@
                 "item2_price": [1, 2],
                 "item3_price": [10, 20],
                 "item4_price": [5, 15],
-                "item1_quantity": [1, 10],
-                "item2_quantity": [1, 20],
-                "item3_quantity": [1, 2],
-                "item4_quantity": [1, 3],
+                "item1_quantity": [2, 10],
+                "item2_quantity": [2, 20],
+                "item3_quantity": [1, 1],
+                "item4_quantity": [1, 1],
                 "discount_percentage": [5, 20]
             }
         },
@@ -194,7 +194,7 @@
             "numerical": {
                 "total_distance": [1750, 6000],
                 "speed": [40, 80],
-                "days": [1, 5]
+                "days": [2, 5]
             }
         },
         "conditions": {
