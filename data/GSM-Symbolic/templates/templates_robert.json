@@ -44,7 +44,7 @@
     "problem": "A football team has {x} members.  There are twice as many players on the offense as there is on the defense. There is half the number of players on the special teams as there is on the defense.  How many players are on the defense?",
     "variables": {
         "numerical": {
-            "x": [1, 200]
+            "x": [2, 200]
         }
     },
     "conditions": {
@@ -84,7 +84,7 @@
         "numerical": {
         "x":[10, 100],
         "y":[2, 5],
-        "z":[1, 100]
+        "z":[2, 100]
         }
     },
     "conditions": {
