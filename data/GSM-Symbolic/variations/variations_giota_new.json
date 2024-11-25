@@ -1,0 +1,482 @@
+[
+    {
+        "id": 0,
+        "parent_id": 170,
+        "problem": "The marching band is ordering new uniforms. Each uniform comes with a hat that costs 76, a jacket that costs 2 times as much as the hat, and pants that cost the average of the costs of the hat and jacket. How much does each uniform cost total?",
+        "solution": "The cost of the jacket is 76 * 2 = <<76*2=152>>152.\nThe cost of the pants is the average of the hat and jacket: (76 + 152) / 2 = <<(76+152)/2=114>>114.\nThe total cost of the uniform is 76 + 152 + 114 = <<76+152+114=342>>342.\n#### 342"
+    },
+    {
+        "id": 1,
+        "parent_id": 170,
+        "problem": "The marching band is ordering new uniforms. Each uniform comes with a hat that costs 92, a jacket that costs 3 times as much as the hat, and pants that cost the average of the costs of the hat and jacket. How much does each uniform cost total?",
+        "solution": "The cost of the jacket is 92 * 3 = <<92*3=276>>276.\nThe cost of the pants is the average of the hat and jacket: (92 + 276) / 2 = <<(92+276)/2=184>>184.\nThe total cost of the uniform is 92 + 276 + 184 = <<92+276+184=552>>552.\n#### 552"
+    },
+    {
+        "id": 2,
+        "parent_id": 170,
+        "problem": "The marching band is ordering new uniforms. Each uniform comes with a hat that costs 177, a jacket that costs 1 times as much as the hat, and pants that cost the average of the costs of the hat and jacket. How much does each uniform cost total?",
+        "solution": "The cost of the jacket is 177 * 1 = <<177*1=177>>177.\nThe cost of the pants is the average of the hat and jacket: (177 + 177) / 2 = <<(177+177)/2=177>>177.\nThe total cost of the uniform is 177 + 177 + 177 = <<177+177+177=531>>531.\n#### 531"
+    },
+    {
+        "id": 3,
+        "parent_id": 170,
+        "problem": "The marching band is ordering new uniforms. Each uniform comes with a hat that costs 84, a jacket that costs 2 times as much as the hat, and pants that cost the average of the costs of the hat and jacket. How much does each uniform cost total?",
+        "solution": "The cost of the jacket is 84 * 2 = <<84*2=168>>168.\nThe cost of the pants is the average of the hat and jacket: (84 + 168) / 2 = <<(84+168)/2=126>>126.\nThe total cost of the uniform is 84 + 168 + 126 = <<84+168+126=378>>378.\n#### 378"
+    },
+    {
+        "id": 4,
+        "parent_id": 170,
+        "problem": "The marching band is ordering new uniforms. Each uniform comes with a hat that costs 156, a jacket that costs 1 times as much as the hat, and pants that cost the average of the costs of the hat and jacket. How much does each uniform cost total?",
+        "solution": "The cost of the jacket is 156 * 1 = <<156*1=156>>156.\nThe cost of the pants is the average of the hat and jacket: (156 + 156) / 2 = <<(156+156)/2=156>>156.\nThe total cost of the uniform is 156 + 156 + 156 = <<156+156+156=468>>468.\n#### 468"
+    },
+    {
+        "id": 5,
+        "parent_id": 170,
+        "problem": "The marching band is ordering new uniforms. Each uniform comes with a hat that costs 29, a jacket that costs 1 times as much as the hat, and pants that cost the average of the costs of the hat and jacket. How much does each uniform cost total?",
+        "solution": "The cost of the jacket is 29 * 1 = <<29*1=29>>29.\nThe cost of the pants is the average of the hat and jacket: (29 + 29) / 2 = <<(29+29)/2=29>>29.\nThe total cost of the uniform is 29 + 29 + 29 = <<29+29+29=87>>87.\n#### 87"
+    },
+    {
+        "id": 6,
+        "parent_id": 170,
+        "problem": "The marching band is ordering new uniforms. Each uniform comes with a hat that costs 79, a jacket that costs 3 times as much as the hat, and pants that cost the average of the costs of the hat and jacket. How much does each uniform cost total?",
+        "solution": "The cost of the jacket is 79 * 3 = <<79*3=237>>237.\nThe cost of the pants is the average of the hat and jacket: (79 + 237) / 2 = <<(79+237)/2=158>>158.\nThe total cost of the uniform is 79 + 237 + 158 = <<79+237+158=474>>474.\n#### 474"
+    },
+    {
+        "id": 7,
+        "parent_id": 170,
+        "problem": "The marching band is ordering new uniforms. Each uniform comes with a hat that costs 130, a jacket that costs 3 times as much as the hat, and pants that cost the average of the costs of the hat and jacket. How much does each uniform cost total?",
+        "solution": "The cost of the jacket is 130 * 3 = <<130*3=390>>390.\nThe cost of the pants is the average of the hat and jacket: (130 + 390) / 2 = <<(130+390)/2=260>>260.\nThe total cost of the uniform is 130 + 390 + 260 = <<130+390+260=780>>780.\n#### 780"
+    },
+    {
+        "id": 8,
+        "parent_id": 170,
+        "problem": "The marching band is ordering new uniforms. Each uniform comes with a hat that costs 152, a jacket that costs 3 times as much as the hat, and pants that cost the average of the costs of the hat and jacket. How much does each uniform cost total?",
+        "solution": "The cost of the jacket is 152 * 3 = <<152*3=456>>456.\nThe cost of the pants is the average of the hat and jacket: (152 + 456) / 2 = <<(152+456)/2=304>>304.\nThe total cost of the uniform is 152 + 456 + 304 = <<152+456+304=912>>912.\n#### 912"
+    },
+    {
+        "id": 9,
+        "parent_id": 170,
+        "problem": "The marching band is ordering new uniforms. Each uniform comes with a hat that costs 147, a jacket that costs 1 times as much as the hat, and pants that cost the average of the costs of the hat and jacket. How much does each uniform cost total?",
+        "solution": "The cost of the jacket is 147 * 1 = <<147*1=147>>147.\nThe cost of the pants is the average of the hat and jacket: (147 + 147) / 2 = <<(147+147)/2=147>>147.\nThe total cost of the uniform is 147 + 147 + 147 = <<147+147+147=441>>441.\n#### 441"
+    },
+    {
+        "id": 10,
+        "parent_id": 990,
+        "problem": "An air conditioner cools a room 3 degrees an hour on low and 5 degrees an hour on high. The room will warm up at 2 degrees an hour with no air conditioner running. The air conditioner ran on low for 4 hours, then it was turned up to high for 4 hours. Afterward, it was turned off for 3 hours. How many degrees lower than the starting temperature was the final temperature?",
+        "solution": "The air conditioner ran on low for 4 hours, so the temperature dropped 3 * 4 = <<3*4=12>>12 degrees.\nIt then ran on high for 4 hours, so the temperature dropped another 5 * 4 = <<5*4=20>>20 degrees.\nWhile off, the temperature rose 2 * 3 = <<2*3=6>>6 degrees.\nThus, the final temperature difference is 12 + 20 - 6 = <<12+20-6=26>>26 degrees lower than the starting temperature.\n#### 26"
+    },
+    {
+        "id": 11,
+        "parent_id": 990,
+        "problem": "An air conditioner cools a room 5 degrees an hour on low and 4 degrees an hour on high. The room will warm up at 2 degrees an hour with no air conditioner running. The air conditioner ran on low for 4 hours, then it was turned up to high for 6 hours. Afterward, it was turned off for 3 hours. How many degrees lower than the starting temperature was the final temperature?",
+        "solution": "The air conditioner ran on low for 4 hours, so the temperature dropped 5 * 4 = <<5*4=20>>20 degrees.\nIt then ran on high for 6 hours, so the temperature dropped another 4 * 6 = <<4*6=24>>24 degrees.\nWhile off, the temperature rose 2 * 3 = <<2*3=6>>6 degrees.\nThus, the final temperature difference is 20 + 24 - 6 = <<20+24-6=38>>38 degrees lower than the starting temperature.\n#### 38"
+    },
+    {
+        "id": 12,
+        "parent_id": 990,
+        "problem": "An air conditioner cools a room 5 degrees an hour on low and 6 degrees an hour on high. The room will warm up at 3 degrees an hour with no air conditioner running. The air conditioner ran on low for 2 hours, then it was turned up to high for 3 hours. Afterward, it was turned off for 2 hours. How many degrees lower than the starting temperature was the final temperature?",
+        "solution": "The air conditioner ran on low for 2 hours, so the temperature dropped 5 * 2 = <<5*2=10>>10 degrees.\nIt then ran on high for 3 hours, so the temperature dropped another 6 * 3 = <<6*3=18>>18 degrees.\nWhile off, the temperature rose 3 * 2 = <<3*2=6>>6 degrees.\nThus, the final temperature difference is 10 + 18 - 6 = <<10+18-6=22>>22 degrees lower than the starting temperature.\n#### 22"
+    },
+    {
+        "id": 13,
+        "parent_id": 990,
+        "problem": "An air conditioner cools a room 5 degrees an hour on low and 3 degrees an hour on high. The room will warm up at 2 degrees an hour with no air conditioner running. The air conditioner ran on low for 3 hours, then it was turned up to high for 4 hours. Afterward, it was turned off for 3 hours. How many degrees lower than the starting temperature was the final temperature?",
+        "solution": "The air conditioner ran on low for 3 hours, so the temperature dropped 5 * 3 = <<5*3=15>>15 degrees.\nIt then ran on high for 4 hours, so the temperature dropped another 3 * 4 = <<3*4=12>>12 degrees.\nWhile off, the temperature rose 2 * 3 = <<2*3=6>>6 degrees.\nThus, the final temperature difference is 15 + 12 - 6 = <<15+12-6=21>>21 degrees lower than the starting temperature.\n#### 21"
+    },
+    {
+        "id": 14,
+        "parent_id": 990,
+        "problem": "An air conditioner cools a room 4 degrees an hour on low and 4 degrees an hour on high. The room will warm up at 3 degrees an hour with no air conditioner running. The air conditioner ran on low for 5 hours, then it was turned up to high for 4 hours. Afterward, it was turned off for 3 hours. How many degrees lower than the starting temperature was the final temperature?",
+        "solution": "The air conditioner ran on low for 5 hours, so the temperature dropped 4 * 5 = <<4*5=20>>20 degrees.\nIt then ran on high for 4 hours, so the temperature dropped another 4 * 4 = <<4*4=16>>16 degrees.\nWhile off, the temperature rose 3 * 3 = <<3*3=9>>9 degrees.\nThus, the final temperature difference is 20 + 16 - 9 = <<20+16-9=27>>27 degrees lower than the starting temperature.\n#### 27"
+    },
+    {
+        "id": 15,
+        "parent_id": 990,
+        "problem": "An air conditioner cools a room 5 degrees an hour on low and 3 degrees an hour on high. The room will warm up at 2 degrees an hour with no air conditioner running. The air conditioner ran on low for 2 hours, then it was turned up to high for 3 hours. Afterward, it was turned off for 1 hours. How many degrees lower than the starting temperature was the final temperature?",
+        "solution": "The air conditioner ran on low for 2 hours, so the temperature dropped 5 * 2 = <<5*2=10>>10 degrees.\nIt then ran on high for 3 hours, so the temperature dropped another 3 * 3 = <<3*3=9>>9 degrees.\nWhile off, the temperature rose 2 * 1 = <<2*1=2>>2 degrees.\nThus, the final temperature difference is 10 + 9 - 2 = <<10+9-2=17>>17 degrees lower than the starting temperature.\n#### 17"
+    },
+    {
+        "id": 16,
+        "parent_id": 990,
+        "problem": "An air conditioner cools a room 4 degrees an hour on low and 3 degrees an hour on high. The room will warm up at 2 degrees an hour with no air conditioner running. The air conditioner ran on low for 1 hours, then it was turned up to high for 5 hours. Afterward, it was turned off for 1 hours. How many degrees lower than the starting temperature was the final temperature?",
+        "solution": "The air conditioner ran on low for 1 hours, so the temperature dropped 4 * 1 = <<4*1=4>>4 degrees.\nIt then ran on high for 5 hours, so the temperature dropped another 3 * 5 = <<3*5=15>>15 degrees.\nWhile off, the temperature rose 2 * 1 = <<2*1=2>>2 degrees.\nThus, the final temperature difference is 4 + 15 - 2 = <<4+15-2=17>>17 degrees lower than the starting temperature.\n#### 17"
+    },
+    {
+        "id": 17,
+        "parent_id": 990,
+        "problem": "An air conditioner cools a room 1 degrees an hour on low and 4 degrees an hour on high. The room will warm up at 3 degrees an hour with no air conditioner running. The air conditioner ran on low for 1 hours, then it was turned up to high for 3 hours. Afterward, it was turned off for 2 hours. How many degrees lower than the starting temperature was the final temperature?",
+        "solution": "The air conditioner ran on low for 1 hours, so the temperature dropped 1 * 1 = <<1*1=1>>1 degrees.\nIt then ran on high for 3 hours, so the temperature dropped another 4 * 3 = <<4*3=12>>12 degrees.\nWhile off, the temperature rose 3 * 2 = <<3*2=6>>6 degrees.\nThus, the final temperature difference is 1 + 12 - 6 = <<1+12-6=7>>7 degrees lower than the starting temperature.\n#### 7"
+    },
+    {
+        "id": 18,
+        "parent_id": 990,
+        "problem": "An air conditioner cools a room 4 degrees an hour on low and 2 degrees an hour on high. The room will warm up at 3 degrees an hour with no air conditioner running. The air conditioner ran on low for 1 hours, then it was turned up to high for 2 hours. Afterward, it was turned off for 1 hours. How many degrees lower than the starting temperature was the final temperature?",
+        "solution": "The air conditioner ran on low for 1 hours, so the temperature dropped 4 * 1 = <<4*1=4>>4 degrees.\nIt then ran on high for 2 hours, so the temperature dropped another 2 * 2 = <<2*2=4>>4 degrees.\nWhile off, the temperature rose 3 * 1 = <<3*1=3>>3 degrees.\nThus, the final temperature difference is 4 + 4 - 3 = <<4+4-3=5>>5 degrees lower than the starting temperature.\n#### 5"
+    },
+    {
+        "id": 19,
+        "parent_id": 990,
+        "problem": "An air conditioner cools a room 2 degrees an hour on low and 3 degrees an hour on high. The room will warm up at 2 degrees an hour with no air conditioner running. The air conditioner ran on low for 4 hours, then it was turned up to high for 3 hours. Afterward, it was turned off for 3 hours. How many degrees lower than the starting temperature was the final temperature?",
+        "solution": "The air conditioner ran on low for 4 hours, so the temperature dropped 2 * 4 = <<2*4=8>>8 degrees.\nIt then ran on high for 3 hours, so the temperature dropped another 3 * 3 = <<3*3=9>>9 degrees.\nWhile off, the temperature rose 2 * 3 = <<2*3=6>>6 degrees.\nThus, the final temperature difference is 8 + 9 - 6 = <<8+9-6=11>>11 degrees lower than the starting temperature.\n#### 11"
+    },
+    {
+        "id": 20,
+        "parent_id": 27,
+        "problem": "Mary eats one serving of ice cream every night. They buy cartons of ice cream with 15 servings per carton at a cost of $2 per carton. After 45 days, how much will they spend on ice cream?",
+        "solution": "Each carton has 15 servings, and Mary eats 1 serving a night. So after 45 days, they will need 45 / 15 = <<45/15=3>>3 cartons of ice cream.\nIf each carton costs $2, then the total cost is 3 * 2 = $<<3*2=6>>6.\n#### 6"
+    },
+    {
+        "id": 21,
+        "parent_id": 27,
+        "problem": "Sarah eats one serving of ice cream every night. They buy cartons of ice cream with 13 servings per carton at a cost of $4 per carton. After 65 days, how much will they spend on ice cream?",
+        "solution": "Each carton has 13 servings, and Sarah eats 1 serving a night. So after 65 days, they will need 65 / 13 = <<65/13=5>>5 cartons of ice cream.\nIf each carton costs $4, then the total cost is 5 * 4 = $<<5*4=20>>20.\n#### 20"
+    },
+    {
+        "id": 22,
+        "parent_id": 27,
+        "problem": "Elizabeth eats one serving of ice cream every night. They buy cartons of ice cream with 11 servings per carton at a cost of $4 per carton. After 88 days, how much will they spend on ice cream?",
+        "solution": "Each carton has 11 servings, and Elizabeth eats 1 serving a night. So after 88 days, they will need 88 / 11 = <<88/11=8>>8 cartons of ice cream.\nIf each carton costs $4, then the total cost is 8 * 4 = $<<8*4=32>>32.\n#### 32"
+    },
+    {
+        "id": 23,
+        "parent_id": 27,
+        "problem": "Linda eats one serving of ice cream every night. They buy cartons of ice cream with 10 servings per carton at a cost of $5 per carton. After 80 days, how much will they spend on ice cream?",
+        "solution": "Each carton has 10 servings, and Linda eats 1 serving a night. So after 80 days, they will need 80 / 10 = <<80/10=8>>8 cartons of ice cream.\nIf each carton costs $5, then the total cost is 8 * 5 = $<<8*5=40>>40.\n#### 40"
+    },
+    {
+        "id": 24,
+        "parent_id": 27,
+        "problem": "Jessica eats one serving of ice cream every night. They buy cartons of ice cream with 18 servings per carton at a cost of $5 per carton. After 90 days, how much will they spend on ice cream?",
+        "solution": "Each carton has 18 servings, and Jessica eats 1 serving a night. So after 90 days, they will need 90 / 18 = <<90/18=5>>5 cartons of ice cream.\nIf each carton costs $5, then the total cost is 5 * 5 = $<<5*5=25>>25.\n#### 25"
+    },
+    {
+        "id": 25,
+        "parent_id": 27,
+        "problem": "Margaret eats one serving of ice cream every night. They buy cartons of ice cream with 10 servings per carton at a cost of $4 per carton. After 40 days, how much will they spend on ice cream?",
+        "solution": "Each carton has 10 servings, and Margaret eats 1 serving a night. So after 40 days, they will need 40 / 10 = <<40/10=4>>4 cartons of ice cream.\nIf each carton costs $4, then the total cost is 4 * 4 = $<<4*4=16>>16.\n#### 16"
+    },
+    {
+        "id": 26,
+        "parent_id": 27,
+        "problem": "Sarah eats one serving of ice cream every night. They buy cartons of ice cream with 10 servings per carton at a cost of $3 per carton. After 60 days, how much will they spend on ice cream?",
+        "solution": "Each carton has 10 servings, and Sarah eats 1 serving a night. So after 60 days, they will need 60 / 10 = <<60/10=6>>6 cartons of ice cream.\nIf each carton costs $3, then the total cost is 6 * 3 = $<<6*3=18>>18.\n#### 18"
+    },
+    {
+        "id": 27,
+        "parent_id": 27,
+        "problem": "Barbara eats one serving of ice cream every night. They buy cartons of ice cream with 13 servings per carton at a cost of $5 per carton. After 78 days, how much will they spend on ice cream?",
+        "solution": "Each carton has 13 servings, and Barbara eats 1 serving a night. So after 78 days, they will need 78 / 13 = <<78/13=6>>6 cartons of ice cream.\nIf each carton costs $5, then the total cost is 6 * 5 = $<<6*5=30>>30.\n#### 30"
+    },
+    {
+        "id": 28,
+        "parent_id": 27,
+        "problem": "Mary eats one serving of ice cream every night. They buy cartons of ice cream with 12 servings per carton at a cost of $5 per carton. After 84 days, how much will they spend on ice cream?",
+        "solution": "Each carton has 12 servings, and Mary eats 1 serving a night. So after 84 days, they will need 84 / 12 = <<84/12=7>>7 cartons of ice cream.\nIf each carton costs $5, then the total cost is 7 * 5 = $<<7*5=35>>35.\n#### 35"
+    },
+    {
+        "id": 29,
+        "parent_id": 27,
+        "problem": "Linda eats one serving of ice cream every night. They buy cartons of ice cream with 17 servings per carton at a cost of $3 per carton. After 34 days, how much will they spend on ice cream?",
+        "solution": "Each carton has 17 servings, and Linda eats 1 serving a night. So after 34 days, they will need 34 / 17 = <<34/17=2>>2 cartons of ice cream.\nIf each carton costs $3, then the total cost is 2 * 3 = $<<2*3=6>>6.\n#### 6"
+    },
+    {
+        "id": 30,
+        "parent_id": 1244,
+        "problem": "Jennifer has to take two math tests to pass 7 grade. They must correctly answer 62% of the total questions to move on to the next grade. The first test has 50 questions, and they get 64% of them correct. The second test has 50 questions. How many questions do they need to get right on the second test to pass?",
+        "solution": "There are 50 + 50 = <<50+50=100>>100 questions in total.\nJennifer needs to get 100 * 62% = <<100*62/100=62>>62 questions correct to pass.\nThey got 50 * 64% = <<50*64/100=32>>32 questions correct on the first test.\nThey need 62 - 32 = <<62-32=30>>30 questions correct on the second test.\n#### 30"
+    },
+    {
+        "id": 31,
+        "parent_id": 1244,
+        "problem": "Mary has to take two math tests to pass 7 grade. They must correctly answer 70% of the total questions to move on to the next grade. The first test has 50 questions, and they get 56% of them correct. The second test has 30 questions. How many questions do they need to get right on the second test to pass?",
+        "solution": "There are 50 + 30 = <<50+30=80>>80 questions in total.\nMary needs to get 80 * 70% = <<80*70/100=56>>56 questions correct to pass.\nThey got 50 * 56% = <<50*56/100=28>>28 questions correct on the first test.\nThey need 56 - 28 = <<56-28=28>>28 questions correct on the second test.\n#### 28"
+    },
+    {
+        "id": 32,
+        "parent_id": 1244,
+        "problem": "Mary has to take two math tests to pass 6 grade. They must correctly answer 80% of the total questions to move on to the next grade. The first test has 80 questions, and they get 50% of them correct. The second test has 30 questions. How many questions do they need to get right on the second test to pass?",
+        "solution": "There are 80 + 30 = <<80+30=110>>110 questions in total.\nMary needs to get 110 * 80% = <<110*80/100=88>>88 questions correct to pass.\nThey got 80 * 50% = <<80*50/100=40>>40 questions correct on the first test.\nThey need 88 - 40 = <<88-40=48>>48 questions correct on the second test.\n#### 48"
+    },
+    {
+        "id": 33,
+        "parent_id": 1244,
+        "problem": "Elizabeth has to take two math tests to pass 7 grade. They must correctly answer 74% of the total questions to move on to the next grade. The first test has 60 questions, and they get 55% of them correct. The second test has 40 questions. How many questions do they need to get right on the second test to pass?",
+        "solution": "There are 60 + 40 = <<60+40=100>>100 questions in total.\nElizabeth needs to get 100 * 74% = <<100*74/100=74>>74 questions correct to pass.\nThey got 60 * 55% = <<60*55/100=33>>33 questions correct on the first test.\nThey need 74 - 33 = <<74-33=41>>41 questions correct on the second test.\n#### 41"
+    },
+    {
+        "id": 34,
+        "parent_id": 1244,
+        "problem": "Linda has to take two math tests to pass 6 grade. They must correctly answer 70% of the total questions to move on to the next grade. The first test has 54 questions, and they get 50% of them correct. The second test has 36 questions. How many questions do they need to get right on the second test to pass?",
+        "solution": "There are 54 + 36 = <<54+36=90>>90 questions in total.\nLinda needs to get 90 * 70% = <<90*70/100=63>>63 questions correct to pass.\nThey got 54 * 50% = <<54*50/100=27>>27 questions correct on the first test.\nThey need 63 - 27 = <<63-27=36>>36 questions correct on the second test.\n#### 36"
+    },
+    {
+        "id": 35,
+        "parent_id": 1244,
+        "problem": "Barbara has to take two math tests to pass 7 grade. They must correctly answer 77% of the total questions to move on to the next grade. The first test has 50 questions, and they get 54% of them correct. The second test has 50 questions. How many questions do they need to get right on the second test to pass?",
+        "solution": "There are 50 + 50 = <<50+50=100>>100 questions in total.\nBarbara needs to get 100 * 77% = <<100*77/100=77>>77 questions correct to pass.\nThey got 50 * 54% = <<50*54/100=27>>27 questions correct on the first test.\nThey need 77 - 27 = <<77-27=50>>50 questions correct on the second test.\n#### 50"
+    },
+    {
+        "id": 36,
+        "parent_id": 1244,
+        "problem": "Barbara has to take two math tests to pass 7 grade. They must correctly answer 70% of the total questions to move on to the next grade. The first test has 50 questions, and they get 50% of them correct. The second test has 50 questions. How many questions do they need to get right on the second test to pass?",
+        "solution": "There are 50 + 50 = <<50+50=100>>100 questions in total.\nBarbara needs to get 100 * 70% = <<100*70/100=70>>70 questions correct to pass.\nThey got 50 * 50% = <<50*50/100=25>>25 questions correct on the first test.\nThey need 70 - 25 = <<70-25=45>>45 questions correct on the second test.\n#### 45"
+    },
+    {
+        "id": 37,
+        "parent_id": 1244,
+        "problem": "Margaret has to take two math tests to pass 6 grade. They must correctly answer 60% of the total questions to move on to the next grade. The first test has 50 questions, and they get 70% of them correct. The second test has 40 questions. How many questions do they need to get right on the second test to pass?",
+        "solution": "There are 50 + 40 = <<50+40=90>>90 questions in total.\nMargaret needs to get 90 * 60% = <<90*60/100=54>>54 questions correct to pass.\nThey got 50 * 70% = <<50*70/100=35>>35 questions correct on the first test.\nThey need 54 - 35 = <<54-35=19>>19 questions correct on the second test.\n#### 19"
+    },
+    {
+        "id": 38,
+        "parent_id": 1244,
+        "problem": "Linda has to take two math tests to pass 7 grade. They must correctly answer 70% of the total questions to move on to the next grade. The first test has 65 questions, and they get 60% of them correct. The second test has 35 questions. How many questions do they need to get right on the second test to pass?",
+        "solution": "There are 65 + 35 = <<65+35=100>>100 questions in total.\nLinda needs to get 100 * 70% = <<100*70/100=70>>70 questions correct to pass.\nThey got 65 * 60% = <<65*60/100=39>>39 questions correct on the first test.\nThey need 70 - 39 = <<70-39=31>>31 questions correct on the second test.\n#### 31"
+    },
+    {
+        "id": 39,
+        "parent_id": 1244,
+        "problem": "Jessica has to take two math tests to pass 6 grade. They must correctly answer 71% of the total questions to move on to the next grade. The first test has 50 questions, and they get 54% of them correct. The second test has 50 questions. How many questions do they need to get right on the second test to pass?",
+        "solution": "There are 50 + 50 = <<50+50=100>>100 questions in total.\nJessica needs to get 100 * 71% = <<100*71/100=71>>71 questions correct to pass.\nThey got 50 * 54% = <<50*54/100=27>>27 questions correct on the first test.\nThey need 71 - 27 = <<71-27=44>>44 questions correct on the second test.\n#### 44"
+    },
+    {
+        "id": 40,
+        "parent_id": 34,
+        "problem": "David has 3 fewer jewels than James. James has 4 more jewels than half of Charles's jewels. If Charles has 32 jewels, how many jewels does David have?",
+        "solution": "Half of Charles's jewels is 32 / 2 = <<32/2=16>>16.\nSince James has 4 more jewels than half of Charles's jewels, they have 16 + 4 = <<16+4=20>>20 jewels.\nDavid has 20 - 3 = <<20-3=17>>17 jewels.\n#### 17"
+    },
+    {
+        "id": 41,
+        "parent_id": 34,
+        "problem": "Thomas has 4 fewer jewels than Thomas. Thomas has 4 more jewels than half of Robert's jewels. If Robert has 44 jewels, how many jewels does Thomas have?",
+        "solution": "Half of Robert's jewels is 44 / 2 = <<44/2=22>>22.\nSince Thomas has 4 more jewels than half of Robert's jewels, they have 22 + 4 = <<22+4=26>>26 jewels.\nThomas has 26 - 4 = <<26-4=22>>22 jewels.\n#### 22"
+    },
+    {
+        "id": 42,
+        "parent_id": 34,
+        "problem": "James has 5 fewer jewels than Thomas. Thomas has 4 more jewels than half of Charles's jewels. If Charles has 92 jewels, how many jewels does James have?",
+        "solution": "Half of Charles's jewels is 92 / 2 = <<92/2=46>>46.\nSince Thomas has 4 more jewels than half of Charles's jewels, they have 46 + 4 = <<46+4=50>>50 jewels.\nJames has 50 - 5 = <<50-5=45>>45 jewels.\n#### 45"
+    },
+    {
+        "id": 43,
+        "parent_id": 34,
+        "problem": "James has 3 fewer jewels than John. John has 5 more jewels than half of Charles's jewels. If Charles has 32 jewels, how many jewels does James have?",
+        "solution": "Half of Charles's jewels is 32 / 2 = <<32/2=16>>16.\nSince John has 5 more jewels than half of Charles's jewels, they have 16 + 5 = <<16+5=21>>21 jewels.\nJames has 21 - 3 = <<21-3=18>>18 jewels.\n#### 18"
+    },
+    {
+        "id": 44,
+        "parent_id": 34,
+        "problem": "James has 3 fewer jewels than Thomas. Thomas has 7 more jewels than half of Joseph's jewels. If Joseph has 78 jewels, how many jewels does James have?",
+        "solution": "Half of Joseph's jewels is 78 / 2 = <<78/2=39>>39.\nSince Thomas has 7 more jewels than half of Joseph's jewels, they have 39 + 7 = <<39+7=46>>46 jewels.\nJames has 46 - 3 = <<46-3=43>>43 jewels.\n#### 43"
+    },
+    {
+        "id": 45,
+        "parent_id": 34,
+        "problem": "William has 5 fewer jewels than Joseph. Joseph has 3 more jewels than half of John's jewels. If John has 64 jewels, how many jewels does William have?",
+        "solution": "Half of John's jewels is 64 / 2 = <<64/2=32>>32.\nSince Joseph has 3 more jewels than half of John's jewels, they have 32 + 3 = <<32+3=35>>35 jewels.\nWilliam has 35 - 5 = <<35-5=30>>30 jewels.\n#### 30"
+    },
+    {
+        "id": 46,
+        "parent_id": 34,
+        "problem": "William has 4 fewer jewels than Richard. Richard has 3 more jewels than half of John's jewels. If John has 98 jewels, how many jewels does William have?",
+        "solution": "Half of John's jewels is 98 / 2 = <<98/2=49>>49.\nSince Richard has 3 more jewels than half of John's jewels, they have 49 + 3 = <<49+3=52>>52 jewels.\nWilliam has 52 - 4 = <<52-4=48>>48 jewels.\n#### 48"
+    },
+    {
+        "id": 47,
+        "parent_id": 34,
+        "problem": "Robert has 1 fewer jewels than John. John has 5 more jewels than half of David's jewels. If David has 96 jewels, how many jewels does Robert have?",
+        "solution": "Half of David's jewels is 96 / 2 = <<96/2=48>>48.\nSince John has 5 more jewels than half of David's jewels, they have 48 + 5 = <<48+5=53>>53 jewels.\nRobert has 53 - 1 = <<53-1=52>>52 jewels.\n#### 52"
+    },
+    {
+        "id": 48,
+        "parent_id": 34,
+        "problem": "Charles has 5 fewer jewels than Charles. Charles has 4 more jewels than half of Robert's jewels. If Robert has 24 jewels, how many jewels does Charles have?",
+        "solution": "Half of Robert's jewels is 24 / 2 = <<24/2=12>>12.\nSince Charles has 4 more jewels than half of Robert's jewels, they have 12 + 4 = <<12+4=16>>16 jewels.\nCharles has 16 - 5 = <<16-5=11>>11 jewels.\n#### 11"
+    },
+    {
+        "id": 49,
+        "parent_id": 34,
+        "problem": "Charles has 5 fewer jewels than Joseph. Joseph has 5 more jewels than half of William's jewels. If William has 100 jewels, how many jewels does Charles have?",
+        "solution": "Half of William's jewels is 100 / 2 = <<100/2=50>>50.\nSince Joseph has 5 more jewels than half of William's jewels, they have 50 + 5 = <<50+5=55>>55 jewels.\nCharles has 55 - 5 = <<55-5=50>>50 jewels.\n#### 50"
+    },
+    {
+        "id": 50,
+        "parent_id": 930,
+        "problem": "When Sarah watches her nephew, she gets out a variety of toys. The bag of building blocks has 30 blocks in it. The bin of stuffed animals has 9 stuffed animals inside. The tower of stacking rings has 5 multicolored rings on it. Sarah recently bought a tube of bouncy balls, bringing the total number of toys to 77. How many bouncy balls came in the tube?",
+        "solution": "Let T be the number of bouncy balls in the tube.\nThe total number of toys without the bouncy balls is 30 + 9 + 5 = <<30+9+5=44>>44.\nAfter buying the tube of balls, Sarah has 44 + T = 77 toys.\nThus, T = 77 - 44 = <<77-44=33>>33 bouncy balls came in the tube.\n#### 33"
+    },
+    {
+        "id": 51,
+        "parent_id": 930,
+        "problem": "When Jessica watches her nephew, she gets out a variety of toys. The bag of building blocks has 31 blocks in it. The bin of stuffed animals has 12 stuffed animals inside. The tower of stacking rings has 15 multicolored rings on it. Jessica recently bought a tube of bouncy balls, bringing the total number of toys to 91. How many bouncy balls came in the tube?",
+        "solution": "Let T be the number of bouncy balls in the tube.\nThe total number of toys without the bouncy balls is 31 + 12 + 15 = <<31+12+15=58>>58.\nAfter buying the tube of balls, Jessica has 58 + T = 91 toys.\nThus, T = 91 - 58 = <<91-58=33>>33 bouncy balls came in the tube.\n#### 33"
+    },
+    {
+        "id": 52,
+        "parent_id": 930,
+        "problem": "When Sarah watches her nephew, she gets out a variety of toys. The bag of building blocks has 46 blocks in it. The bin of stuffed animals has 15 stuffed animals inside. The tower of stacking rings has 6 multicolored rings on it. Sarah recently bought a tube of bouncy balls, bringing the total number of toys to 82. How many bouncy balls came in the tube?",
+        "solution": "Let T be the number of bouncy balls in the tube.\nThe total number of toys without the bouncy balls is 46 + 15 + 6 = <<46+15+6=67>>67.\nAfter buying the tube of balls, Sarah has 67 + T = 82 toys.\nThus, T = 82 - 67 = <<82-67=15>>15 bouncy balls came in the tube.\n#### 15"
+    },
+    {
+        "id": 53,
+        "parent_id": 930,
+        "problem": "When Susan watches her nephew, she gets out a variety of toys. The bag of building blocks has 25 blocks in it. The bin of stuffed animals has 5 stuffed animals inside. The tower of stacking rings has 13 multicolored rings on it. Susan recently bought a tube of bouncy balls, bringing the total number of toys to 75. How many bouncy balls came in the tube?",
+        "solution": "Let T be the number of bouncy balls in the tube.\nThe total number of toys without the bouncy balls is 25 + 5 + 13 = <<25+5+13=43>>43.\nAfter buying the tube of balls, Susan has 43 + T = 75 toys.\nThus, T = 75 - 43 = <<75-43=32>>32 bouncy balls came in the tube.\n#### 32"
+    },
+    {
+        "id": 54,
+        "parent_id": 930,
+        "problem": "When Barbara watches her nephew, she gets out a variety of toys. The bag of building blocks has 50 blocks in it. The bin of stuffed animals has 5 stuffed animals inside. The tower of stacking rings has 10 multicolored rings on it. Barbara recently bought a tube of bouncy balls, bringing the total number of toys to 80. How many bouncy balls came in the tube?",
+        "solution": "Let T be the number of bouncy balls in the tube.\nThe total number of toys without the bouncy balls is 50 + 5 + 10 = <<50+5+10=65>>65.\nAfter buying the tube of balls, Barbara has 65 + T = 80 toys.\nThus, T = 80 - 65 = <<80-65=15>>15 bouncy balls came in the tube.\n#### 15"
+    },
+    {
+        "id": 55,
+        "parent_id": 930,
+        "problem": "When Linda watches her nephew, she gets out a variety of toys. The bag of building blocks has 33 blocks in it. The bin of stuffed animals has 11 stuffed animals inside. The tower of stacking rings has 13 multicolored rings on it. Linda recently bought a tube of bouncy balls, bringing the total number of toys to 67. How many bouncy balls came in the tube?",
+        "solution": "Let T be the number of bouncy balls in the tube.\nThe total number of toys without the bouncy balls is 33 + 11 + 13 = <<33+11+13=57>>57.\nAfter buying the tube of balls, Linda has 57 + T = 67 toys.\nThus, T = 67 - 57 = <<67-57=10>>10 bouncy balls came in the tube.\n#### 10"
+    },
+    {
+        "id": 56,
+        "parent_id": 930,
+        "problem": "When Patricia watches her nephew, she gets out a variety of toys. The bag of building blocks has 27 blocks in it. The bin of stuffed animals has 14 stuffed animals inside. The tower of stacking rings has 6 multicolored rings on it. Patricia recently bought a tube of bouncy balls, bringing the total number of toys to 66. How many bouncy balls came in the tube?",
+        "solution": "Let T be the number of bouncy balls in the tube.\nThe total number of toys without the bouncy balls is 27 + 14 + 6 = <<27+14+6=47>>47.\nAfter buying the tube of balls, Patricia has 47 + T = 66 toys.\nThus, T = 66 - 47 = <<66-47=19>>19 bouncy balls came in the tube.\n#### 19"
+    },
+    {
+        "id": 57,
+        "parent_id": 930,
+        "problem": "When Barbara watches her nephew, she gets out a variety of toys. The bag of building blocks has 39 blocks in it. The bin of stuffed animals has 6 stuffed animals inside. The tower of stacking rings has 8 multicolored rings on it. Barbara recently bought a tube of bouncy balls, bringing the total number of toys to 87. How many bouncy balls came in the tube?",
+        "solution": "Let T be the number of bouncy balls in the tube.\nThe total number of toys without the bouncy balls is 39 + 6 + 8 = <<39+6+8=53>>53.\nAfter buying the tube of balls, Barbara has 53 + T = 87 toys.\nThus, T = 87 - 53 = <<87-53=34>>34 bouncy balls came in the tube.\n#### 34"
+    },
+    {
+        "id": 58,
+        "parent_id": 930,
+        "problem": "When Sarah watches her nephew, she gets out a variety of toys. The bag of building blocks has 30 blocks in it. The bin of stuffed animals has 15 stuffed animals inside. The tower of stacking rings has 6 multicolored rings on it. Sarah recently bought a tube of bouncy balls, bringing the total number of toys to 93. How many bouncy balls came in the tube?",
+        "solution": "Let T be the number of bouncy balls in the tube.\nThe total number of toys without the bouncy balls is 30 + 15 + 6 = <<30+15+6=51>>51.\nAfter buying the tube of balls, Sarah has 51 + T = 93 toys.\nThus, T = 93 - 51 = <<93-51=42>>42 bouncy balls came in the tube.\n#### 42"
+    },
+    {
+        "id": 59,
+        "parent_id": 930,
+        "problem": "When Sarah watches her nephew, she gets out a variety of toys. The bag of building blocks has 28 blocks in it. The bin of stuffed animals has 14 stuffed animals inside. The tower of stacking rings has 7 multicolored rings on it. Sarah recently bought a tube of bouncy balls, bringing the total number of toys to 91. How many bouncy balls came in the tube?",
+        "solution": "Let T be the number of bouncy balls in the tube.\nThe total number of toys without the bouncy balls is 28 + 14 + 7 = <<28+14+7=49>>49.\nAfter buying the tube of balls, Sarah has 49 + T = 91 toys.\nThus, T = 91 - 49 = <<91-49=42>>42 bouncy balls came in the tube.\n#### 42"
+    },
+    {
+        "id": 60,
+        "parent_id": 787,
+        "problem": "Joseph owns an appliance store. For this week, one-fourth of their sales are smart TVs, one-eighth are analog TVs, and the rest are OLED TVs. If they were able to sell a total of 64 TVs, how many OLED TVs were they able to sell?",
+        "solution": "Joseph sold 1/4 of the TVs as Smart TVs: 64 / 4 = <<64/4=16>>16 Smart TVs.\nThey sold 1/8 of the TVs as Analog TVs: 64 / 8 = <<64/8=8>>8 Analog TVs.\nSo, the total number of Smart and Analog TVs is 16 + 8 = <<16+8=24>>24.\nTherefore, the total number of OLED TVs sold is 64 - 24 = <<64-24=40>>40.\n#### 40"
+    },
+    {
+        "id": 61,
+        "parent_id": 787,
+        "problem": "Richard owns an appliance store. For this week, one-fourth of their sales are smart TVs, one-eighth are analog TVs, and the rest are OLED TVs. If they were able to sell a total of 88 TVs, how many OLED TVs were they able to sell?",
+        "solution": "Richard sold 1/4 of the TVs as Smart TVs: 88 / 4 = <<88/4=22>>22 Smart TVs.\nThey sold 1/8 of the TVs as Analog TVs: 88 / 8 = <<88/8=11>>11 Analog TVs.\nSo, the total number of Smart and Analog TVs is 22 + 11 = <<22+11=33>>33.\nTherefore, the total number of OLED TVs sold is 88 - 33 = <<88-33=55>>55.\n#### 55"
+    },
+    {
+        "id": 62,
+        "parent_id": 787,
+        "problem": "James owns an appliance store. For this week, one-fourth of their sales are smart TVs, one-eighth are analog TVs, and the rest are OLED TVs. If they were able to sell a total of 32 TVs, how many OLED TVs were they able to sell?",
+        "solution": "James sold 1/4 of the TVs as Smart TVs: 32 / 4 = <<32/4=8>>8 Smart TVs.\nThey sold 1/8 of the TVs as Analog TVs: 32 / 8 = <<32/8=4>>4 Analog TVs.\nSo, the total number of Smart and Analog TVs is 8 + 4 = <<8+4=12>>12.\nTherefore, the total number of OLED TVs sold is 32 - 12 = <<32-12=20>>20.\n#### 20"
+    },
+    {
+        "id": 63,
+        "parent_id": 787,
+        "problem": "Richard owns an appliance store. For this week, one-fourth of their sales are smart TVs, one-eighth are analog TVs, and the rest are OLED TVs. If they were able to sell a total of 32 TVs, how many OLED TVs were they able to sell?",
+        "solution": "Richard sold 1/4 of the TVs as Smart TVs: 32 / 4 = <<32/4=8>>8 Smart TVs.\nThey sold 1/8 of the TVs as Analog TVs: 32 / 8 = <<32/8=4>>4 Analog TVs.\nSo, the total number of Smart and Analog TVs is 8 + 4 = <<8+4=12>>12.\nTherefore, the total number of OLED TVs sold is 32 - 12 = <<32-12=20>>20.\n#### 20"
+    },
+    {
+        "id": 64,
+        "parent_id": 787,
+        "problem": "John owns an appliance store. For this week, one-fourth of their sales are smart TVs, one-eighth are analog TVs, and the rest are OLED TVs. If they were able to sell a total of 96 TVs, how many OLED TVs were they able to sell?",
+        "solution": "John sold 1/4 of the TVs as Smart TVs: 96 / 4 = <<96/4=24>>24 Smart TVs.\nThey sold 1/8 of the TVs as Analog TVs: 96 / 8 = <<96/8=12>>12 Analog TVs.\nSo, the total number of Smart and Analog TVs is 24 + 12 = <<24+12=36>>36.\nTherefore, the total number of OLED TVs sold is 96 - 36 = <<96-36=60>>60.\n#### 60"
+    },
+    {
+        "id": 65,
+        "parent_id": 787,
+        "problem": "Charles owns an appliance store. For this week, one-fourth of their sales are smart TVs, one-eighth are analog TVs, and the rest are OLED TVs. If they were able to sell a total of 40 TVs, how many OLED TVs were they able to sell?",
+        "solution": "Charles sold 1/4 of the TVs as Smart TVs: 40 / 4 = <<40/4=10>>10 Smart TVs.\nThey sold 1/8 of the TVs as Analog TVs: 40 / 8 = <<40/8=5>>5 Analog TVs.\nSo, the total number of Smart and Analog TVs is 10 + 5 = <<10+5=15>>15.\nTherefore, the total number of OLED TVs sold is 40 - 15 = <<40-15=25>>25.\n#### 25"
+    },
+    {
+        "id": 66,
+        "parent_id": 787,
+        "problem": "William owns an appliance store. For this week, one-fourth of their sales are smart TVs, one-eighth are analog TVs, and the rest are OLED TVs. If they were able to sell a total of 48 TVs, how many OLED TVs were they able to sell?",
+        "solution": "William sold 1/4 of the TVs as Smart TVs: 48 / 4 = <<48/4=12>>12 Smart TVs.\nThey sold 1/8 of the TVs as Analog TVs: 48 / 8 = <<48/8=6>>6 Analog TVs.\nSo, the total number of Smart and Analog TVs is 12 + 6 = <<12+6=18>>18.\nTherefore, the total number of OLED TVs sold is 48 - 18 = <<48-18=30>>30.\n#### 30"
+    },
+    {
+        "id": 67,
+        "parent_id": 787,
+        "problem": "John owns an appliance store. For this week, one-fourth of their sales are smart TVs, one-eighth are analog TVs, and the rest are OLED TVs. If they were able to sell a total of 40 TVs, how many OLED TVs were they able to sell?",
+        "solution": "John sold 1/4 of the TVs as Smart TVs: 40 / 4 = <<40/4=10>>10 Smart TVs.\nThey sold 1/8 of the TVs as Analog TVs: 40 / 8 = <<40/8=5>>5 Analog TVs.\nSo, the total number of Smart and Analog TVs is 10 + 5 = <<10+5=15>>15.\nTherefore, the total number of OLED TVs sold is 40 - 15 = <<40-15=25>>25.\n#### 25"
+    },
+    {
+        "id": 68,
+        "parent_id": 787,
+        "problem": "Thomas owns an appliance store. For this week, one-fourth of their sales are smart TVs, one-eighth are analog TVs, and the rest are OLED TVs. If they were able to sell a total of 80 TVs, how many OLED TVs were they able to sell?",
+        "solution": "Thomas sold 1/4 of the TVs as Smart TVs: 80 / 4 = <<80/4=20>>20 Smart TVs.\nThey sold 1/8 of the TVs as Analog TVs: 80 / 8 = <<80/8=10>>10 Analog TVs.\nSo, the total number of Smart and Analog TVs is 20 + 10 = <<20+10=30>>30.\nTherefore, the total number of OLED TVs sold is 80 - 30 = <<80-30=50>>50.\n#### 50"
+    },
+    {
+        "id": 69,
+        "parent_id": 787,
+        "problem": "William owns an appliance store. For this week, one-fourth of their sales are smart TVs, one-eighth are analog TVs, and the rest are OLED TVs. If they were able to sell a total of 40 TVs, how many OLED TVs were they able to sell?",
+        "solution": "William sold 1/4 of the TVs as Smart TVs: 40 / 4 = <<40/4=10>>10 Smart TVs.\nThey sold 1/8 of the TVs as Analog TVs: 40 / 8 = <<40/8=5>>5 Analog TVs.\nSo, the total number of Smart and Analog TVs is 10 + 5 = <<10+5=15>>15.\nTherefore, the total number of OLED TVs sold is 40 - 15 = <<40-15=25>>25.\n#### 25"
+    },
+    {
+        "id": 70,
+        "parent_id": 835,
+        "problem": "If it takes 5 kangaroos traveling at the same speed a total of 25 hours to travel across a highway, how many hours will it take 3 turtles, each traveling at half the speed of a kangaroo, to do so?",
+        "solution": "If it takes 5 kangaroos traveling at the same speed a total of 25 hours to travel across the highway, one kangaroo takes 25 / 5 = <<25/5=5>>5 hours to cross the highway.\nA turtle traveling at half the speed of a kangaroo will take 2 * 5 = <<2*5=10>>10 hours to cross the highway.\nThus, 3 turtles will take a total of 3 * 10 = <<3*10=30>>30 hours to travel across the highway.\n#### 30"
+    },
+    {
+        "id": 71,
+        "parent_id": 835,
+        "problem": "If it takes 2 kangaroos traveling at the same speed a total of 28 hours to travel across a highway, how many hours will it take 6 turtles, each traveling at half the speed of a kangaroo, to do so?",
+        "solution": "If it takes 2 kangaroos traveling at the same speed a total of 28 hours to travel across the highway, one kangaroo takes 28 / 2 = <<28/2=14>>14 hours to cross the highway.\nA turtle traveling at half the speed of a kangaroo will take 2 * 14 = <<2*14=28>>28 hours to cross the highway.\nThus, 6 turtles will take a total of 6 * 28 = <<6*28=168>>168 hours to travel across the highway.\n#### 168"
+    },
+    {
+        "id": 72,
+        "parent_id": 835,
+        "problem": "If it takes 2 kangaroos traveling at the same speed a total of 18 hours to travel across a highway, how many hours will it take 3 turtles, each traveling at half the speed of a kangaroo, to do so?",
+        "solution": "If it takes 2 kangaroos traveling at the same speed a total of 18 hours to travel across the highway, one kangaroo takes 18 / 2 = <<18/2=9>>9 hours to cross the highway.\nA turtle traveling at half the speed of a kangaroo will take 2 * 9 = <<2*9=18>>18 hours to cross the highway.\nThus, 3 turtles will take a total of 3 * 18 = <<3*18=54>>54 hours to travel across the highway.\n#### 54"
+    },
+    {
+        "id": 73,
+        "parent_id": 835,
+        "problem": "If it takes 2 kangaroos traveling at the same speed a total of 28 hours to travel across a highway, how many hours will it take 5 turtles, each traveling at half the speed of a kangaroo, to do so?",
+        "solution": "If it takes 2 kangaroos traveling at the same speed a total of 28 hours to travel across the highway, one kangaroo takes 28 / 2 = <<28/2=14>>14 hours to cross the highway.\nA turtle traveling at half the speed of a kangaroo will take 2 * 14 = <<2*14=28>>28 hours to cross the highway.\nThus, 5 turtles will take a total of 5 * 28 = <<5*28=140>>140 hours to travel across the highway.\n#### 140"
+    },
+    {
+        "id": 74,
+        "parent_id": 835,
+        "problem": "If it takes 2 kangaroos traveling at the same speed a total of 18 hours to travel across a highway, how many hours will it take 6 turtles, each traveling at half the speed of a kangaroo, to do so?",
+        "solution": "If it takes 2 kangaroos traveling at the same speed a total of 18 hours to travel across the highway, one kangaroo takes 18 / 2 = <<18/2=9>>9 hours to cross the highway.\nA turtle traveling at half the speed of a kangaroo will take 2 * 9 = <<2*9=18>>18 hours to cross the highway.\nThus, 6 turtles will take a total of 6 * 18 = <<6*18=108>>108 hours to travel across the highway.\n#### 108"
+    },
+    {
+        "id": 75,
+        "parent_id": 835,
+        "problem": "If it takes 3 kangaroos traveling at the same speed a total of 15 hours to travel across a highway, how many hours will it take 5 turtles, each traveling at half the speed of a kangaroo, to do so?",
+        "solution": "If it takes 3 kangaroos traveling at the same speed a total of 15 hours to travel across the highway, one kangaroo takes 15 / 3 = <<15/3=5>>5 hours to cross the highway.\nA turtle traveling at half the speed of a kangaroo will take 2 * 5 = <<2*5=10>>10 hours to cross the highway.\nThus, 5 turtles will take a total of 5 * 10 = <<5*10=50>>50 hours to travel across the highway.\n#### 50"
+    },
+    {
+        "id": 76,
+        "parent_id": 835,
+        "problem": "If it takes 5 kangaroos traveling at the same speed a total of 25 hours to travel across a highway, how many hours will it take 2 turtles, each traveling at half the speed of a kangaroo, to do so?",
+        "solution": "If it takes 5 kangaroos traveling at the same speed a total of 25 hours to travel across the highway, one kangaroo takes 25 / 5 = <<25/5=5>>5 hours to cross the highway.\nA turtle traveling at half the speed of a kangaroo will take 2 * 5 = <<2*5=10>>10 hours to cross the highway.\nThus, 2 turtles will take a total of 2 * 10 = <<2*10=20>>20 hours to travel across the highway.\n#### 20"
+    },
+    {
+        "id": 77,
+        "parent_id": 835,
+        "problem": "If it takes 3 kangaroos traveling at the same speed a total of 24 hours to travel across a highway, how many hours will it take 3 turtles, each traveling at half the speed of a kangaroo, to do so?",
+        "solution": "If it takes 3 kangaroos traveling at the same speed a total of 24 hours to travel across the highway, one kangaroo takes 24 / 3 = <<24/3=8>>8 hours to cross the highway.\nA turtle traveling at half the speed of a kangaroo will take 2 * 8 = <<2*8=16>>16 hours to cross the highway.\nThus, 3 turtles will take a total of 3 * 16 = <<3*16=48>>48 hours to travel across the highway.\n#### 48"
+    },
+    {
+        "id": 78,
+        "parent_id": 835,
+        "problem": "If it takes 2 kangaroos traveling at the same speed a total of 18 hours to travel across a highway, how many hours will it take 2 turtles, each traveling at half the speed of a kangaroo, to do so?",
+        "solution": "If it takes 2 kangaroos traveling at the same speed a total of 18 hours to travel across the highway, one kangaroo takes 18 / 2 = <<18/2=9>>9 hours to cross the highway.\nA turtle traveling at half the speed of a kangaroo will take 2 * 9 = <<2*9=18>>18 hours to cross the highway.\nThus, 2 turtles will take a total of 2 * 18 = <<2*18=36>>36 hours to travel across the highway.\n#### 36"
+    },
+    {
+        "id": 79,
+        "parent_id": 835,
+        "problem": "If it takes 3 kangaroos traveling at the same speed a total of 30 hours to travel across a highway, how many hours will it take 4 turtles, each traveling at half the speed of a kangaroo, to do so?",
+        "solution": "If it takes 3 kangaroos traveling at the same speed a total of 30 hours to travel across the highway, one kangaroo takes 30 / 3 = <<30/3=10>>10 hours to cross the highway.\nA turtle traveling at half the speed of a kangaroo will take 2 * 10 = <<2*10=20>>20 hours to cross the highway.\nThus, 4 turtles will take a total of 4 * 20 = <<4*20=80>>80 hours to travel across the highway.\n#### 80"
+    }
+]

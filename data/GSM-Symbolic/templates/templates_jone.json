@@ -1,11 +1,8 @@
 [
     {
         "id": 0,
-        "problem": "{name}\u2019s ducks lay {x} eggs per day. She eats {y} for breakfast every morning and bakes muffins for her {people} every day with {z}. She sells the remainder at the {place} daily for ${a} per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+        "problem": "{name_f_0}\u2019s ducks lay {x} eggs per day. She eats {y} for breakfast every morning and bakes muffins for her friends every day with {z}. She sells the remainder at the farmer's market daily for ${a} per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
         "variables": {
-            "name":["Janet", "Josh", "James", "Kylar"],
-            "people":["friends", "sister", "brother"],
-            "place":["farmers' market", "store", "Toulouse"],
             "numerical":{
                 "x":[1, 100],
                 "y":[1, 100],
@@ -21,15 +18,12 @@
             "tot_eggs":"x-y-z",
             "ans":"tot_eggs*a"
         },
-        "solution": "Janet sells {x} - {y} - {z} = <<{x}-{y}-{z}={tot_eggs}>>{tot_eggs} duck eggs a day.\nShe makes {tot_eggs} * {a} = $<<{tot_eggs}*{a}={ans}>>{ans} every day at the farmer\u2019s market.\n#### {ans}"
+        "solution": "{name_f_0} sells {x} - {y} - {z} = <<{x}-{y}-{z}={tot_eggs}>>{tot_eggs} duck eggs a day.\nShe makes {tot_eggs} * {a} = $<<{tot_eggs}*{a}={ans}>>{ans} every day at the farmer\u2019s market.\n#### {ans}"
     },
     {
         "id": 1,
         "problem": "A robe takes {x} bolts of blue fiber and {y} that much white fiber.  How many bolts in total does it take?",
         "variables":{
-            "name":["Janet", "Josh", "James", "Kylar"],
-            "people":["friends", "sister", "brother"],
-            "place":["farmers' market", "store", "Toulouse"],
             "numerical":{
                 "x":[1, 100],
                 "y":[1, 100]
@@ -47,11 +41,8 @@
     },
     {
         "id": 303,
-        "problem": "{name} has been selling her {people}'s collection of {x} books for three years. Each book sells at {y}$, and she sold {z} times as many books in the first year as she has sold in the current year. There are currently {a} unsold books, and her sales number this year is {b}. What's the total amount of money she earned in the second year?",
+        "problem": "{name_f_0} has been selling her dad's collection of {x} books for three years. Each book sells at {y}$, and she sold {z} times as many books in the first year as she has sold in the current year. There are currently {a} unsold books, and her sales number this year is {b}. What's the total amount of money she earned in the second year?",
         "variables":{
-            "name":["Janet", "Josh", "James", "Kylar"],
-            "people":["friends", "sister", "brother"],
-            "place":["farmers' market", "store", "Toulouse"],
             "numerical":{
                 "x":[1, 1000],
                 "y":[1, 100],
@@ -76,7 +67,7 @@
     },
     {
         "id": 524,
-        "problem": "{name} is planting tulips. He can fit {x} red tulips in a row and {y} blue tulips in a row. If {name} buys {z} red tulips and {a} blue tulips, how many rows of flowers will he plant?",
+        "problem": "{name_m_0} is planting tulips. He can fit {x} red tulips in a row and {y} blue tulips in a row. If {name_m_0} buys {z} red tulips and {a} blue tulips, how many rows of flowers will he plant?",
         "variables":{
             "name":["Janet", "Josh", "James", "Kylar"],
             "people":["friends", "sister", "brother"],
@@ -102,11 +93,8 @@
     },
     {
         "id": 275,
-        "problem": "{name} is practicing for his role in a theater production. He has to memorize his lines for two scenes and the lyrics to one solo song. His solo song has {x} lines in the lyrics. The first scene has {y} times the number of lines, but only {z}/{a} of them are his lines. The second scene has {b} more lines than the song, and {c}/{d} of them are his. How many lines does {name} have to memorize?",
+        "problem": "{name_m_0} is practicing for his role in a theater production. He has to memorize his lines for two scenes and the lyrics to one solo song. His solo song has {x} lines in the lyrics. The first scene has {y} times the number of lines, but only {z}/{a} of them are his lines. The second scene has {b} more lines than the song, and {c}/{d} of them are his. How many lines does {name_m_0} have to memorize?",
         "variables":{
-            "name":["Janet", "Josh", "James", "Kylar"],
-            "people":["friends", "sister", "brother"],
-            "place":["farmers' market", "store", "Toulouse"],
             "numerical":{
                 "x":[1, 100],
                 "y":[1, 10],
@@ -131,15 +119,12 @@
             "his_second_lines":"c*second_lines/d",
             "ans":"x+his_first_lines+his_second_lines"
         },
-        "solution": "The first scene has {y} times the number of lines as his solo song, so it has {y} * {x} = <<{y}*{x}={first_lines}>>{first_lines} lines.\nA {z}/{a} of them are {name}\u2019s lines, so he has to memorize {z} * {first_lines} / {a} = <<{z}*{first_lines}/{a}={his_first_lines}>>{his_first_lines} lines.\nThe second scene has {x} + {b} = <<{x}+{b}={second_lines}>>{second_lines} lines.\n{c}/{d} of the second scene\u2019s lines are {name}\u2019s, so he has to memorize {c} * {second_lines} / {d} = <<{c}*{second_lines}/{d}={his_second_lines}>>{his_second_lines} lines.\n{name} has to memorize his entire solo song, so he has to memorize {x} + {his_first_lines} + {his_second_lines} = <<{x}+{his_first_lines}+{his_second_lines}={ans}>>{ans} lines in all.\n#### {ans}"
+        "solution": "The first scene has {y} times the number of lines as his solo song, so it has {y} * {x} = <<{y}*{x}={first_lines}>>{first_lines} lines.\nA {z}/{a} of them are {name_m_0}\u2019s lines, so he has to memorize {z} * {first_lines} / {a} = <<{z}*{first_lines}/{a}={his_first_lines}>>{his_first_lines} lines.\nThe second scene has {x} + {b} = <<{x}+{b}={second_lines}>>{second_lines} lines.\n{c}/{d} of the second scene\u2019s lines are {name_m_0}\u2019s, so he has to memorize {c} * {second_lines} / {d} = <<{c}*{second_lines}/{d}={his_second_lines}>>{his_second_lines} lines.\n{name_m_0} has to memorize his entire solo song, so he has to memorize {x} + {his_first_lines} + {his_second_lines} = <<{x}+{his_first_lines}+{his_second_lines}={ans}>>{ans} lines in all.\n#### {ans}"
     },
     {
         "id": 32,
-        "problem": "{name} takes care of {x} dogs.  Each dog takes {y} hours a day to walk and take care of their business.  How many hours a week does he spend taking care of dogs?",
+        "problem": "{name_m_0} takes care of {x} dogs.  Each dog takes {y} hours a day to walk and take care of their business.  How many hours a week does he spend taking care of dogs?",
         "variables":{
-            "name":["Janet", "Josh", "James", "Kylar"],
-            "people":["friends", "sister", "brother"],
-            "place":["farmers' market", "store", "Toulouse"],
             "numerical":{
                 "x":[2, 6],
                 "y":[1, 4]
@@ -157,11 +142,8 @@
     },
     {
         "id": 104,
-        "problem": "{name} is solving a {x}-piece jigsaw puzzle. She places 1/{y} of the pieces on the board, then her {people} places 1/{z} of the remaining pieces. How many jigsaw pieces are left to be placed?",
+        "problem": "{name_f_0} is solving a {x}-piece jigsaw puzzle. She places 1/{y} of the pieces on the board, then her mom places 1/{z} of the remaining pieces. How many jigsaw pieces are left to be placed?",
         "variables":{
-            "name":["Janet", "Josh", "James", "Kylar"],
-            "people":["friends", "sister", "brother"],
-            "place":["farmers' market", "store", "Toulouse"],
             "numerical":{
                 "x":[100, 10000],
                 "y":[1, 10],
@@ -180,15 +162,12 @@
             "mom_pieces":"rest/z",
             "ans":"rest-mom_pieces"
         },
-        "solution": "{name} has placed {x} pieces / {y} = <<{x}/{y}={pop_pieces}>>{pop_pieces} pieces.\nThis means there are {x} \u2013 {pop_pieces} = <<{x}-{pop_pieces}={rest}>>{rest} pieces remaining.\nHer {people} therefore places {rest} / {z} = <<{rest}/{z}={mom_pieces}>>{mom_pieces} pieces.\nThis leaves a total of {rest} \u2013 {mom_pieces} = <<{rest}-{mom_pieces}={ans}>>{ans} jigsaw pieces left to be placed.\n#### {ans}"
+        "solution": "{name_f_0} has placed {x} pieces / {y} = <<{x}/{y}={pop_pieces}>>{pop_pieces} pieces.\nThis means there are {x} \u2013 {pop_pieces} = <<{x}-{pop_pieces}={rest}>>{rest} pieces remaining.\nHer mom therefore places {rest} / {z} = <<{rest}/{z}={mom_pieces}>>{mom_pieces} pieces.\nThis leaves a total of {rest} \u2013 {mom_pieces} = <<{rest}-{mom_pieces}={ans}>>{ans} jigsaw pieces left to be placed.\n#### {ans}"
     },
     {
         "id": 1145,
-        "problem": "{name} owns a flower shop. He sells a sunflower that costs ${x} each and a bouquet of sunflower that costs ${y}. If {name} earned ${z} from the sunflower and ${a} from the bouquet per day, and if each bouquet has {b} sunflowers, how many sunflowers was {name} able to sell after {c} days?",
+        "problem": "{name_m_0} owns a flower shop. He sells a sunflower that costs ${x} each and a bouquet of sunflower that costs ${y}. If {name_m_0} earned ${z} from the sunflower and ${a} from the bouquet per day, and if each bouquet has {b} sunflowers, how many sunflowers was {name_m_0} able to sell after {c} days?",
         "variables":{
-            "name":["Janet", "Josh", "James", "Kylar"],
-            "people":["friends", "sister", "brother"],
-            "place":["farmers' market", "store", "Toulouse"],
             "numerical":{
                 "x":[1, 10],
                 "y":[1, 50],
@@ -212,15 +191,12 @@
             "tot_sun":"num_sun+sun",
             "ans":"tot_sun*c"
         },
-        "solution": "{name} sold ${a} / ${y} = <<{a}/{y}={num_boq}>>{num_boq} bouquets of sunflower.\nSo he was able to sell a total of {b} x {num_boq} = <<{b}*{num_boq}={num_sun}>>{num_sun} sunflowers from the bouquets.\nAnd he was able to sell a total of ${z}/${x}= <<{z}/{x}={sun}>>{sun} Sunflowers.\nThe sum of sunflowers {name} was able to sell is {num_sun} + {sun} = <<{num_sun}+{sun}={tot_sun}>>{tot_sun}.\nTherefore, the total of sunflowers he sold after {c} days is {tot_sun} x {c} = <<{tot_sun}*{c}={ans}>>{ans}.\n#### {ans}"
+        "solution": "{name_m_0} sold ${a} / ${y} = <<{a}/{y}={num_boq}>>{num_boq} bouquets of sunflower.\nSo he was able to sell a total of {b} x {num_boq} = <<{b}*{num_boq}={num_sun}>>{num_sun} sunflowers from the bouquets.\nAnd he was able to sell a total of ${z}/${x}= <<{z}/{x}={sun}>>{sun} Sunflowers.\nThe sum of sunflowers {name_m_0} was able to sell is {num_sun} + {sun} = <<{num_sun}+{sun}={tot_sun}>>{tot_sun}.\nTherefore, the total of sunflowers he sold after {c} days is {tot_sun} x {c} = <<{tot_sun}*{c}={ans}>>{ans}.\n#### {ans}"
     },
     {
         "id": 529,
-        "problem": "{name} bought a CD for ${x}, and a headphone set. In total, he paid ${y}. How many more CDs would {name} have been able to buy if he had decided not to buy the headphone set?",
+        "problem": "{name_m_0} bought a CD for ${x}, and a headphone set. In total, he paid ${y}. How many more CDs would {name_m_0} have been able to buy if he had decided not to buy the headphone set?",
         "variables":{
-            "name":["Janet", "Josh", "James", "Kylar"],
-            "people":["friends", "sister", "brother"],
-            "place":["farmers' market", "store", "Toulouse"],
             "numerical":{
                 "x":[1, 10],
                 "y":[1, 100]
@@ -234,15 +210,12 @@
             "head":"y-x",
             "ans":"head/x"
         },
-        "solution": "The headphone set cost was {y} - {x} = $<<{y}-{x}={head}>>{head}.\nThat means, for that money {name} would be able to buy {head} / {x} = <<{head}/{x}={ans}>>{ans} more CDs.\n#### {ans}"
+        "solution": "The headphone set cost was {y} - {x} = $<<{y}-{x}={head}>>{head}.\nThat means, for that money {name_m_0} would be able to buy {head} / {x} = <<{head}/{x}={ans}>>{ans} more CDs.\n#### {ans}"
     },
     {
         "id": 424,
         "problem": "The employees of Google went on a day trip. {x} buses were rented that have the capacity of holding {y} employees. {z} minibusses that can hold {a} employees, and {b} minivans that can hold {c} employees. How many employees can join the day trip?",
         "variables":{
-            "name":["Janet", "Josh", "James", "Kylar"],
-            "people":["friends", "sister", "brother"],
-            "place":["farmers' market", "store", "Toulouse"],
             "numerical":{
                 "x":[2, 10],
                 "y":[50, 100],

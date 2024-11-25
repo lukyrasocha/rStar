@@ -1,0 +1,482 @@
+[
+    {
+        "id": 0,
+        "parent_id": 963,
+        "problem": "Joseph, Michael, and Charles are trying to catch them all. Pokemon that is. Together they have caught 348 Pokemon. Joseph has catched 1 more than Michael, and Michael has caught 8 less than 5 times as many as Charles has caught. How many Pokemon has Michael caught?",
+        "solution": "Let x represent the number of Pokemon Charles caught.\nMichael: 5 * x - 8 = 5 * 33 - 8 = <<5*33-8=157>>157\nJoseph: 157 + 1 = 157 + 1 = <<157+1=158>>158\nTotal: 33 + 157 + 158 = 348\nMichael has caught 157 Pokemons.\n#### 157"
+    },
+    {
+        "id": 1,
+        "parent_id": 963,
+        "problem": "David, Charles, and Richard are trying to catch them all. Pokemon that is. Together they have caught 421 Pokemon. David has catched 13 more than Charles, and Charles has caught 16 less than 5 times as many as Richard has caught. How many Pokemon has Charles caught?",
+        "solution": "Let x represent the number of Pokemon Richard caught.\nCharles: 5 * x - 16 = 5 * 40 - 16 = <<5*40-16=184>>184\nDavid: 184 + 13 = 184 + 13 = <<184+13=197>>197\nTotal: 40 + 184 + 197 = 421\nCharles has caught 184 Pokemons.\n#### 184"
+    },
+    {
+        "id": 2,
+        "parent_id": 963,
+        "problem": "Michael, David, and Richard are trying to catch them all. Pokemon that is. Together they have caught 134 Pokemon. Michael has catched 11 more than David, and David has caught 6 less than 4 times as many as Richard has caught. How many Pokemon has David caught?",
+        "solution": "Let x represent the number of Pokemon Richard caught.\nDavid: 4 * x - 6 = 4 * 15 - 6 = <<4*15-6=54>>54\nMichael: 54 + 11 = 54 + 11 = <<54+11=65>>65\nTotal: 15 + 54 + 65 = 134\nDavid has caught 54 Pokemons.\n#### 54"
+    },
+    {
+        "id": 3,
+        "parent_id": 963,
+        "problem": "Michael, Robert, and Thomas are trying to catch them all. Pokemon that is. Together they have caught 306 Pokemon. Michael has catched 8 more than Robert, and Robert has caught 5 less than 3 times as many as Thomas has caught. How many Pokemon has Robert caught?",
+        "solution": "Let x represent the number of Pokemon Thomas caught.\nRobert: 3 * x - 5 = 3 * 44 - 5 = <<3*44-5=127>>127\nMichael: 127 + 8 = 127 + 8 = <<127+8=135>>135\nTotal: 44 + 127 + 135 = 306\nRobert has caught 127 Pokemons.\n#### 127"
+    },
+    {
+        "id": 4,
+        "parent_id": 963,
+        "problem": "William, William, and Charles are trying to catch them all. Pokemon that is. Together they have caught 284 Pokemon. William has catched 2 more than William, and William has caught 12 less than 4 times as many as Charles has caught. How many Pokemon has William caught?",
+        "solution": "Let x represent the number of Pokemon Charles caught.\nWilliam: 4 * x - 12 = 4 * 34 - 12 = <<4*34-12=124>>124\nWilliam: 124 + 2 = 124 + 2 = <<124+2=126>>126\nTotal: 34 + 124 + 126 = 284\nWilliam has caught 124 Pokemons.\n#### 124"
+    },
+    {
+        "id": 5,
+        "parent_id": 963,
+        "problem": "Robert, James, and Thomas are trying to catch them all. Pokemon that is. Together they have caught 400 Pokemon. Robert has catched 7 more than James, and James has caught 18 less than 5 times as many as Thomas has caught. How many Pokemon has James caught?",
+        "solution": "Let x represent the number of Pokemon Thomas caught.\nJames: 5 * x - 18 = 5 * 39 - 18 = <<5*39-18=177>>177\nRobert: 177 + 7 = 177 + 7 = <<177+7=184>>184\nTotal: 39 + 177 + 184 = 400\nJames has caught 177 Pokemons.\n#### 177"
+    },
+    {
+        "id": 6,
+        "parent_id": 963,
+        "problem": "John, David, and Robert are trying to catch them all. Pokemon that is. Together they have caught 111 Pokemon. John has catched 10 more than David, and David has caught 2 less than 3 times as many as Robert has caught. How many Pokemon has David caught?",
+        "solution": "Let x represent the number of Pokemon Robert caught.\nDavid: 3 * x - 2 = 3 * 15 - 2 = <<3*15-2=43>>43\nJohn: 43 + 10 = 43 + 10 = <<43+10=53>>53\nTotal: 15 + 43 + 53 = 111\nDavid has caught 43 Pokemons.\n#### 43"
+    },
+    {
+        "id": 7,
+        "parent_id": 963,
+        "problem": "John, Charles, and David are trying to catch them all. Pokemon that is. Together they have caught 209 Pokemon. John has catched 1 more than Charles, and Charles has caught 16 less than 2 times as many as David has caught. How many Pokemon has Charles caught?",
+        "solution": "Let x represent the number of Pokemon David caught.\nCharles: 2 * x - 16 = 2 * 48 - 16 = <<2*48-16=80>>80\nJohn: 80 + 1 = 80 + 1 = <<80+1=81>>81\nTotal: 48 + 80 + 81 = 209\nCharles has caught 80 Pokemons.\n#### 80"
+    },
+    {
+        "id": 8,
+        "parent_id": 963,
+        "problem": "Thomas, John, and James are trying to catch them all. Pokemon that is. Together they have caught 185 Pokemon. Thomas has catched 7 more than John, and John has caught 11 less than 2 times as many as James has caught. How many Pokemon has John caught?",
+        "solution": "Let x represent the number of Pokemon James caught.\nJohn: 2 * x - 11 = 2 * 40 - 11 = <<2*40-11=69>>69\nThomas: 69 + 7 = 69 + 7 = <<69+7=76>>76\nTotal: 40 + 69 + 76 = 185\nJohn has caught 69 Pokemons.\n#### 69"
+    },
+    {
+        "id": 9,
+        "parent_id": 963,
+        "problem": "Michael, Michael, and Joseph are trying to catch them all. Pokemon that is. Together they have caught 446 Pokemon. Michael has catched 20 more than Michael, and Michael has caught 7 less than 5 times as many as Joseph has caught. How many Pokemon has Michael caught?",
+        "solution": "Let x represent the number of Pokemon Joseph caught.\nMichael: 5 * x - 7 = 5 * 40 - 7 = <<5*40-7=193>>193\nMichael: 193 + 20 = 193 + 20 = <<193+20=213>>213\nTotal: 40 + 193 + 213 = 446\nMichael has caught 193 Pokemons.\n#### 193"
+    },
+    {
+        "id": 10,
+        "parent_id": 43,
+        "problem": "According to the nutritional info, a bag of chips has 203 calories per serving. If a 110g bag has 5 servings, how many grams can Joseph eat if Joseph's daily calorie target is 1748 calories and Joseph has already consumed 936 calories?",
+        "solution": "If the total calorie target is 1748 calories and Joseph has consumed 936 calories, then Joseph has 1748 - 936 = <<1748-936=812>>812 calories left to eat.\n If each serving of chips has 203 calories and I Joseph only have 812 / 203 = <<812/203=4>>4 servings.\nA 110g bag of chips has 5 servings, hence each serving is 110g / 5 = <<110/5=22>>22 grams.\nThen  Joseph can eat only 22g * 4 = <<22*4=88>>88 grams.\n#### 88"
+    },
+    {
+        "id": 11,
+        "parent_id": 43,
+        "problem": "According to the nutritional info, a bag of chips has 340 calories per serving. If a 120g bag has 5 servings, how many grams can David eat if David's daily calorie target is 1751 calories and David has already consumed 1071 calories?",
+        "solution": "If the total calorie target is 1751 calories and David has consumed 1071 calories, then David has 1751 - 1071 = <<1751-1071=680>>680 calories left to eat.\n If each serving of chips has 340 calories and I David only have 680 / 340 = <<680/340=2>>2 servings.\nA 120g bag of chips has 5 servings, hence each serving is 120g / 5 = <<120/5=24>>24 grams.\nThen  David can eat only 24g * 2 = <<24*2=48>>48 grams.\n#### 48"
+    },
+    {
+        "id": 12,
+        "parent_id": 43,
+        "problem": "According to the nutritional info, a bag of chips has 325 calories per serving. If a 144g bag has 9 servings, how many grams can David eat if David's daily calorie target is 2962 calories and David has already consumed 1012 calories?",
+        "solution": "If the total calorie target is 2962 calories and David has consumed 1012 calories, then David has 2962 - 1012 = <<2962-1012=1950>>1950 calories left to eat.\n If each serving of chips has 325 calories and I David only have 1950 / 325 = <<1950/325=6>>6 servings.\nA 144g bag of chips has 9 servings, hence each serving is 144g / 9 = <<144/9=16>>16 grams.\nThen  David can eat only 16g * 6 = <<16*6=96>>96 grams.\n#### 96"
+    },
+    {
+        "id": 13,
+        "parent_id": 43,
+        "problem": "According to the nutritional info, a bag of chips has 260 calories per serving. If a 120g bag has 8 servings, how many grams can Joseph eat if Joseph's daily calorie target is 1931 calories and Joseph has already consumed 631 calories?",
+        "solution": "If the total calorie target is 1931 calories and Joseph has consumed 631 calories, then Joseph has 1931 - 631 = <<1931-631=1300>>1300 calories left to eat.\n If each serving of chips has 260 calories and I Joseph only have 1300 / 260 = <<1300/260=5>>5 servings.\nA 120g bag of chips has 8 servings, hence each serving is 120g / 8 = <<120/8=15>>15 grams.\nThen  Joseph can eat only 15g * 5 = <<15*5=75>>75 grams.\n#### 75"
+    },
+    {
+        "id": 14,
+        "parent_id": 43,
+        "problem": "According to the nutritional info, a bag of chips has 318 calories per serving. If a 128g bag has 8 servings, how many grams can Joseph eat if Joseph's daily calorie target is 1966 calories and Joseph has already consumed 694 calories?",
+        "solution": "If the total calorie target is 1966 calories and Joseph has consumed 694 calories, then Joseph has 1966 - 694 = <<1966-694=1272>>1272 calories left to eat.\n If each serving of chips has 318 calories and I Joseph only have 1272 / 318 = <<1272/318=4>>4 servings.\nA 128g bag of chips has 8 servings, hence each serving is 128g / 8 = <<128/8=16>>16 grams.\nThen  Joseph can eat only 16g * 4 = <<16*4=64>>64 grams.\n#### 64"
+    },
+    {
+        "id": 15,
+        "parent_id": 43,
+        "problem": "According to the nutritional info, a bag of chips has 168 calories per serving. If a 104g bag has 8 servings, how many grams can Robert eat if Robert's daily calorie target is 2472 calories and Robert has already consumed 1296 calories?",
+        "solution": "If the total calorie target is 2472 calories and Robert has consumed 1296 calories, then Robert has 2472 - 1296 = <<2472-1296=1176>>1176 calories left to eat.\n If each serving of chips has 168 calories and I Robert only have 1176 / 168 = <<1176/168=7>>7 servings.\nA 104g bag of chips has 8 servings, hence each serving is 104g / 8 = <<104/8=13>>13 grams.\nThen  Robert can eat only 13g * 7 = <<13*7=91>>91 grams.\n#### 91"
+    },
+    {
+        "id": 16,
+        "parent_id": 43,
+        "problem": "According to the nutritional info, a bag of chips has 252 calories per serving. If a 170g bag has 10 servings, how many grams can Thomas eat if Thomas's daily calorie target is 2679 calories and Thomas has already consumed 1419 calories?",
+        "solution": "If the total calorie target is 2679 calories and Thomas has consumed 1419 calories, then Thomas has 2679 - 1419 = <<2679-1419=1260>>1260 calories left to eat.\n If each serving of chips has 252 calories and I Thomas only have 1260 / 252 = <<1260/252=5>>5 servings.\nA 170g bag of chips has 10 servings, hence each serving is 170g / 10 = <<170/10=17>>17 grams.\nThen  Thomas can eat only 17g * 5 = <<17*5=85>>85 grams.\n#### 85"
+    },
+    {
+        "id": 17,
+        "parent_id": 43,
+        "problem": "According to the nutritional info, a bag of chips has 393 calories per serving. If a 190g bag has 10 servings, how many grams can Michael eat if Michael's daily calorie target is 2087 calories and Michael has already consumed 1301 calories?",
+        "solution": "If the total calorie target is 2087 calories and Michael has consumed 1301 calories, then Michael has 2087 - 1301 = <<2087-1301=786>>786 calories left to eat.\n If each serving of chips has 393 calories and I Michael only have 786 / 393 = <<786/393=2>>2 servings.\nA 190g bag of chips has 10 servings, hence each serving is 190g / 10 = <<190/10=19>>19 grams.\nThen  Michael can eat only 19g * 2 = <<19*2=38>>38 grams.\n#### 38"
+    },
+    {
+        "id": 18,
+        "parent_id": 43,
+        "problem": "According to the nutritional info, a bag of chips has 201 calories per serving. If a 132g bag has 6 servings, how many grams can David eat if David's daily calorie target is 2356 calories and David has already consumed 547 calories?",
+        "solution": "If the total calorie target is 2356 calories and David has consumed 547 calories, then David has 2356 - 547 = <<2356-547=1809>>1809 calories left to eat.\n If each serving of chips has 201 calories and I David only have 1809 / 201 = <<1809/201=9>>9 servings.\nA 132g bag of chips has 6 servings, hence each serving is 132g / 6 = <<132/6=22>>22 grams.\nThen  David can eat only 22g * 9 = <<22*9=198>>198 grams.\n#### 198"
+    },
+    {
+        "id": 19,
+        "parent_id": 43,
+        "problem": "According to the nutritional info, a bag of chips has 291 calories per serving. If a 119g bag has 7 servings, how many grams can Richard eat if Richard's daily calorie target is 1922 calories and Richard has already consumed 758 calories?",
+        "solution": "If the total calorie target is 1922 calories and Richard has consumed 758 calories, then Richard has 1922 - 758 = <<1922-758=1164>>1164 calories left to eat.\n If each serving of chips has 291 calories and I Richard only have 1164 / 291 = <<1164/291=4>>4 servings.\nA 119g bag of chips has 7 servings, hence each serving is 119g / 7 = <<119/7=17>>17 grams.\nThen  Richard can eat only 17g * 4 = <<17*4=68>>68 grams.\n#### 68"
+    },
+    {
+        "id": 20,
+        "parent_id": 117,
+        "problem": "David buys 2 shoes for each of his 6 children. They cost $15 each. How much did David pay?",
+        "solution": "David bought 6 * 2 = <<6*2=12>>12pairs of shoes.\nSo David spent 15 * 12 = $<<15*12=180>>180.\n#### 180"
+    },
+    {
+        "id": 21,
+        "parent_id": 117,
+        "problem": "John buys 4 shoes for each of his 3 children. They cost $98 each. How much did John pay?",
+        "solution": "John bought 3 * 4 = <<3*4=12>>12pairs of shoes.\nSo John spent 98 * 12 = $<<98*12=1176>>1176.\n#### 1176"
+    },
+    {
+        "id": 22,
+        "parent_id": 117,
+        "problem": "Richard buys 2 shoes for each of his 3 children. They cost $31 each. How much did Richard pay?",
+        "solution": "Richard bought 3 * 2 = <<3*2=6>>6pairs of shoes.\nSo Richard spent 31 * 6 = $<<31*6=186>>186.\n#### 186"
+    },
+    {
+        "id": 23,
+        "parent_id": 117,
+        "problem": "Robert buys 2 shoes for each of his 6 children. They cost $43 each. How much did Robert pay?",
+        "solution": "Robert bought 6 * 2 = <<6*2=12>>12pairs of shoes.\nSo Robert spent 43 * 12 = $<<43*12=516>>516.\n#### 516"
+    },
+    {
+        "id": 24,
+        "parent_id": 117,
+        "problem": "Robert buys 3 shoes for each of his 4 children. They cost $67 each. How much did Robert pay?",
+        "solution": "Robert bought 4 * 3 = <<4*3=12>>12pairs of shoes.\nSo Robert spent 67 * 12 = $<<67*12=804>>804.\n#### 804"
+    },
+    {
+        "id": 25,
+        "parent_id": 117,
+        "problem": "John buys 1 shoes for each of his 4 children. They cost $46 each. How much did John pay?",
+        "solution": "John bought 4 * 1 = <<4*1=4>>4pairs of shoes.\nSo John spent 46 * 4 = $<<46*4=184>>184.\n#### 184"
+    },
+    {
+        "id": 26,
+        "parent_id": 117,
+        "problem": "Thomas buys 1 shoes for each of his 5 children. They cost $92 each. How much did Thomas pay?",
+        "solution": "Thomas bought 5 * 1 = <<5*1=5>>5pairs of shoes.\nSo Thomas spent 92 * 5 = $<<92*5=460>>460.\n#### 460"
+    },
+    {
+        "id": 27,
+        "parent_id": 117,
+        "problem": "Richard buys 2 shoes for each of his 4 children. They cost $76 each. How much did Richard pay?",
+        "solution": "Richard bought 4 * 2 = <<4*2=8>>8pairs of shoes.\nSo Richard spent 76 * 8 = $<<76*8=608>>608.\n#### 608"
+    },
+    {
+        "id": 28,
+        "parent_id": 117,
+        "problem": "David buys 1 shoes for each of his 5 children. They cost $31 each. How much did David pay?",
+        "solution": "David bought 5 * 1 = <<5*1=5>>5pairs of shoes.\nSo David spent 31 * 5 = $<<31*5=155>>155.\n#### 155"
+    },
+    {
+        "id": 29,
+        "parent_id": 117,
+        "problem": "Richard buys 4 shoes for each of his 3 children. They cost $30 each. How much did Richard pay?",
+        "solution": "Richard bought 3 * 4 = <<3*4=12>>12pairs of shoes.\nSo Richard spent 30 * 12 = $<<30*12=360>>360.\n#### 360"
+    },
+    {
+        "id": 30,
+        "parent_id": 295,
+        "problem": "William decides to body exercises for a whole week. William does 53 pushups, 36 squats, and 19 dumbbell presses on the first day. On the second day, William does 15 more pushups than on the first day, 15 fewer squats, and 3 times the number of dumbbell presses. What's the total count of the activities William has done in the two days?",
+        "solution": "The total count of activities for the first day is 53 + 36 + 19 = <<53+36+19=108>>108.\n\nOn the second day, William does 53 + 15 = <<53+15=68>>68 pushups.\n\nWilliam also does 36 - 15 = <<36-15=21>>21 squats.\n\nFor the dumbbell presses, William multiplies the number from the first day by 3, which becomes 3 * 19 = <<3*19=57>>57.\n\nThe total count for the three activities on the second day is 68 + 21 + 57 = <<68+21+57=146>>146.\n\nFor the two days, William has a total count for all three activities of 108 + 146 = <<108+146=254>>254.\n#### 254"
+    },
+    {
+        "id": 31,
+        "parent_id": 295,
+        "problem": "David decides to body exercises for a whole week. David does 78 pushups, 43 squats, and 19 dumbbell presses on the first day. On the second day, David does 23 more pushups than on the first day, 14 fewer squats, and 3 times the number of dumbbell presses. What's the total count of the activities David has done in the two days?",
+        "solution": "The total count of activities for the first day is 78 + 43 + 19 = <<78+43+19=140>>140.\n\nOn the second day, David does 78 + 23 = <<78+23=101>>101 pushups.\n\nDavid also does 43 - 14 = <<43-14=29>>29 squats.\n\nFor the dumbbell presses, David multiplies the number from the first day by 3, which becomes 3 * 19 = <<3*19=57>>57.\n\nThe total count for the three activities on the second day is 101 + 29 + 57 = <<101+29+57=187>>187.\n\nFor the two days, David has a total count for all three activities of 140 + 187 = <<140+187=327>>327.\n#### 327"
+    },
+    {
+        "id": 32,
+        "parent_id": 295,
+        "problem": "Michael decides to body exercises for a whole week. Michael does 58 pushups, 46 squats, and 16 dumbbell presses on the first day. On the second day, Michael does 16 more pushups than on the first day, 18 fewer squats, and 3 times the number of dumbbell presses. What's the total count of the activities Michael has done in the two days?",
+        "solution": "The total count of activities for the first day is 58 + 46 + 16 = <<58+46+16=120>>120.\n\nOn the second day, Michael does 58 + 16 = <<58+16=74>>74 pushups.\n\nMichael also does 46 - 18 = <<46-18=28>>28 squats.\n\nFor the dumbbell presses, Michael multiplies the number from the first day by 3, which becomes 3 * 16 = <<3*16=48>>48.\n\nThe total count for the three activities on the second day is 74 + 28 + 48 = <<74+28+48=150>>150.\n\nFor the two days, Michael has a total count for all three activities of 120 + 150 = <<120+150=270>>270.\n#### 270"
+    },
+    {
+        "id": 33,
+        "parent_id": 295,
+        "problem": "Joseph decides to body exercises for a whole week. Joseph does 96 pushups, 49 squats, and 29 dumbbell presses on the first day. On the second day, Joseph does 21 more pushups than on the first day, 11 fewer squats, and 2 times the number of dumbbell presses. What's the total count of the activities Joseph has done in the two days?",
+        "solution": "The total count of activities for the first day is 96 + 49 + 29 = <<96+49+29=174>>174.\n\nOn the second day, Joseph does 96 + 21 = <<96+21=117>>117 pushups.\n\nJoseph also does 49 - 11 = <<49-11=38>>38 squats.\n\nFor the dumbbell presses, Joseph multiplies the number from the first day by 2, which becomes 2 * 29 = <<2*29=58>>58.\n\nThe total count for the three activities on the second day is 117 + 38 + 58 = <<117+38+58=213>>213.\n\nFor the two days, Joseph has a total count for all three activities of 174 + 213 = <<174+213=387>>387.\n#### 387"
+    },
+    {
+        "id": 34,
+        "parent_id": 295,
+        "problem": "John decides to body exercises for a whole week. John does 93 pushups, 76 squats, and 16 dumbbell presses on the first day. On the second day, John does 19 more pushups than on the first day, 11 fewer squats, and 3 times the number of dumbbell presses. What's the total count of the activities John has done in the two days?",
+        "solution": "The total count of activities for the first day is 93 + 76 + 16 = <<93+76+16=185>>185.\n\nOn the second day, John does 93 + 19 = <<93+19=112>>112 pushups.\n\nJohn also does 76 - 11 = <<76-11=65>>65 squats.\n\nFor the dumbbell presses, John multiplies the number from the first day by 3, which becomes 3 * 16 = <<3*16=48>>48.\n\nThe total count for the three activities on the second day is 112 + 65 + 48 = <<112+65+48=225>>225.\n\nFor the two days, John has a total count for all three activities of 185 + 225 = <<185+225=410>>410.\n#### 410"
+    },
+    {
+        "id": 35,
+        "parent_id": 295,
+        "problem": "Robert decides to body exercises for a whole week. Robert does 74 pushups, 51 squats, and 27 dumbbell presses on the first day. On the second day, Robert does 10 more pushups than on the first day, 10 fewer squats, and 3 times the number of dumbbell presses. What's the total count of the activities Robert has done in the two days?",
+        "solution": "The total count of activities for the first day is 74 + 51 + 27 = <<74+51+27=152>>152.\n\nOn the second day, Robert does 74 + 10 = <<74+10=84>>84 pushups.\n\nRobert also does 51 - 10 = <<51-10=41>>41 squats.\n\nFor the dumbbell presses, Robert multiplies the number from the first day by 3, which becomes 3 * 27 = <<3*27=81>>81.\n\nThe total count for the three activities on the second day is 84 + 41 + 81 = <<84+41+81=206>>206.\n\nFor the two days, Robert has a total count for all three activities of 152 + 206 = <<152+206=358>>358.\n#### 358"
+    },
+    {
+        "id": 36,
+        "parent_id": 295,
+        "problem": "Joseph decides to body exercises for a whole week. Joseph does 82 pushups, 44 squats, and 11 dumbbell presses on the first day. On the second day, Joseph does 12 more pushups than on the first day, 13 fewer squats, and 3 times the number of dumbbell presses. What's the total count of the activities Joseph has done in the two days?",
+        "solution": "The total count of activities for the first day is 82 + 44 + 11 = <<82+44+11=137>>137.\n\nOn the second day, Joseph does 82 + 12 = <<82+12=94>>94 pushups.\n\nJoseph also does 44 - 13 = <<44-13=31>>31 squats.\n\nFor the dumbbell presses, Joseph multiplies the number from the first day by 3, which becomes 3 * 11 = <<3*11=33>>33.\n\nThe total count for the three activities on the second day is 94 + 31 + 33 = <<94+31+33=158>>158.\n\nFor the two days, Joseph has a total count for all three activities of 137 + 158 = <<137+158=295>>295.\n#### 295"
+    },
+    {
+        "id": 37,
+        "parent_id": 295,
+        "problem": "Joseph decides to body exercises for a whole week. Joseph does 56 pushups, 41 squats, and 30 dumbbell presses on the first day. On the second day, Joseph does 28 more pushups than on the first day, 13 fewer squats, and 2 times the number of dumbbell presses. What's the total count of the activities Joseph has done in the two days?",
+        "solution": "The total count of activities for the first day is 56 + 41 + 30 = <<56+41+30=127>>127.\n\nOn the second day, Joseph does 56 + 28 = <<56+28=84>>84 pushups.\n\nJoseph also does 41 - 13 = <<41-13=28>>28 squats.\n\nFor the dumbbell presses, Joseph multiplies the number from the first day by 2, which becomes 2 * 30 = <<2*30=60>>60.\n\nThe total count for the three activities on the second day is 84 + 28 + 60 = <<84+28+60=172>>172.\n\nFor the two days, Joseph has a total count for all three activities of 127 + 172 = <<127+172=299>>299.\n#### 299"
+    },
+    {
+        "id": 38,
+        "parent_id": 295,
+        "problem": "Michael decides to body exercises for a whole week. Michael does 81 pushups, 42 squats, and 10 dumbbell presses on the first day. On the second day, Michael does 29 more pushups than on the first day, 16 fewer squats, and 2 times the number of dumbbell presses. What's the total count of the activities Michael has done in the two days?",
+        "solution": "The total count of activities for the first day is 81 + 42 + 10 = <<81+42+10=133>>133.\n\nOn the second day, Michael does 81 + 29 = <<81+29=110>>110 pushups.\n\nMichael also does 42 - 16 = <<42-16=26>>26 squats.\n\nFor the dumbbell presses, Michael multiplies the number from the first day by 2, which becomes 2 * 10 = <<2*10=20>>20.\n\nThe total count for the three activities on the second day is 110 + 26 + 20 = <<110+26+20=156>>156.\n\nFor the two days, Michael has a total count for all three activities of 133 + 156 = <<133+156=289>>289.\n#### 289"
+    },
+    {
+        "id": 39,
+        "parent_id": 295,
+        "problem": "Richard decides to body exercises for a whole week. Richard does 50 pushups, 74 squats, and 22 dumbbell presses on the first day. On the second day, Richard does 22 more pushups than on the first day, 16 fewer squats, and 2 times the number of dumbbell presses. What's the total count of the activities Richard has done in the two days?",
+        "solution": "The total count of activities for the first day is 50 + 74 + 22 = <<50+74+22=146>>146.\n\nOn the second day, Richard does 50 + 22 = <<50+22=72>>72 pushups.\n\nRichard also does 74 - 16 = <<74-16=58>>58 squats.\n\nFor the dumbbell presses, Richard multiplies the number from the first day by 2, which becomes 2 * 22 = <<2*22=44>>44.\n\nThe total count for the three activities on the second day is 72 + 58 + 44 = <<72+58+44=174>>174.\n\nFor the two days, Richard has a total count for all three activities of 146 + 174 = <<146+174=320>>320.\n#### 320"
+    },
+    {
+        "id": 40,
+        "parent_id": 550,
+        "problem": "A shop  sells school supplies. One notebook is sold at $1 each, a pen at $2 each, a calculator at $14 each, and a geometry set at $10 each. Robert is a engineering student, and Robert wants to buy 8 notebooks, 17 pens, 2 calculator, and 3 geometry set. The shop gives a 7% discount on all the purchased items. How much does Robert have to spend on all the items Robert wants to buy?",
+        "solution": "8 notebooks cost 8 x $1 = $<<8*1=8>>8.\n17 pens cost 17 x $2 = $<<17*2=34>>34.\nThe total cost is $8 + $34 = $<<8+34=100>>100.\nThe total discount is 7% of $100 = $<<7*100/100=7>>7.\nTherefore, Robert has to spend $100 - $7 = $<<100-7=93>>93 on all the items Robert wants to buy.\n#### 93"
+    },
+    {
+        "id": 41,
+        "parent_id": 550,
+        "problem": "A shop  sells school supplies. One notebook is sold at $3 each, a pen at $2 each, a calculator at $11 each, and a geometry set at $8 each. James is a engineering student, and James wants to buy 7 notebooks, 1 pens, 1 calculator, and 2 geometry set. The shop gives a 8% discount on all the purchased items. How much does James have to spend on all the items James wants to buy?",
+        "solution": "7 notebooks cost 7 x $3 = $<<7*3=21>>21.\n1 pens cost 1 x $2 = $<<1*2=2>>2.\nThe total cost is $21 + $2 = $<<21+2=50>>50.\nThe total discount is 8% of $50 = $<<8*50/100=4>>4.\nTherefore, James has to spend $50 - $4 = $<<50-4=46>>46 on all the items James wants to buy.\n#### 46"
+    },
+    {
+        "id": 42,
+        "parent_id": 550,
+        "problem": "A shop  sells school supplies. One notebook is sold at $2 each, a pen at $1 each, a calculator at $14 each, and a geometry set at $15 each. John is a engineering student, and John wants to buy 9 notebooks, 9 pens, 2 calculator, and 3 geometry set. The shop gives a 6% discount on all the purchased items. How much does John have to spend on all the items John wants to buy?",
+        "solution": "9 notebooks cost 9 x $2 = $<<9*2=18>>18.\n9 pens cost 9 x $1 = $<<9*1=9>>9.\nThe total cost is $18 + $9 = $<<18+9=100>>100.\nThe total discount is 6% of $100 = $<<6*100/100=6>>6.\nTherefore, John has to spend $100 - $6 = $<<100-6=94>>94 on all the items John wants to buy.\n#### 94"
+    },
+    {
+        "id": 43,
+        "parent_id": 550,
+        "problem": "A shop  sells school supplies. One notebook is sold at $5 each, a pen at $2 each, a calculator at $12 each, and a geometry set at $12 each. James is a engineering student, and James wants to buy 2 notebooks, 8 pens, 1 calculator, and 1 geometry set. The shop gives a 18% discount on all the purchased items. How much does James have to spend on all the items James wants to buy?",
+        "solution": "2 notebooks cost 2 x $5 = $<<2*5=10>>10.\n8 pens cost 8 x $2 = $<<8*2=16>>16.\nThe total cost is $10 + $16 = $<<10+16=50>>50.\nThe total discount is 18% of $50 = $<<18*50/100=9>>9.\nTherefore, James has to spend $50 - $9 = $<<50-9=41>>41 on all the items James wants to buy.\n#### 41"
+    },
+    {
+        "id": 44,
+        "parent_id": 550,
+        "problem": "A shop  sells school supplies. One notebook is sold at $2 each, a pen at $2 each, a calculator at $14 each, and a geometry set at $9 each. Michael is a engineering student, and Michael wants to buy 10 notebooks, 14 pens, 1 calculator, and 2 geometry set. The shop gives a 20% discount on all the purchased items. How much does Michael have to spend on all the items Michael wants to buy?",
+        "solution": "10 notebooks cost 10 x $2 = $<<10*2=20>>20.\n14 pens cost 14 x $2 = $<<14*2=28>>28.\nThe total cost is $20 + $28 = $<<20+28=80>>80.\nThe total discount is 20% of $80 = $<<20*80/100=16>>16.\nTherefore, Michael has to spend $80 - $16 = $<<80-16=64>>64 on all the items Michael wants to buy.\n#### 64"
+    },
+    {
+        "id": 45,
+        "parent_id": 550,
+        "problem": "A shop  sells school supplies. One notebook is sold at $1 each, a pen at $1 each, a calculator at $14 each, and a geometry set at $10 each. Richard is a engineering student, and Richard wants to buy 3 notebooks, 9 pens, 2 calculator, and 1 geometry set. The shop gives a 14% discount on all the purchased items. How much does Richard have to spend on all the items Richard wants to buy?",
+        "solution": "3 notebooks cost 3 x $1 = $<<3*1=3>>3.\n9 pens cost 9 x $1 = $<<9*1=9>>9.\nThe total cost is $3 + $9 = $<<3+9=50>>50.\nThe total discount is 14% of $50 = $<<14*50/100=7>>7.\nTherefore, Richard has to spend $50 - $7 = $<<50-7=43>>43 on all the items Richard wants to buy.\n#### 43"
+    },
+    {
+        "id": 46,
+        "parent_id": 550,
+        "problem": "A shop  sells school supplies. One notebook is sold at $5 each, a pen at $2 each, a calculator at $15 each, and a geometry set at $10 each. David is a engineering student, and David wants to buy 1 notebooks, 10 pens, 1 calculator, and 2 geometry set. The shop gives a 5% discount on all the purchased items. How much does David have to spend on all the items David wants to buy?",
+        "solution": "1 notebooks cost 1 x $5 = $<<1*5=5>>5.\n10 pens cost 10 x $2 = $<<10*2=20>>20.\nThe total cost is $5 + $20 = $<<5+20=60>>60.\nThe total discount is 5% of $60 = $<<5*60/100=3>>3.\nTherefore, David has to spend $60 - $3 = $<<60-3=57>>57 on all the items David wants to buy.\n#### 57"
+    },
+    {
+        "id": 47,
+        "parent_id": 550,
+        "problem": "A shop  sells school supplies. One notebook is sold at $5 each, a pen at $1 each, a calculator at $20 each, and a geometry set at $13 each. William is a engineering student, and William wants to buy 1 notebooks, 19 pens, 1 calculator, and 2 geometry set. The shop gives a 20% discount on all the purchased items. How much does William have to spend on all the items William wants to buy?",
+        "solution": "1 notebooks cost 1 x $5 = $<<1*5=5>>5.\n19 pens cost 19 x $1 = $<<19*1=19>>19.\nThe total cost is $5 + $19 = $<<5+19=70>>70.\nThe total discount is 20% of $70 = $<<20*70/100=14>>14.\nTherefore, William has to spend $70 - $14 = $<<70-14=56>>56 on all the items William wants to buy.\n#### 56"
+    },
+    {
+        "id": 48,
+        "parent_id": 550,
+        "problem": "A shop  sells school supplies. One notebook is sold at $5 each, a pen at $2 each, a calculator at $18 each, and a geometry set at $5 each. William is a engineering student, and William wants to buy 10 notebooks, 2 pens, 2 calculator, and 2 geometry set. The shop gives a 7% discount on all the purchased items. How much does William have to spend on all the items William wants to buy?",
+        "solution": "10 notebooks cost 10 x $5 = $<<10*5=50>>50.\n2 pens cost 2 x $2 = $<<2*2=4>>4.\nThe total cost is $50 + $4 = $<<50+4=100>>100.\nThe total discount is 7% of $100 = $<<7*100/100=7>>7.\nTherefore, William has to spend $100 - $7 = $<<100-7=93>>93 on all the items William wants to buy.\n#### 93"
+    },
+    {
+        "id": 49,
+        "parent_id": 550,
+        "problem": "A shop  sells school supplies. One notebook is sold at $3 each, a pen at $2 each, a calculator at $14 each, and a geometry set at $15 each. James is a engineering student, and James wants to buy 6 notebooks, 14 pens, 1 calculator, and 1 geometry set. The shop gives a 12% discount on all the purchased items. How much does James have to spend on all the items James wants to buy?",
+        "solution": "6 notebooks cost 6 x $3 = $<<6*3=18>>18.\n14 pens cost 14 x $2 = $<<14*2=28>>28.\nThe total cost is $18 + $28 = $<<18+28=75>>75.\nThe total discount is 12% of $75 = $<<12*75/100=9>>9.\nTherefore, James has to spend $75 - $9 = $<<75-9=66>>66 on all the items James wants to buy.\n#### 66"
+    },
+    {
+        "id": 50,
+        "parent_id": 249,
+        "problem": "On Monday, Patricia ate 3 times as many cookies as Barbara. On Tuesday, Patricia ate 3 times as many cookies as Barbara. Barbara ate 4 cookies on Monday and 12 the next day. If 1 cookie has 144 calories, how many more calories did Patricia consume than Barbara?",
+        "solution": "Patricia's Monday cookie intake is 3 * 4 = <<3*4=12>>12.\nPatricia's Tuesday cookie intake is 3 * 12 = <<3*12=36>>36.\nTotal cookie Patricia consumed is 12 + 36 = <<12+36=48>>48.\nBarbara ate a total of 4 + 12 = <<4+12=16>>16 cookies.\nPatricia ate 48 - 16 = <<48-16=32>>32 more cookies.\nPatricia consumed 32 * 144 = <<32*144=4608>>4608 more calories.\n#### 4608"
+    },
+    {
+        "id": 51,
+        "parent_id": 249,
+        "problem": "On Monday, Jennifer ate 4 times as many cookies as Margaret. On Tuesday, Jennifer ate 3 times as many cookies as Margaret. Margaret ate 8 cookies on Monday and 7 the next day. If 1 cookie has 66 calories, how many more calories did Jennifer consume than Margaret?",
+        "solution": "Jennifer's Monday cookie intake is 4 * 8 = <<4*8=32>>32.\nJennifer's Tuesday cookie intake is 3 * 7 = <<3*7=21>>21.\nTotal cookie Jennifer consumed is 32 + 21 = <<32+21=53>>53.\nMargaret ate a total of 8 + 7 = <<8+7=15>>15 cookies.\nJennifer ate 53 - 15 = <<53-15=38>>38 more cookies.\nJennifer consumed 38 * 66 = <<38*66=2508>>2508 more calories.\n#### 2508"
+    },
+    {
+        "id": 52,
+        "parent_id": 249,
+        "problem": "On Monday, Mary ate 2 times as many cookies as Sarah. On Tuesday, Mary ate 4 times as many cookies as Sarah. Sarah ate 5 cookies on Monday and 6 the next day. If 1 cookie has 87 calories, how many more calories did Mary consume than Sarah?",
+        "solution": "Mary's Monday cookie intake is 2 * 5 = <<2*5=10>>10.\nMary's Tuesday cookie intake is 4 * 6 = <<4*6=24>>24.\nTotal cookie Mary consumed is 10 + 24 = <<10+24=34>>34.\nSarah ate a total of 5 + 6 = <<5+6=11>>11 cookies.\nMary ate 34 - 11 = <<34-11=23>>23 more cookies.\nMary consumed 23 * 87 = <<23*87=2001>>2001 more calories.\n#### 2001"
+    },
+    {
+        "id": 53,
+        "parent_id": 249,
+        "problem": "On Monday, Patricia ate 5 times as many cookies as Patricia. On Tuesday, Patricia ate 4 times as many cookies as Patricia. Patricia ate 6 cookies on Monday and 5 the next day. If 1 cookie has 108 calories, how many more calories did Patricia consume than Patricia?",
+        "solution": "Patricia's Monday cookie intake is 5 * 6 = <<5*6=30>>30.\nPatricia's Tuesday cookie intake is 4 * 5 = <<4*5=20>>20.\nTotal cookie Patricia consumed is 30 + 20 = <<30+20=50>>50.\nPatricia ate a total of 6 + 5 = <<6+5=11>>11 cookies.\nPatricia ate 50 - 11 = <<50-11=39>>39 more cookies.\nPatricia consumed 39 * 108 = <<39*108=4212>>4212 more calories.\n#### 4212"
+    },
+    {
+        "id": 54,
+        "parent_id": 249,
+        "problem": "On Monday, Jennifer ate 3 times as many cookies as Jessica. On Tuesday, Jennifer ate 2 times as many cookies as Jessica. Jessica ate 4 cookies on Monday and 14 the next day. If 1 cookie has 104 calories, how many more calories did Jennifer consume than Jessica?",
+        "solution": "Jennifer's Monday cookie intake is 3 * 4 = <<3*4=12>>12.\nJennifer's Tuesday cookie intake is 2 * 14 = <<2*14=28>>28.\nTotal cookie Jennifer consumed is 12 + 28 = <<12+28=40>>40.\nJessica ate a total of 4 + 14 = <<4+14=18>>18 cookies.\nJennifer ate 40 - 18 = <<40-18=22>>22 more cookies.\nJennifer consumed 22 * 104 = <<22*104=2288>>2288 more calories.\n#### 2288"
+    },
+    {
+        "id": 55,
+        "parent_id": 249,
+        "problem": "On Monday, Elizabeth ate 5 times as many cookies as Jennifer. On Tuesday, Elizabeth ate 2 times as many cookies as Jennifer. Jennifer ate 5 cookies on Monday and 7 the next day. If 1 cookie has 140 calories, how many more calories did Elizabeth consume than Jennifer?",
+        "solution": "Elizabeth's Monday cookie intake is 5 * 5 = <<5*5=25>>25.\nElizabeth's Tuesday cookie intake is 2 * 7 = <<2*7=14>>14.\nTotal cookie Elizabeth consumed is 25 + 14 = <<25+14=39>>39.\nJennifer ate a total of 5 + 7 = <<5+7=12>>12 cookies.\nElizabeth ate 39 - 12 = <<39-12=27>>27 more cookies.\nElizabeth consumed 27 * 140 = <<27*140=3780>>3780 more calories.\n#### 3780"
+    },
+    {
+        "id": 56,
+        "parent_id": 249,
+        "problem": "On Monday, Susan ate 3 times as many cookies as Elizabeth. On Tuesday, Susan ate 2 times as many cookies as Elizabeth. Elizabeth ate 5 cookies on Monday and 6 the next day. If 1 cookie has 191 calories, how many more calories did Susan consume than Elizabeth?",
+        "solution": "Susan's Monday cookie intake is 3 * 5 = <<3*5=15>>15.\nSusan's Tuesday cookie intake is 2 * 6 = <<2*6=12>>12.\nTotal cookie Susan consumed is 15 + 12 = <<15+12=27>>27.\nElizabeth ate a total of 5 + 6 = <<5+6=11>>11 cookies.\nSusan ate 27 - 11 = <<27-11=16>>16 more cookies.\nSusan consumed 16 * 191 = <<16*191=3056>>3056 more calories.\n#### 3056"
+    },
+    {
+        "id": 57,
+        "parent_id": 249,
+        "problem": "On Monday, Jessica ate 2 times as many cookies as Sarah. On Tuesday, Jessica ate 2 times as many cookies as Sarah. Sarah ate 6 cookies on Monday and 9 the next day. If 1 cookie has 151 calories, how many more calories did Jessica consume than Sarah?",
+        "solution": "Jessica's Monday cookie intake is 2 * 6 = <<2*6=12>>12.\nJessica's Tuesday cookie intake is 2 * 9 = <<2*9=18>>18.\nTotal cookie Jessica consumed is 12 + 18 = <<12+18=30>>30.\nSarah ate a total of 6 + 9 = <<6+9=15>>15 cookies.\nJessica ate 30 - 15 = <<30-15=15>>15 more cookies.\nJessica consumed 15 * 151 = <<15*151=2265>>2265 more calories.\n#### 2265"
+    },
+    {
+        "id": 58,
+        "parent_id": 249,
+        "problem": "On Monday, Sarah ate 2 times as many cookies as Margaret. On Tuesday, Sarah ate 2 times as many cookies as Margaret. Margaret ate 10 cookies on Monday and 9 the next day. If 1 cookie has 237 calories, how many more calories did Sarah consume than Margaret?",
+        "solution": "Sarah's Monday cookie intake is 2 * 10 = <<2*10=20>>20.\nSarah's Tuesday cookie intake is 2 * 9 = <<2*9=18>>18.\nTotal cookie Sarah consumed is 20 + 18 = <<20+18=38>>38.\nMargaret ate a total of 10 + 9 = <<10+9=19>>19 cookies.\nSarah ate 38 - 19 = <<38-19=19>>19 more cookies.\nSarah consumed 19 * 237 = <<19*237=4503>>4503 more calories.\n#### 4503"
+    },
+    {
+        "id": 59,
+        "parent_id": 249,
+        "problem": "On Monday, Susan ate 2 times as many cookies as Patricia. On Tuesday, Susan ate 3 times as many cookies as Patricia. Patricia ate 4 cookies on Monday and 14 the next day. If 1 cookie has 68 calories, how many more calories did Susan consume than Patricia?",
+        "solution": "Susan's Monday cookie intake is 2 * 4 = <<2*4=8>>8.\nSusan's Tuesday cookie intake is 3 * 14 = <<3*14=42>>42.\nTotal cookie Susan consumed is 8 + 42 = <<8+42=50>>50.\nPatricia ate a total of 4 + 14 = <<4+14=18>>18 cookies.\nSusan ate 50 - 18 = <<50-18=32>>32 more cookies.\nSusan consumed 32 * 68 = <<32*68=2176>>2176 more calories.\n#### 2176"
+    },
+    {
+        "id": 60,
+        "parent_id": 476,
+        "problem": "Sarah went to buy books from the store and spent $360 on the books. If each book was $20 and Sarah gave an equal number of books to her 2 kids, how many books did each child get?",
+        "solution": "Since Sarah spent $360 on the books and each book cost $20, Sarah bought $360 / $20 = <<360/20=18>>18 books.\n\nIf Sarah gave an equal number of books to each of her 2 kids, each child received 18 / 2 = <<18/2=9>>9 books.\n#### 9"
+    },
+    {
+        "id": 61,
+        "parent_id": 476,
+        "problem": "Sarah went to buy books from the store and spent $360 on the books. If each book was $8 and Sarah gave an equal number of books to her 3 kids, how many books did each child get?",
+        "solution": "Since Sarah spent $360 on the books and each book cost $8, Sarah bought $360 / $8 = <<360/8=45>>45 books.\n\nIf Sarah gave an equal number of books to each of her 3 kids, each child received 45 / 3 = <<45/3=15>>15 books.\n#### 15"
+    },
+    {
+        "id": 62,
+        "parent_id": 476,
+        "problem": "Sarah went to buy books from the store and spent $476 on the books. If each book was $14 and Sarah gave an equal number of books to her 2 kids, how many books did each child get?",
+        "solution": "Since Sarah spent $476 on the books and each book cost $14, Sarah bought $476 / $14 = <<476/14=34>>34 books.\n\nIf Sarah gave an equal number of books to each of her 2 kids, each child received 34 / 2 = <<34/2=17>>17 books.\n#### 17"
+    },
+    {
+        "id": 63,
+        "parent_id": 476,
+        "problem": "Jennifer went to buy books from the store and spent $480 on the books. If each book was $48 and Jennifer gave an equal number of books to her 5 kids, how many books did each child get?",
+        "solution": "Since Jennifer spent $480 on the books and each book cost $48, Jennifer bought $480 / $48 = <<480/48=10>>10 books.\n\nIf Jennifer gave an equal number of books to each of her 5 kids, each child received 10 / 5 = <<10/5=2>>2 books.\n#### 2"
+    },
+    {
+        "id": 64,
+        "parent_id": 476,
+        "problem": "Jennifer went to buy books from the store and spent $492 on the books. If each book was $6 and Jennifer gave an equal number of books to her 2 kids, how many books did each child get?",
+        "solution": "Since Jennifer spent $492 on the books and each book cost $6, Jennifer bought $492 / $6 = <<492/6=82>>82 books.\n\nIf Jennifer gave an equal number of books to each of her 2 kids, each child received 82 / 2 = <<82/2=41>>41 books.\n#### 41"
+    },
+    {
+        "id": 65,
+        "parent_id": 476,
+        "problem": "Jessica went to buy books from the store and spent $490 on the books. If each book was $49 and Jessica gave an equal number of books to her 5 kids, how many books did each child get?",
+        "solution": "Since Jessica spent $490 on the books and each book cost $49, Jessica bought $490 / $49 = <<490/49=10>>10 books.\n\nIf Jessica gave an equal number of books to each of her 5 kids, each child received 10 / 5 = <<10/5=2>>2 books.\n#### 2"
+    },
+    {
+        "id": 66,
+        "parent_id": 476,
+        "problem": "Linda went to buy books from the store and spent $200 on the books. If each book was $5 and Linda gave an equal number of books to her 5 kids, how many books did each child get?",
+        "solution": "Since Linda spent $200 on the books and each book cost $5, Linda bought $200 / $5 = <<200/5=40>>40 books.\n\nIf Linda gave an equal number of books to each of her 5 kids, each child received 40 / 5 = <<40/5=8>>8 books.\n#### 8"
+    },
+    {
+        "id": 67,
+        "parent_id": 476,
+        "problem": "Elizabeth went to buy books from the store and spent $150 on the books. If each book was $5 and Elizabeth gave an equal number of books to her 3 kids, how many books did each child get?",
+        "solution": "Since Elizabeth spent $150 on the books and each book cost $5, Elizabeth bought $150 / $5 = <<150/5=30>>30 books.\n\nIf Elizabeth gave an equal number of books to each of her 3 kids, each child received 30 / 3 = <<30/3=10>>10 books.\n#### 10"
+    },
+    {
+        "id": 68,
+        "parent_id": 476,
+        "problem": "Margaret went to buy books from the store and spent $180 on the books. If each book was $18 and Margaret gave an equal number of books to her 5 kids, how many books did each child get?",
+        "solution": "Since Margaret spent $180 on the books and each book cost $18, Margaret bought $180 / $18 = <<180/18=10>>10 books.\n\nIf Margaret gave an equal number of books to each of her 5 kids, each child received 10 / 5 = <<10/5=2>>2 books.\n#### 2"
+    },
+    {
+        "id": 69,
+        "parent_id": 476,
+        "problem": "Jessica went to buy books from the store and spent $495 on the books. If each book was $9 and Jessica gave an equal number of books to her 5 kids, how many books did each child get?",
+        "solution": "Since Jessica spent $495 on the books and each book cost $9, Jessica bought $495 / $9 = <<495/9=55>>55 books.\n\nIf Jessica gave an equal number of books to each of her 5 kids, each child received 55 / 5 = <<55/5=11>>11 books.\n#### 11"
+    },
+    {
+        "id": 70,
+        "parent_id": 1235,
+        "problem": "Charles is traveling on the interstate at an average speed of 50 km/hr (taking into account all the necessary stops for gas, relaxation, etc.). If Charles goes on like this for 2 days, and the distance between Alaska and Texas is 3200 km, what percentage of this distance has Charles covered?",
+        "solution": "There are 24 hours in each day, so Charles has been traveling for a total of 2 * 24 = <<2*24=48>>48 hours.\nAt a rate of 50 km/hr, Charles has covered 50 * 48 = <<50*48=2400>>2400 km.\n2400 km as a percentage of 3200 km is (2400/3200)*100% = <<(2400/3200)*100=75>>75%\n#### 75"
+    },
+    {
+        "id": 71,
+        "parent_id": 1235,
+        "problem": "William is traveling on the interstate at an average speed of 42 km/hr (taking into account all the necessary stops for gas, relaxation, etc.). If William goes on like this for 3 days, and the distance between Alaska and Texas is 5040 km, what percentage of this distance has William covered?",
+        "solution": "There are 24 hours in each day, so William has been traveling for a total of 3 * 24 = <<3*24=72>>72 hours.\nAt a rate of 42 km/hr, William has covered 42 * 72 = <<42*72=3024>>3024 km.\n3024 km as a percentage of 5040 km is (3024/5040)*100% = <<(3024/5040)*100=60>>60%\n#### 60"
+    },
+    {
+        "id": 72,
+        "parent_id": 1235,
+        "problem": "Charles is traveling on the interstate at an average speed of 63 km/hr (taking into account all the necessary stops for gas, relaxation, etc.). If Charles goes on like this for 1 days, and the distance between Alaska and Texas is 2160 km, what percentage of this distance has Charles covered?",
+        "solution": "There are 24 hours in each day, so Charles has been traveling for a total of 1 * 24 = <<1*24=24>>24 hours.\nAt a rate of 63 km/hr, Charles has covered 63 * 24 = <<63*24=1512>>1512 km.\n1512 km as a percentage of 2160 km is (1512/2160)*100% = <<(1512/2160)*100=70>>70%\n#### 70"
+    },
+    {
+        "id": 73,
+        "parent_id": 1235,
+        "problem": "James is traveling on the interstate at an average speed of 73 km/hr (taking into account all the necessary stops for gas, relaxation, etc.). If James goes on like this for 1 days, and the distance between Alaska and Texas is 1825 km, what percentage of this distance has James covered?",
+        "solution": "There are 24 hours in each day, so James has been traveling for a total of 1 * 24 = <<1*24=24>>24 hours.\nAt a rate of 73 km/hr, James has covered 73 * 24 = <<73*24=1752>>1752 km.\n1752 km as a percentage of 1825 km is (1752/1825)*100% = <<(1752/1825)*100=96>>96%\n#### 96"
+    },
+    {
+        "id": 74,
+        "parent_id": 1235,
+        "problem": "Robert is traveling on the interstate at an average speed of 46 km/hr (taking into account all the necessary stops for gas, relaxation, etc.). If Robert goes on like this for 1 days, and the distance between Alaska and Texas is 2300 km, what percentage of this distance has Robert covered?",
+        "solution": "There are 24 hours in each day, so Robert has been traveling for a total of 1 * 24 = <<1*24=24>>24 hours.\nAt a rate of 46 km/hr, Robert has covered 46 * 24 = <<46*24=1104>>1104 km.\n1104 km as a percentage of 2300 km is (1104/2300)*100% = <<(1104/2300)*100=48>>48%\n#### 48"
+    },
+    {
+        "id": 75,
+        "parent_id": 1235,
+        "problem": "Robert is traveling on the interstate at an average speed of 53 km/hr (taking into account all the necessary stops for gas, relaxation, etc.). If Robert goes on like this for 2 days, and the distance between Alaska and Texas is 5300 km, what percentage of this distance has Robert covered?",
+        "solution": "There are 24 hours in each day, so Robert has been traveling for a total of 2 * 24 = <<2*24=48>>48 hours.\nAt a rate of 53 km/hr, Robert has covered 53 * 48 = <<53*48=2544>>2544 km.\n2544 km as a percentage of 5300 km is (2544/5300)*100% = <<(2544/5300)*100=48>>48%\n#### 48"
+    },
+    {
+        "id": 76,
+        "parent_id": 1235,
+        "problem": "John is traveling on the interstate at an average speed of 45 km/hr (taking into account all the necessary stops for gas, relaxation, etc.). If John goes on like this for 1 days, and the distance between Alaska and Texas is 4500 km, what percentage of this distance has John covered?",
+        "solution": "There are 24 hours in each day, so John has been traveling for a total of 1 * 24 = <<1*24=24>>24 hours.\nAt a rate of 45 km/hr, John has covered 45 * 24 = <<45*24=1080>>1080 km.\n1080 km as a percentage of 4500 km is (1080/4500)*100% = <<(1080/4500)*100=24>>24%\n#### 24"
+    },
+    {
+        "id": 77,
+        "parent_id": 1235,
+        "problem": "Thomas is traveling on the interstate at an average speed of 51 km/hr (taking into account all the necessary stops for gas, relaxation, etc.). If Thomas goes on like this for 1 days, and the distance between Alaska and Texas is 2400 km, what percentage of this distance has Thomas covered?",
+        "solution": "There are 24 hours in each day, so Thomas has been traveling for a total of 1 * 24 = <<1*24=24>>24 hours.\nAt a rate of 51 km/hr, Thomas has covered 51 * 24 = <<51*24=1224>>1224 km.\n1224 km as a percentage of 2400 km is (1224/2400)*100% = <<(1224/2400)*100=51>>51%\n#### 51"
+    },
+    {
+        "id": 78,
+        "parent_id": 1235,
+        "problem": "James is traveling on the interstate at an average speed of 47 km/hr (taking into account all the necessary stops for gas, relaxation, etc.). If James goes on like this for 1 days, and the distance between Alaska and Texas is 1880 km, what percentage of this distance has James covered?",
+        "solution": "There are 24 hours in each day, so James has been traveling for a total of 1 * 24 = <<1*24=24>>24 hours.\nAt a rate of 47 km/hr, James has covered 47 * 24 = <<47*24=1128>>1128 km.\n1128 km as a percentage of 1880 km is (1128/1880)*100% = <<(1128/1880)*100=60>>60%\n#### 60"
+    },
+    {
+        "id": 79,
+        "parent_id": 1235,
+        "problem": "Joseph is traveling on the interstate at an average speed of 70 km/hr (taking into account all the necessary stops for gas, relaxation, etc.). If Joseph goes on like this for 1 days, and the distance between Alaska and Texas is 3500 km, what percentage of this distance has Joseph covered?",
+        "solution": "There are 24 hours in each day, so Joseph has been traveling for a total of 1 * 24 = <<1*24=24>>24 hours.\nAt a rate of 70 km/hr, Joseph has covered 70 * 24 = <<70*24=1680>>1680 km.\n1680 km as a percentage of 3500 km is (1680/3500)*100% = <<(1680/3500)*100=48>>48%\n#### 48"
+    }
+]
