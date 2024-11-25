@@ -136,5 +136,29 @@
         "ans": "10*shark_blood"
     },
     "solution": "Since a shark has three times as much blood as a whale, then a shark has 3*{x} = <<3*{x}={shark_blood}>>{shark_blood} gallons of blood.\n10 sharks swimming in the sea will have 10*{shark_blood} = <<10*{shark_blood}={ans}>>{ans} gallons of blood.\n#### {ans}"
+    },
+    {
+    "id": 65,
+    "problem": "{name_m_0} spends {x} hours watching TV and then decides to go to bed and reads for half as long.  He does this {y} times a week.  How many hours does he spend on TV and reading in {z} weeks?",
+    "variables": {
+        "numerical": {
+            "x": [2, 8],
+            "y": [2, 7],
+            "z": [2, 26]
+        }
+    },
+    "conditions": {
+        "t_read": [1, 10000],
+        "t_total": [1, 10000],
+        "t_week": [1, 11000],
+        "ans": [1, 10000]
+    },
+    "calculations": {
+        "t_read": "x/2",
+        "t_total": "x+t_read",
+        "t_week": "t_total*y",
+        "ans": "t_week*z"
+    },
+    "solution": "He reads for {x}/2=<<{x}/2={t_read}>>{t_read} hour a night\nSo he spends {x}+{t_read}=<<{x}+{t_read}={t_total}>>{t_total} hours on these activities\nThat means he spends {t_total}*{y}=<<{t_total}*{y}={t_week}>>{t_week} hours a week on them\nSo in {z} weeks, he spends {t_week}*{z}=<<{t_week}*{z}={ans}>>{ans} hours on these activities\n#### {ans}"
     }
 ]
