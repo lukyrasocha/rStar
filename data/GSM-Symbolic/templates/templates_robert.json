@@ -1,13 +1,12 @@
 [
     {
     "id": 3,
-    "problem": "{name} decides to run {x} sprints {y} times a week.  He runs {z} meters each sprint.  How many total meters does he run a week?",
+    "problem": "{name_m_0} decides to run {x} sprints {y} times a week.  He runs {z} meters each sprint.  How many total meters does he run a week?",
     "variables": {
-        "name": ["Josh", "John", "Jack", "Hose"],
         "numerical": {
-        "x":[2,7],
-        "y":[2,9],
-        "z":[10,100]
+            "x":[2,7],
+            "y":[2,9],
+            "z":[10,100]
         }
     },
     "conditions": {
@@ -22,13 +21,12 @@
     },
     {
     "id": 215,
-    "problem": "{name} wants to buy a ${x}.00 pair of shoes and a matching belt that is ${y}.00.  Her part-time job pays her ${z}.00 an hour.  How many hours will she have to work before she can make her purchase?",
+    "problem": "{name_f_0} wants to buy a ${x}.00 pair of shoes and a matching belt that is ${y}.00.  Her part-time job pays her ${z}.00 an hour.  How many hours will she have to work before she can make her purchase?",
     "variables": {
-        "name":["Lara, Lucia, Natasha, Samantha"],
         "numerical": {
-        "x":[1, 1000],
-        "y":[1, 100],
-        "z":[5, 25]
+            "x":[1, 1000],
+            "y":[1, 100],
+            "z":[5, 25]
         }
     },
     "conditions": {
@@ -43,11 +41,10 @@
     },
     {
     "id": 314,
-    "problem": "A {sport} team has {x} members.  There are twice as many players on the offense as there is on the defense. There is half the number of players on the special teams as there is on the defense.  How many players are on the defense?",
+    "problem": "A football team has {x} members.  There are twice as many players on the offense as there is on the defense. There is half the number of players on the special teams as there is on the defense.  How many players are on the defense?",
     "variables": {
-        "sport": ["soccer", "waterpolo", "handball", "basketball"],
         "numerical": {
-        "x": [1, 200]
+            "x": [1, 200]
         }
     },
     "conditions": {
@@ -59,14 +56,13 @@
     "solution": "Let x represent the number of players on the defense\nOffense:2x\nSpecial Teams:(1/2)x\nTotal:x+2x+(1/2)x={x}\n(7/2)x={x}\nx={x}(2/7)={ans} players\n#### {ans}"
     },
     {
-    "id": 421,
-    "problem": "{name} injured his back and needs to go to physical therapy.  He went to physical therapy for {x} weeks.  Each week he went twice for {z} hours at a time.  If the sessions cost ${y} per hour how much did the physical therapy cost?",
+    "id": 621,
+    "problem": "{name_m_0} injured his back and needs to go to physical therapy.  He went to physical therapy for {x} weeks.  Each week he went twice for {z} hours at a time.  If the sessions cost ${y} per hour how much did the physical therapy cost?",
     "variables": {
-        "name": ["Jack", "James", "Ivan", "Peter"],
         "numerical": {
-        "x":[2, 40],
-        "y":[100, 1000],
-        "z": [2, 6]
+            "x":[2, 40],
+            "y":[100, 1000],
+            "z": [2, 6]
         }
     },
     "conditions": {
@@ -83,9 +79,8 @@
     },
     {
     "id": 741,
-    "problem": "{name} saw {x} birds in their backyard and threw a stone at them, scaring away 1/{y} of that number. A few minutes later, {z} more birds joined the fearless birds. How many birds are now in the backyard?",
+    "problem": "{name_m_0} saw {x} birds in their backyard and threw a stone at them, scaring away 1/{y} of that number. A few minutes later, {z} more birds joined the fearless birds. How many birds are now in the backyard?",
     "variables": {
-        "name": ["Jamie, Jethro, Joseph, Jesus"],
         "numerical": {
         "x":[10, 100],
         "y":[2, 5],
@@ -106,9 +101,8 @@
     },
     {
     "id": 1108,
-    "problem": "My {relation} went to a gardening shop. She bought a set of pots for ${x} and a sack of garden soil for ${y}. At checkout, she used a coupon for ${z} off. How much money did my {relation} spend at the gardening shop?",
+    "problem": "My mom went to a gardening shop. She bought a set of pots for ${x} and a sack of garden soil for ${y}. At checkout, she used a coupon for ${z} off. How much money did my mom spend at the gardening shop?",
     "variables": {
-        "relation": ["sister", "niece", "aunt", "grandma"],
         "numerical": {
         "x": [1, 100],
         "y": [1, 100],
@@ -127,11 +121,10 @@
     },
     {
     "id": 1194,
-    "problem": "From her science class study, {name} learned that each whale in the sea has {x} gallons of blood. She also learned that a shark has three times as much blood as a whale. Calculate the number of gallons of blood that ten sharks swimming in the sea have.",
+    "problem": "From her science class study, {name_f_0} learned that each whale in the sea has {x} gallons of blood. She also learned that a shark has three times as much blood as a whale. Calculate the number of gallons of blood that ten sharks swimming in the sea have.",
     "variables": {
-        "name": ["Chelsea", "Susan", "Maja", "Anna"],
         "numerical": {
-        "x":[2,100]
+            "x":[2,100]
         }
     },
     "conditions": {
