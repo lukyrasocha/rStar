@@ -139,7 +139,7 @@
     },
     {
         "id": 249,
-        "problem": "On Monday, {name_f_0} ate {multiplier_monday} times as many cookies as {name_f_1}. On Tuesday, {name_f_0} ate {multiplier_tuesday} times as many {food_item_plural} as {name_f_1}. {name_f_1} ate {name2_monday} cookies on Monday and {name2_tuesday} the next day. If 1 cookie has {calories_per_item} calories, how many more calories did {name_f_0} consume than {name_f_1}?",
+        "problem": "On Monday, {name_f_0} ate {multiplier_monday} times as many cookies as {name_f_1}. On Tuesday, {name_f_0} ate {multiplier_tuesday} times as many cookies as {name_f_1}. {name_f_1} ate {name2_monday} cookies on Monday and {name2_tuesday} the next day. If 1 cookie has {calories_per_item} calories, how many more calories did {name_f_0} consume than {name_f_1}?",
         "variables": {
             "numerical": {
                 "multiplier_monday": [2, 5],
@@ -162,11 +162,11 @@
             "total_calories_difference": "difference_in_items * calories_per_item",
             "ans": "total_calories_difference"
         },
-        "solution": "{name_f_0}'s Monday cookie intake is {multiplier_monday} * {name2_monday} = <<{multiplier_monday}*{name2_monday}={name1_monday}>>{name1_monday}.\n{name_f_0}'s Tuesday cookie intake is {multiplier_tuesday} * {name2_tuesday} = <<{multiplier_tuesday}*{name2_tuesday}={name1_tuesday}>>{name1_tuesday}.\nTotal cookie {name_f_0} consumed is {name1_monday} + {name1_tuesday} = <<{name1_monday}+{name1_tuesday}={name1_total}>>{name1_total}.\n{name_f_1} ate a total of {name2_monday} + {name2_tuesday} = <<{name2_monday}+{name2_tuesday}={name2_total}>>{name2_total} {food_item_plural}.\n{name_f_0} ate {name1_total} - {name2_total} = <<{name1_total}-{name2_total}={difference_in_items}>>{difference_in_items} more {food_item_plural}.\n{name_f_0} consumed {difference_in_items} * {calories_per_item} = <<{difference_in_items}*{calories_per_item}={total_calories_difference}>>{total_calories_difference} more calories.\n#### {ans}"
+        "solution": "{name_f_0}'s Monday cookie intake is {multiplier_monday} * {name2_monday} = <<{multiplier_monday}*{name2_monday}={name1_monday}>>{name1_monday}.\n{name_f_0}'s Tuesday cookie intake is {multiplier_tuesday} * {name2_tuesday} = <<{multiplier_tuesday}*{name2_tuesday}={name1_tuesday}>>{name1_tuesday}.\nTotal cookie {name_f_0} consumed is {name1_monday} + {name1_tuesday} = <<{name1_monday}+{name1_tuesday}={name1_total}>>{name1_total}.\n{name_f_1} ate a total of {name2_monday} + {name2_tuesday} = <<{name2_monday}+{name2_tuesday}={name2_total}>>{name2_total} cookies.\n{name_f_0} ate {name1_total} - {name2_total} = <<{name1_total}-{name2_total}={difference_in_items}>>{difference_in_items} more cookies.\n{name_f_0} consumed {difference_in_items} * {calories_per_item} = <<{difference_in_items}*{calories_per_item}={total_calories_difference}>>{total_calories_difference} more calories.\n#### {ans}"
     },
     {
         "id": 476,
-        "problem": "{name_f_0} went to buy books from the store and spent ${total_spent} on the books. If each book was ${item_price} and {name_f_0} gave an equal number of {item_plural} to her {number_of_kids} kids, how many {item_plural} did each child get?",
+        "problem": "{name_f_0} went to buy books from the store and spent ${total_spent} on the books. If each book was ${item_price} and {name_f_0} gave an equal number of books to her {number_of_kids} kids, how many books did each child get?",
         "variables": {
             "numerical": {
                 "total_spent": [100, 500],
@@ -184,7 +184,7 @@
             "items_per_child": "number_of_items / number_of_kids",
             "ans": "items_per_child"
         },
-        "solution": "Since {name_f_0} spent ${total_spent} on the books and each book cost ${item_price}, {name_f_0} bought ${total_spent} / ${item_price} = <<{total_spent}/{item_price}={number_of_items}>>{number_of_items} {item_plural}.\n\nIf {name_f_0} gave an equal number of {item_plural} to each of her {number_of_kids} kids, each child received {number_of_items} / {number_of_kids} = <<{number_of_items}/{number_of_kids}={items_per_child}>>{items_per_child} {item_plural}.\n#### {ans}"
+        "solution": "Since {name_f_0} spent ${total_spent} on the books and each book cost ${item_price}, {name_f_0} bought ${total_spent} / ${item_price} = <<{total_spent}/{item_price}={number_of_items}>>{number_of_items} books.\n\nIf {name_f_0} gave an equal number of books to each of her {number_of_kids} kids, each child received {number_of_items} / {number_of_kids} = <<{number_of_items}/{number_of_kids}={items_per_child}>>{items_per_child} books.\n#### {ans}"
     },
     {
         "id": 1235,

@@ -5,7 +5,7 @@
         "variables": {
             "numerical": {
                 "pages_per_inch": [50, 200],
-                "thickness": [2.0, 5.0]
+                "thickness": [2, 5]
             }
         },
         "calculations": {
