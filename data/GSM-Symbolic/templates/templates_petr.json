@@ -1,0 +1,263 @@
+[
+    {
+        "id": 963,
+        "problem": "{name1}, {name2}, and {name3} are trying to collect {collection_item_plural}. Together they have collected {total_items} {collection_item_plural}. {name1} has collected {a} more than {name2}, and {name2} has collected {b} less than {c} times as many as {name3} has collected. How many {collection_item_plural} has {name2} collected?",
+        "variables": {
+            "name1": ["Alex", "Blake", "Casey", "Drew", "Evan"],
+            "name2": ["Flynn", "Gale", "Harley", "Jordan", "Kai"],
+            "name3": ["Lee", "Morgan", "Quinn", "Riley", "Skyler"],
+            "collection_item_plural": ["Pokémon", "stamps", "coins", "trading cards"],
+            "numerical": {
+                "x": [10, 50],
+                "a": [1, 20],
+                "b": [1, 20],
+                "c": [2, 5]
+            }
+        },
+        "conditions": {
+            "name2_items": [1, 500],
+            "name1_items": [1, 500],
+            "total_items": [100, 500],
+            "ans": [1, 500]
+        },
+        "calculations": {
+            "name3_items": "x",
+            "name2_items": "c * x - b",
+            "name1_items": "name2_items + a",
+            "total_items": "name3_items + name2_items + name1_items",
+            "ans": "name2_items"
+        },
+        "solution": "Let x represent the number of {collection_item_plural} {name3} collected.\n{name2}: {c} * x - {b} = {c} * {x} - {b} = <<{c}*{x}-{b}={name2_items}>>{name2_items}\n{name1}: {name2_items} + {a} = {name2_items} + {a} = <<{name2_items}+{a}={name1_items}>>{name1_items}\nTotal: {x} + {name2_items} + {name1_items} = {total_items}\n{name2} has collected {name2_items} {collection_item_plural}.\n#### {ans}"
+    },
+    {
+        "id": 43,
+        "problem": "{name} wants to enjoy some {food_item}. According to the nutritional info, a bag of {food_item} has {calories_per_serving} calories per serving. If a {bag_weight}g bag has {servings_per_bag} servings, how many grams can {name} eat if {name}'s daily calorie target is {daily_calorie_target} calories and {name} has already consumed {calories_consumed} calories?",
+        "variables": {
+            "name": ["Alex", "Sam", "Jordan", "Taylor", "Morgan", "Casey", "Jamie", "Riley"],
+            "food_item": ["chips", "cookies", "granola bars", "crackers", "popcorn", "pretzels"],
+            "numerical": {
+                "calories_per_serving": [100, 500],
+                "bag_weight": [100, 1000],
+                "servings_per_bag": [1, 10],
+                "daily_calorie_target": [1500, 3000],
+                "calories_consumed": [500, 1500]
+            }
+        },
+        "conditions": {
+            "remaining_calories": [1, 2500],
+            "serving_size": [1, 25],
+            "servings_can_eat": [1, 10],
+            "grams_can_eat": [1, 1000],
+            "ans": [1, 1000]
+        },
+        "calculations": {
+            "remaining_calories": "daily_calorie_target - calories_consumed",
+            "serving_size": "bag_weight / servings_per_bag",
+            "servings_can_eat": "remaining_calories / calories_per_serving",
+            "grams_can_eat": "serving_size * servings_can_eat",
+            "ans": "grams_can_eat"
+        },
+        "solution": "If {name}'s total calorie target is {daily_calorie_target} calories and {name} has consumed {calories_consumed} calories, then {name} has {daily_calorie_target} - {calories_consumed} = <<{daily_calorie_target}-{calories_consumed}={remaining_calories}>>{remaining_calories} calories left to eat.\nEach serving of {food_item} has {calories_per_serving} calories, so {name} can eat {remaining_calories} / {calories_per_serving} = <<{remaining_calories}/{calories_per_serving}={servings_can_eat}>>{servings_can_eat} servings.\nA {bag_weight}g bag of {food_item} has {servings_per_bag} servings, so each serving is {bag_weight}g / {servings_per_bag} = <<{bag_weight}/{servings_per_bag}={serving_size}>>{serving_size} grams.\nTherefore, {name} can eat {serving_size}g * {servings_can_eat} = <<{serving_size}*{servings_can_eat}={grams_can_eat}>>{grams_can_eat} grams.\n#### {ans}"
+    },
+    {
+        "id": 117,
+        "problem": "{buyer_name} buys {number_per_person} {item_plural} for each of {number_of_people} {people_relation}. They cost ${item_cost} each. How much did {buyer_name} pay?",
+        "variables": {
+            "buyer_name": ["John", "Sarah", "Alex", "Emily", "Michael", "Jessica", "David", "Emma"],
+            "item_singular": ["pair of shoes", "book", "toy", "shirt", "game", "pen", "notebook", "hat", "bicycle", "watch"],
+            "item_plural": ["pairs of shoes", "books", "toys", "shirts", "games", "pens", "notebooks", "hats", "bicycles", "watches"],
+            "people_relation": ["children", "students", "friends", "siblings", "cousins", "nephews", "nieces", "grandchildren", "teammates", "classmates"],
+            "numerical": {
+                "number_per_person": [1, 5],
+                "number_of_people": [2, 6],
+                "item_cost": [10, 100]
+            }
+        },
+        "conditions": {
+            "total_items": [2, 30],
+            "total_cost": [20, 3000],
+            "ans": [20, 3000]
+        },
+        "calculations": {
+            "total_items": "number_per_person * number_of_people",
+            "total_cost": "total_items * item_cost",
+            "ans": "total_cost"
+        },
+        "solution": "{buyer_name} bought {number_of_people} * {number_per_person} = <<{number_of_people}*{number_per_person}={total_items}>>{total_items} {item_plural}.\nSo {buyer_name} spent {item_cost} * {total_items} = $<<{item_cost}*{total_items}={total_cost}>>{total_cost}.\n#### {ans}"
+    },
+    {
+        "id": 295,
+        "problem": "{name} decides to {activity_description}. {he_she} does {first_day_pushups} pushups, {first_day_squats} squats, and {first_day_dumbbell_presses} dumbbell presses on the first day. On the second day, {he_she} does {pushup_change} more pushups than on the first day, {squat_change} fewer squats, and {dumbbell_press_multiplier} times the number of dumbbell presses. What's the total count of the activities {he_she} has done in the two days?",
+        "variables": {
+            "name": ["Darren", "Alex", "Sam", "Jordan", "Taylor", "Morgan", "Casey", "Jamie", "Riley", "Chris"],
+            "he_she": ["he", "she", "they"],
+            "activity_description": [
+                "start a new fitness routine",
+                "commit to daily workouts",
+                "train for a marathon",
+                "prepare for a bodybuilding competition",
+                "get in shape for the summer",
+                "improve fitness",
+                "take on a fitness challenge",
+                "boost strength and endurance",
+                "enhance physical performance",
+                "focus on functional training"
+            ],
+            "numerical": {
+                "first_day_pushups": [50, 100],
+                "first_day_squats": [30, 80],
+                "first_day_dumbbell_presses": [10, 30],
+                "pushup_change": [10, 30],
+                "squat_change": [10, 20],
+                "dumbbell_press_multiplier": [2, 3]
+            }
+        },
+        "conditions": {
+            "total_activities": [200, 500],
+            "ans": [200, 500]
+        },
+        "calculations": {
+            "second_day_pushups": "first_day_pushups + pushup_change",
+            "second_day_squats": "first_day_squats - squat_change",
+            "second_day_dumbbell_presses": "first_day_dumbbell_presses * dumbbell_press_multiplier",
+            "first_day_total": "first_day_pushups + first_day_squats + first_day_dumbbell_presses",
+            "second_day_total": "second_day_pushups + second_day_squats + second_day_dumbbell_presses",
+            "total_activities": "first_day_total + second_day_total",
+            "ans": "total_activities"
+        },
+        "solution": "The total count of activities for the first day is {first_day_pushups} + {first_day_squats} + {first_day_dumbbell_presses} = <<{first_day_pushups}+{first_day_squats}+{first_day_dumbbell_presses}={first_day_total}>>{first_day_total}.\n\nOn the second day, {he_she} does {first_day_pushups} + {pushup_change} = <<{first_day_pushups}+{pushup_change}={second_day_pushups}>>{second_day_pushups} pushups.\n\n{he_she} also does {first_day_squats} - {squat_change} = <<{first_day_squats}-{squat_change}={second_day_squats}>>{second_day_squats} squats.\n\nFor the dumbbell presses, {he_she} multiplies the number from the first day by {dumbbell_press_multiplier}, which becomes {dumbbell_press_multiplier} * {first_day_dumbbell_presses} = <<{dumbbell_press_multiplier}*{first_day_dumbbell_presses}={second_day_dumbbell_presses}>>{second_day_dumbbell_presses}.\n\nThe total count for the three activities on the second day is {second_day_pushups} + {second_day_squats} + {second_day_dumbbell_presses} = <<{second_day_pushups}+{second_day_squats}+{second_day_dumbbell_presses}={second_day_total}>>{second_day_total}.\n\nFor the two days, {he_she} has a total count for all three activities of {first_day_total} + {second_day_total} = <<{first_day_total}+{second_day_total}={total_activities}>>{total_activities}.\n#### {ans}"
+    },
+    {
+        "id": 550,
+        "problem": "{store_name} sells {item_category}. One {item1_name} is sold at ${item1_price} each, a {item2_name} at ${item2_price} each, a {item3_name} at ${item3_price} each, and a {item4_name} at ${item4_price} each. {customer_name} is a {customer_description}, and {he_she} wants to buy {item1_quantity} {item1_name_plural}, {item2_quantity} {item2_name_plural}, {item3_quantity} {item3_name_plural}, and {item4_quantity} {item4_name_plural}. The shop gives a {discount_percentage}% discount on all the purchased items. How much does {customer_name} have to spend on all the items {he_she} wants to buy?",
+        "variables": {
+            "store_name": ["A local shop", "A supermarket", "An online store", "The campus bookstore", "A stationery store"],
+            "item_category": ["school supplies", "office supplies", "art supplies", "electronic gadgets", "sports equipment"],
+            "item1_name": ["notebook", "pen", "calculator", "geometry set", "backpack"],
+            "item1_name_plural": ["notebooks", "pens", "calculators", "geometry sets", "backpacks"],
+            "item2_name": ["notebook", "pen", "calculator", "geometry set", "backpack"],
+            "item2_name_plural": ["notebooks", "pens", "calculators", "geometry sets", "backpacks"],
+            "item3_name": ["notebook", "pen", "calculator", "geometry set", "backpack"],
+            "item3_name_plural": ["notebooks", "pens", "calculators", "geometry sets", "backpacks"],
+            "item4_name": ["notebook", "pen", "calculator", "geometry set", "backpack"],
+            "item4_name_plural": ["notebooks", "pens", "calculators", "geometry sets", "backpacks"],
+            "customer_name": ["Daniel", "Sarah", "Alex", "Michael", "Jessica", "David", "Emma", "Taylor"],
+            "customer_description": ["engineering student", "medical student", "art student", "teacher", "architect", "graphic designer", "musician", "writer"],
+            "he_she": ["he", "she", "they"],
+            "numerical": {
+                "item1_price": [1, 5],
+                "item2_price": [1, 2],
+                "item3_price": [10, 20],
+                "item4_price": [5, 15],
+                "item1_quantity": [1, 10],
+                "item2_quantity": [1, 20],
+                "item3_quantity": [1, 2],
+                "item4_quantity": [1, 3],
+                "discount_percentage": [5, 20]
+            }
+        },
+        "conditions": {
+            "total_cost_before_discount": [17, 175],
+            "total_discount": [1, 35],
+            "total_cost_after_discount": [16, 174],
+            "ans": [16, 174]
+        },
+        "calculations": {
+            "item1_total": "item1_price * item1_quantity",
+            "item2_total": "item2_price * item2_quantity",
+            "item3_total": "item3_price * item3_quantity",
+            "item4_total": "item4_price * item4_quantity",
+            "total_cost_before_discount": "item1_total + item2_total + item3_total + item4_total",
+            "total_discount": "(discount_percentage * total_cost_before_discount) / 100",
+            "total_cost_after_discount": "total_cost_before_discount - total_discount",
+            "ans": "total_cost_after_discount"
+        },
+        "solution": "{item1_quantity} {item1_name_plural} cost {item1_quantity} x ${item1_price} = $<<{item1_quantity}*{item1_price}={item1_total}>>{item1_total}.\n{item2_quantity} {item2_name_plural} cost {item2_quantity} x ${item2_price} = $<<{item2_quantity}*{item2_price}={item2_total}>>{item2_total}.\n{item3_quantity} {item3_name_plural} cost {item3_quantity} x ${item3_price} = $<<{item3_quantity}*{item3_price}={item3_total}>>{item3_total}.\n{item4_quantity} {item4_name_plural} cost {item4_quantity} x ${item4_price} = $<<{item4_quantity}*{item4_price}={item4_total}>>{item4_total}.\nThe total cost is ${item1_total} + ${item2_total} + ${item3_total} + ${item4_total} = $<<{item1_total}+{item2_total}+{item3_total}+{item4_total}={total_cost_before_discount}>>{total_cost_before_discount}.\nThe total discount is {discount_percentage}% of ${total_cost_before_discount} = $<<{discount_percentage}*{total_cost_before_discount}/100={total_discount}>>{total_discount}.\nTherefore, {customer_name} has to spend ${total_cost_before_discount} - ${total_discount} = $<<{total_cost_before_discount}-{total_discount}={total_cost_after_discount}>>{total_cost_after_discount} on all the items {he_she} wants to buy.\n#### {ans}"
+    },
+    {
+        "id": 249,
+        "problem": "On Monday, {name1} ate {multiplier_monday} times as many {food_item_plural} as {name2}. On Tuesday, {name1} ate {multiplier_tuesday} times as many {food_item_plural} as {name2}. {name2} ate {name2_monday} {food_item_plural} on Monday and {name2_tuesday} the next day. If 1 {food_item_singular} has {calories_per_item} calories, how many more calories did {name1} consume than {name2}?",
+        "variables": {
+            "name1": ["Alex", "Sam", "Jordan", "Taylor"],
+            "name2": ["Morgan", "Jamie", "Casey", "Riley"],
+            "food_item_singular": ["cookie", "cupcake", "donut", "slice of pizza", "candy bar", "ice cream cone"],
+            "food_item_plural": ["cookies", "cupcakes", "donuts", "slices of pizza", "candy bars", "ice cream cones"],
+            "numerical": {
+                "multiplier_monday": [2, 5],
+                "multiplier_tuesday": [2, 5],
+                "name2_monday": [3, 10],
+                "name2_tuesday": [5, 15],
+                "calories_per_item": [50, 300]
+            }
+        },
+        "conditions": {
+            "total_calories_difference": [100, 5000],
+            "ans": [100, 5000]
+        },
+        "calculations": {
+            "name1_monday": "multiplier_monday * name2_monday",
+            "name1_tuesday": "multiplier_tuesday * name2_tuesday",
+            "name1_total": "name1_monday + name1_tuesday",
+            "name2_total": "name2_monday + name2_tuesday",
+            "difference_in_items": "name1_total - name2_total",
+            "total_calories_difference": "difference_in_items * calories_per_item",
+            "ans": "total_calories_difference"
+        },
+        "solution": "{name1}'s Monday {food_item_singular} intake is {multiplier_monday} * {name2_monday} = <<{multiplier_monday}*{name2_monday}={name1_monday}>>{name1_monday}.\n{name1}'s Tuesday {food_item_singular} intake is {multiplier_tuesday} * {name2_tuesday} = <<{multiplier_tuesday}*{name2_tuesday}={name1_tuesday}>>{name1_tuesday}.\nTotal {food_item_plural} {name1} consumed is {name1_monday} + {name1_tuesday} = <<{name1_monday}+{name1_tuesday}={name1_total}>>{name1_total}.\n{name2} ate a total of {name2_monday} + {name2_tuesday} = <<{name2_monday}+{name2_tuesday}={name2_total}>>{name2_total} {food_item_plural}.\n{name1} ate {name1_total} - {name2_total} = <<{name1_total}-{name2_total}={difference_in_items}>>{difference_in_items} more {food_item_plural}.\n{name1} consumed {difference_in_items} * {calories_per_item} = <<{difference_in_items}*{calories_per_item}={total_calories_difference}>>{total_calories_difference} more calories.\n#### {ans}"
+    },
+    {
+        "id": 476,
+        "problem": "{buyer_name} went to buy {item_plural} from the store and spent ${total_spent} on the {item_plural}. If each {item_singular} was ${item_price} and {he_she} gave an equal number of {item_plural} to {his_her} {number_of_kids} {kids}, how many {item_plural} did each child get?",
+        "variables": {
+            "buyer_name": ["Sarah", "Alex", "Michael", "Jessica", "David", "Emily", "Daniel", "Emma", "Taylor", "Jordan"],
+            "he_she": ["he", "she", "they"],
+            "his_her": ["his", "her", "their"],
+            "item_singular": ["book", "toy", "pencil", "notebook", "comic", "game", "sticker", "crayon", "marker", "coloring book"],
+            "item_plural": ["books", "toys", "pencils", "notebooks", "comics", "games", "stickers", "crayons", "markers", "coloring books"],
+            "kids": ["kids", "children", "nieces and nephews", "grandchildren", "students"],
+            "numerical": {
+                "total_spent": [100, 500],
+                "item_price": [5, 50],
+                "number_of_kids": [2, 6]
+            }
+        },
+        "conditions": {
+            "number_of_items": [10, 100],
+            "items_per_child": [1, 50],
+            "ans": [1, 50]
+        },
+        "calculations": {
+            "number_of_items": "total_spent / item_price",
+            "items_per_child": "number_of_items / number_of_kids",
+            "ans": "items_per_child"
+        },
+        "solution": "Since {buyer_name} spent ${total_spent} on the {item_plural} and each {item_singular} cost ${item_price}, {he_she} bought ${total_spent} / ${item_price} = <<{total_spent}/{item_price}={number_of_items}>>{number_of_items} {item_plural}.\n\nIf {buyer_name} gave an equal number of {item_plural} to each of {his_her} {number_of_kids} {kids}, each child received {number_of_items} / {number_of_kids} = <<{number_of_items}/{number_of_kids}={items_per_child}>>{items_per_child} {item_plural}.\n#### {ans}"
+    },
+    {
+        "id": 1235,
+        "problem": "{name} is traveling on the interstate at an average speed of {speed} km/hr (taking into account all the necessary stops for gas, relaxation, etc.). If {he_she} goes on like this for {days} days, and the distance between {place1} and {place2} is {total_distance} km, what percentage of this distance has {he_she} covered?",
+        "variables": {
+            "name": ["Michael", "Sarah", "Alex", "Jessica", "David", "Emily", "Daniel", "Emma", "Taylor", "Jordan"],
+            "he_she": ["he", "she", "they"],
+            "place1": ["Alaska", "New York", "Miami", "Chicago", "Boston", "Atlanta"],
+            "place2": ["Texas", "Los Angeles", "Seattle", "Houston", "San Francisco", "Denver"],
+            "numerical": {
+                "total_distance": [1750, 6000],
+                "speed": [40, 80],
+                "days": [1, 5]
+            }
+        },
+        "conditions": {
+            "distance_covered": [100, 9600],
+            "percentage_covered": [1, 100],
+            "ans": [1, 100]
+        },
+        "calculations": {
+            "total_hours": "days * 24",
+            "distance_covered": "speed * total_hours",
+            "percentage_covered": "(distance_covered / total_distance) * 100",
+            "ans": "percentage_covered"
+        },
+        "solution": "There are 24 hours in each day, so {name} has been traveling for a total of {days} * 24 = <<{days}*24={total_hours}>>{total_hours} hours.\nAt a rate of {speed} km/hr, {he_she} has covered {speed} * {total_hours} = <<{speed}*{total_hours}={distance_covered}>>{distance_covered} km.\n{distance_covered} km as a percentage of {total_distance} km is ({distance_covered}/{total_distance})*100% = <<({distance_covered}/{total_distance})*100={percentage_covered}>>{percentage_covered}%\n#### {ans}"
+    }        
+]
