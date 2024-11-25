@@ -42,10 +42,29 @@ def validate_conditions(resolved_calculations, conditions):
     return True
 
 def generate_variation(template, variation_id, parent_id):
+    mname = ["James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas"]
+    fname = ["Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Margaret", "Jessica", "Sarah"]
     variables = template["variables"]
     numerical = variables.get("numerical", {})
     conditions = template.get("conditions", {})
     
+    # Map to store name mappings for name_m_ and name_f_
+    name_mapping = {}
+
+    # Randomly select names for each name_m_ or name_f_ index
+    name_keys = [key for key in template["problem"].split() if key.startswith("{name_")]
+    for name_key in name_keys:
+        if "name_m_" in name_key:
+            # Select a name from mname list for male
+            name_index = int(name_key.split('_')[2].split('}')[0])  # Extract the index from {name_m_0}, {name_m_1}, etc.
+            if name_index not in name_mapping:
+                name_mapping[name_index] = random.choice(mname)
+        elif "name_f_" in name_key:
+            # Select a name from fname list for female
+            name_index = int(name_key.split('_')[2].split('}')[0])  # Extract the index from {name_f_0}, {name_f_1}, etc.
+            if name_index not in name_mapping:
+                name_mapping[name_index] = random.choice(fname)
+
     while True:  # Retry until conditions are met
         current_vars = {}
 
@@ -75,18 +94,25 @@ def generate_variation(template, variation_id, parent_id):
         # Merge calculations into variables for formatting
         current_vars.update(resolved_calculations)
 
-        #print("="*50)
-        #print(current_vars)
-        #print("="*50)
-
         # Validate conditions
         if validate_conditions(current_vars, conditions):
             break  # Exit loop if conditions are met
 
+    current_vars = convert_all_to_int(current_vars)
 
-    # Fill the problem and solution templates
-    problem = template["problem"].format(**convert_all_to_int(current_vars))
-    solution = template["solution"].format(**convert_all_to_int(current_vars))
+    # Replace {name_m_0}, {name_m_1}, etc., with the selected names
+    problem = template["problem"]
+    solution = template["solution"]
+
+    for name_key, name_value in name_mapping.items():
+        problem = problem.replace(f"{{name_m_{name_key}}}", name_value)  # For male names
+        problem = problem.replace(f"{{name_f_{name_key}}}", name_value)  # For female names
+        solution = solution.replace(f"{{name_m_{name_key}}}", name_value)
+        solution = solution.replace(f"{{name_f_{name_key}}}", name_value)
+
+    # Format problem and solution with numerical variables
+    problem = problem.format(**current_vars)
+    solution = solution.format(**current_vars)
 
     return {
         "id": variation_id,

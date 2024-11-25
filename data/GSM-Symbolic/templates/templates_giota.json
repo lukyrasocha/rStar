@@ -69,7 +69,7 @@
     },
     {
         "id": 1244,
-        "problem": "{name_0_f} has to take two math tests to pass {grade} grade. They must correctly answer {pass_rate}% of the total questions to move on to the next grade. The first test has {test1_questions} questions, and they get {test1_accuracy}% of them correct. The second test has {test2_questions} questions. How many questions do they need to get right on the second test to pass?",
+        "problem": "{name_f_0} has to take two math tests to pass {grade} grade. They must correctly answer {pass_rate}% of the total questions to move on to the next grade. The first test has {test1_questions} questions, and they get {test1_accuracy}% of them correct. The second test has {test2_questions} questions. How many questions do they need to get right on the second test to pass?",
         "variables": {
         "grade": [6, 7],
         "numerical": {
@@ -91,7 +91,7 @@
         "test1_correct": "test1_questions * test1_accuracy / 100",
         "ans": "required_correct - test1_correct"
         },
-        "solution": "There are {test1_questions} + {test2_questions} = <<{test1_questions}+{test2_questions}={total_questions}>>{total_questions} questions in total.\n{name_0_f} needs to get {total_questions} * {pass_rate}% = <<{total_questions}*{pass_rate}/100={required_correct}>>{required_correct} questions correct to pass.\nThey got {test1_questions} * {test1_accuracy}% = <<{test1_questions}*{test1_accuracy}/100={test1_correct}>>{test1_correct} questions correct on the first test.\nThey need {required_correct} - {test1_correct} = <<{required_correct}-{test1_correct}={ans}>>{ans} questions correct on the second test.\n#### {ans}"
+        "solution": "There are {test1_questions} + {test2_questions} = <<{test1_questions}+{test2_questions}={total_questions}>>{total_questions} questions in total.\n{name_f_0} needs to get {total_questions} * {pass_rate}% = <<{total_questions}*{pass_rate}/100={required_correct}>>{required_correct} questions correct to pass.\nThey got {test1_questions} * {test1_accuracy}% = <<{test1_questions}*{test1_accuracy}/100={test1_correct}>>{test1_correct} questions correct on the first test.\nThey need {required_correct} - {test1_correct} = <<{required_correct}-{test1_correct}={ans}>>{ans} questions correct on the second test.\n#### {ans}"
     },
     {
         "id": 34,

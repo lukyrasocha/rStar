@@ -32,7 +32,7 @@
             "numerical": {
                 "calories_per_serving": [100, 500],
                 "bag_weight": [100, 1000],
-                "servings_per_bag": [1, 10],
+                "servings_per_bag": [2, 10],
                 "daily_calorie_target": [1500, 3000],
                 "calories_consumed": [500, 1500]
             }
@@ -58,7 +58,7 @@
         "problem": "{name_m_0} buys {number_per_person} shoes for each of his {number_of_people} children. They cost ${item_cost} each. How much did {name_m_0} pay?",
         "variables": {
             "numerical": {
-                "number_per_person": [1, 5],
+                "number_per_person": [2, 5],
                 "number_of_people": [2, 6],
                 "item_cost": [10, 100]
             }
@@ -112,10 +112,10 @@
                 "item2_price": [1, 2],
                 "item3_price": [10, 20],
                 "item4_price": [5, 15],
-                "item1_quantity": [1, 10],
-                "item2_quantity": [1, 20],
-                "item3_quantity": [1, 2],
-                "item4_quantity": [1, 3],
+                "item1_quantity": [2, 10],
+                "item2_quantity": [2, 20],
+                "item3_quantity": [1, 1],
+                "item4_quantity": [1, 1],
                 "discount_percentage": [5, 20]
             }
         },
@@ -139,7 +139,7 @@
     },
     {
         "id": 249,
-        "problem": "On Monday, {name_f_0} ate {multiplier_monday} times as many cookies as {name_f_1}. On Tuesday, {name_f_0} ate {multiplier_tuesday} times as many {food_item_plural} as {name_f_1}. {name_f_1} ate {name2_monday} cookies on Monday and {name2_tuesday} the next day. If 1 cookie has {calories_per_item} calories, how many more calories did {name_f_0} consume than {name_f_1}?",
+        "problem": "On Monday, {name_f_0} ate {multiplier_monday} times as many cookies as {name_f_1}. On Tuesday, {name_f_0} ate {multiplier_tuesday} times as many cookies as {name_f_1}. {name_f_1} ate {name2_monday} cookies on Monday and {name2_tuesday} the next day. If 1 cookie has {calories_per_item} calories, how many more calories did {name_f_0} consume than {name_f_1}?",
         "variables": {
             "numerical": {
                 "multiplier_monday": [2, 5],
@@ -162,11 +162,11 @@
             "total_calories_difference": "difference_in_items * calories_per_item",
             "ans": "total_calories_difference"
         },
-        "solution": "{name_f_0}'s Monday cookie intake is {multiplier_monday} * {name2_monday} = <<{multiplier_monday}*{name2_monday}={name1_monday}>>{name1_monday}.\n{name_f_0}'s Tuesday cookie intake is {multiplier_tuesday} * {name2_tuesday} = <<{multiplier_tuesday}*{name2_tuesday}={name1_tuesday}>>{name1_tuesday}.\nTotal cookie {name_f_0} consumed is {name1_monday} + {name1_tuesday} = <<{name1_monday}+{name1_tuesday}={name1_total}>>{name1_total}.\n{name_f_1} ate a total of {name2_monday} + {name2_tuesday} = <<{name2_monday}+{name2_tuesday}={name2_total}>>{name2_total} {food_item_plural}.\n{name_f_0} ate {name1_total} - {name2_total} = <<{name1_total}-{name2_total}={difference_in_items}>>{difference_in_items} more {food_item_plural}.\n{name_f_0} consumed {difference_in_items} * {calories_per_item} = <<{difference_in_items}*{calories_per_item}={total_calories_difference}>>{total_calories_difference} more calories.\n#### {ans}"
+        "solution": "{name_f_0}'s Monday cookie intake is {multiplier_monday} * {name2_monday} = <<{multiplier_monday}*{name2_monday}={name1_monday}>>{name1_monday}.\n{name_f_0}'s Tuesday cookie intake is {multiplier_tuesday} * {name2_tuesday} = <<{multiplier_tuesday}*{name2_tuesday}={name1_tuesday}>>{name1_tuesday}.\nTotal cookie {name_f_0} consumed is {name1_monday} + {name1_tuesday} = <<{name1_monday}+{name1_tuesday}={name1_total}>>{name1_total}.\n{name_f_1} ate a total of {name2_monday} + {name2_tuesday} = <<{name2_monday}+{name2_tuesday}={name2_total}>>{name2_total} cookies.\n{name_f_0} ate {name1_total} - {name2_total} = <<{name1_total}-{name2_total}={difference_in_items}>>{difference_in_items} more cookies.\n{name_f_0} consumed {difference_in_items} * {calories_per_item} = <<{difference_in_items}*{calories_per_item}={total_calories_difference}>>{total_calories_difference} more calories.\n#### {ans}"
     },
     {
         "id": 476,
-        "problem": "{name_f_0} went to buy books from the store and spent ${total_spent} on the books. If each book was ${item_price} and {name_f_0} gave an equal number of {item_plural} to her {number_of_kids} kids, how many {item_plural} did each child get?",
+        "problem": "{name_f_0} went to buy books from the store and spent ${total_spent} on the books. If each book was ${item_price} and {name_f_0} gave an equal number of books to her {number_of_kids} kids, how many books did each child get?",
         "variables": {
             "numerical": {
                 "total_spent": [100, 500],
@@ -184,7 +184,7 @@
             "items_per_child": "number_of_items / number_of_kids",
             "ans": "items_per_child"
         },
-        "solution": "Since {name_f_0} spent ${total_spent} on the books and each book cost ${item_price}, {name_f_0} bought ${total_spent} / ${item_price} = <<{total_spent}/{item_price}={number_of_items}>>{number_of_items} {item_plural}.\n\nIf {name_f_0} gave an equal number of {item_plural} to each of her {number_of_kids} kids, each child received {number_of_items} / {number_of_kids} = <<{number_of_items}/{number_of_kids}={items_per_child}>>{items_per_child} {item_plural}.\n#### {ans}"
+        "solution": "Since {name_f_0} spent ${total_spent} on the books and each book cost ${item_price}, {name_f_0} bought ${total_spent} / ${item_price} = <<{total_spent}/{item_price}={number_of_items}>>{number_of_items} books.\n\nIf {name_f_0} gave an equal number of books to each of her {number_of_kids} kids, each child received {number_of_items} / {number_of_kids} = <<{number_of_items}/{number_of_kids}={items_per_child}>>{items_per_child} books.\n#### {ans}"
     },
     {
         "id": 1235,
@@ -194,7 +194,7 @@
             "numerical": {
                 "total_distance": [1750, 6000],
                 "speed": [40, 80],
-                "days": [1, 5]
+                "days": [2, 5]
             }
         },
         "conditions": {
