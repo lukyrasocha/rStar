@@ -23,7 +23,7 @@
             "total_items": "name3_items + name2_items + name1_items",
             "ans": "name2_items"
         },
-        "solution": "Let x represent the number of Pokemon {name_m_2} caught.\n{name_m_1}: {c} * x - {b} = {c} * {x} - {b} = <<{c}*{x}-{b}={name2_items}>>{name2_items}\n{name_m_0}: {name2_items} + {a} = {name2_items} + {a} = <<{name2_items}+{a}={name1_items}>>{name1_items}\nTotal: {x} + {name2_items} + {name1_items} = {total_items}\n{name_m_1} has caught {name2_items} {collection_item_plural}.\n#### {ans}"
+        "solution": "Let x represent the number of Pokemon {name_m_2} caught.\n{name_m_1}: {c} * x - {b} = {c} * {x} - {b} = <<{c}*{x}-{b}={name2_items}>>{name2_items}\n{name_m_0}: {name2_items} + {a} = {name2_items} + {a} = <<{name2_items}+{a}={name1_items}>>{name1_items}\nTotal: {x} + {name2_items} + {name1_items} = {total_items}\n{name_m_1} has caught {name2_items} Pokemons.\n#### {ans}"
     },
     {
         "id": 43,
