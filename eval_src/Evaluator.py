@@ -268,6 +268,7 @@ class GSM8KEvaluator(Evaluator):
 
 GSM8KHARDEvaluator = GSM8KEvaluator
 MULTIARITHEvaluator = GSM8KEvaluator
+GSMSymbolicEvaluator = GSM8KEvaluator
 
 
 class MATHEvaluator(Evaluator):

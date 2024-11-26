@@ -25,8 +25,8 @@ source /dtu/blackhole/0a/203690/miniconda3/bin/activate
 conda activate rStar_new
 
 CUDA_VISIBLE_DEVICES=0 python run_src/do_generate.py \
-    --dataset_name GSM-Symbolic/variations/exp_1_names \
-    --test_json_filename variation_5 \
+    --dataset_name GSMSymbolic \
+    --test_json_filename variations/exp_1_names/variation_5 \
     --model_ckpt mistralai/Mistral-7B-v0.1 \
     --note exp_1_names_variation_5 \
     --num_rollouts 32 \
