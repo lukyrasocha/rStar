@@ -1,0 +1,102 @@
+[
+    {
+        "id": 3,
+        "problem": "James decides to run 2 sprints 6 times a week. He runs 98 meters each sprint. How many total meters does he run a week?",
+        "solution": "He sprints 2*6=<<2*6=12>>12 times\nSo he runs 12*98=<<12*98=1176>>1176 meters\n#### 1176"
+    },
+    {
+        "id": 27,
+        "problem": "Cynthia eats one serving of ice cream every night. She buys cartons of ice cream with 14 servings of ice cream per carton at a cost of $2 per carton. After 35 days, how much will she spend on ice cream?",
+        "solution": "Each container of ice cream has 14 servings, and Cynthia eats 1 serving a night. So after 35 days, they will need 35/14 = <<35/14=2.5>>2.5 cartons of ice cream.\nIf each carton costs $2 and she needs 2.5 containers, then it will cost her 2.5*2 = $<<2.5*2=5>>5.\n#### 5"
+    },
+    {
+        "id": 32,
+        "problem": "John takes care of 4 dogs. Each dog takes 3 hours a day to walk and take care of their business. How many hours a week does he spend taking care of dogs?",
+        "solution": "He spends 4*3=<<4*3=12>>12 hours per day\nThat means he spends 12*7=<<12*7=84>>84 hours per week\n#### 84"
+    },
+    {
+        "id": 65,
+        "problem": "Jim spends 5 hours watching TV and then decides to go to bed and reads for half as long. He does this 6 times a week. How many hours does he spend on TV and reading in 26 weeks?",
+        "solution": "He reads for 5/2=<<5/2=2.5>>2.5 hour a night\nSo he spends 5+2.5=<<5+2.5=7.5>>7.5 hours on these activities\nThat means he spends 7.5*6=<<7.5*6=45>>45 hours a week on them\nSo in 26 weeks, he spends 45*26=<<45*26=1170>>1170 hours on these activities\n#### 1170"
+    },
+    {
+        "id": 104,
+        "problem": "Poppy is solving a 6350-piece jigsaw puzzle. She places a quarter of the pieces on the board, then her mom places a third of the remaining pieces. How many jigsaw pieces are left to be placed?",
+        "solution": "Poppy has placed 6350 pieces / 4 = <<6350/4=1587.5>>1587.5 pieces.\nThis means there are 6350 \u2013 1587.5 = <<6350-1587.5=4762.5>>4762.5 pieces remaining.\nHer mom therefore places 4762.5 / 3 = <<4762.5/3=1587.5>>1587.5 pieces.\nThis leaves a total of 4762.5 \u2013 1587.5 = <<4762.5-1587.5=3175>>3175 jigsaw pieces left to be placed.\n#### 3175"
+    },
+    {
+        "id": 117,
+        "problem": "John buys 5 pairs of shoes for each of his 3 children. They cost $10 each. How much did John pay?",
+        "solution": "John bought 3*5=<<3*5=15>>15 pairs of shoes.\nSo John spent 10*15=$<<10*15=150>>150.\n#### 150"
+    },
+    {
+        "id": 170,
+        "problem": "The marching band is ordering new uniforms. Each uniform comes with a hat that costs 174, a jacket that costs three times as much as the hat, and pants that cost the average of the costs of the hat and jacket. How much does each uniform cost total?",
+        "solution": "The cost of the jacket is 174 * 3 = <<174*3=522>>522.\nThe cost of the pants is the average of the hat and jacket: (174 + 522) / 2 = <<(174+522)/2=348>>348.\nThe total cost of the uniform is 174 + 522 + 348 = <<174+522+348=1044>>1044.\n#### 1044"
+    },
+    {
+        "id": 249,
+        "problem": "On Monday, Sue ate 3 times as many cookies as her sister. On Tuesday, Sue ate 2 times as many cookies as her sister. her sister ate 5 cookies on Monday and 13 the next day. If 1 cookie has 199 calories, how many more calories did Sue consume than her sister?",
+        "solution": "Sue's Monday cookie intake is 3 * 5 = <<3*5=15>>15.\nSue's Tuesday cookie intake is 2 * 13 = <<2*13=26>>26.\nTotal cookie Sue consumed is 15 + 26 = <<15+26=41>>41.\nher sister ate a total of 5 + 13 = <<5+13=18>>18 cookies.\nSue ate 41 - 18 = <<41-18=23>>23 more cookies.\nSue consumed 23 * 199 = <<23*199=4577>>4577 more calories.\n#### 4577"
+    },
+    {
+        "id": 314,
+        "problem": "A football team has 35 members. There are twice as many players on the offense as there is on the defense. There is half the number of players on the special teams as there is on the defense. How many players are on the defense?",
+        "solution": "Let x represent the number of players on the defense\nOffense:2x\nSpecial Teams:(1/2)x\nTotal:x+2x+(1/2)x=35\n(7/2)x=35\nx=35(2/7)=10 players\n#### 10"
+    },
+    {
+        "id": 367,
+        "problem": "3 customers were kicked out of the Walmart for refusing to wear masks. A number equals to four times that many minus 5 were kicked out for shoplifting. Three times the number of shoplifters were kicked out for physical violence over goods on sale. If a total of 86 people were kicked out of the Walmart, how many were kicked out for other reasons?",
+        "solution": "First quadruple the number of customers kicked out for not wearing masks: 4 * 3 customers = <<4*3=12>>12 customers\nThen subtract 5 from this number: 12 customers - 5 customers = <<12-5=7>>7 customers\nThen triple that number to find the number of people kicked out for violence: 7 customers * 3 = <<7*3=21>>21 customers\nThen subtract the number of customers kicked out for each known reason to find the number kicked out for other reasons: 86 customers - 3 customers - 7 customers - 21 customers = <<86-3-7-21=55>>55 customers\n#### 55"
+    },
+    {
+        "id": 376,
+        "problem": "There are 48 pupils in a class. Half of the class likes blue. One-fourth of the remaining likes green and the rest likes yellow. How many pupils like the color yellow?",
+        "solution": "There are 48/2 = <<48/2=24>>24 pupils who like blue.\nSo, there are now 48 - 24 = <<48-24=24>>24 pupils who like either green or yellow.\nHence, 24/4 = <<24/4=6>>6 pupils like green.\nThus, 24 - 6 = <<24-6=18>>18 pupils like yellow.\n#### 18"
+    },
+    {
+        "id": 424,
+        "problem": "The employees of Google went on a day trip. 4 buses were rented that have the capacity of holding 66 employees. 3 minibusses that can hold 29 employees, and 8 minivans that can hold 3 employees. How many employees can join the day trip?",
+        "solution": "66 x 4 = <<66*4=264>>264 employees can ride on the bus.\n29 x 3 = <<29*3=87>>87 employees can ride on the minibusses.\n3 x 8 = <<3*8=24>>24 employees can ride on the minivans.\nTherefore 264 + 87 + 24 = <<264+87+24=375>>375 employees can join the day trip.\n#### 375"
+    },
+    {
+        "id": 550,
+        "problem": "A shop sells school supplies. One notebook is sold at $2 each, a pen at $2 each, a calculator at $12 each, and a geometry set at $12 each. Daniel is a engineering student, and Daniel wants to buy 7 notebooks, 6 pens, 1 calculator, and 1 geometry set. The shop gives a 10% discount on all the purchased items. How much does Daniel have to spend on all the items Daniel wants to buy?",
+        "solution": "7 notebooks cost 7 x $2 = $<<7*2=14>>14.\n6 pens cost 6 x $2 = $<<6*2=12>>12.\nThe total cost is $14 + $12 = $<<14+12=26>>50.\nThe total discount is 10% of $50 = $<<10*50/100=5>>5.\nTherefore, Daniel has to spend $50 - $5 = $<<50-5=45>>45 on all the items Daniel wants to buy.\n#### 45"
+    },
+    {
+        "id": 741,
+        "problem": "Jeremy saw 30 birds in their backyard and threw a stone at them, scaring away 1/5 of that number. A few minutes later, 70 more birds joined the fearless birds. How many birds are now in the backyard?",
+        "solution": "The total number of birds scared away after he threw the stone at them is 1/5 * 30 = <<1/5*30=6>>6 birds.\nThe total number of birds remaining is 30 - 6 = <<30-6=24>>24 birds.\nIf 70 more birds joined, the total number of birds in the backyard will become 24 + 70 = <<24+70=94>>94 birds.\n#### 94"
+    },
+    {
+        "id": 835,
+        "problem": "If it takes 2 kangaroos traveling at the same speed a total of 18 hours to travel across a highway, how many hours will it take 2 turtles, each traveling at half the speed of a kangaroo, to do so?",
+        "solution": "If it takes 2 kangaroos traveling at the same speed a total of 18 hours to travel across the highway, one kangaroo takes 18 / 2 = <<18/2=9>>9 hours to cross the highway.\nA turtle traveling at half the speed of a kangaroo will take 2 * 9 = <<2*9=18>>18 hours to cross the highway.\nThus, 2 turtles will take a total of 2 * 18 = <<2*18=36>>36 hours to travel across the highway.\n#### 36"
+    },
+    {
+        "id": 1145,
+        "problem": "Faraday owns a flower shop. He sells a sunflower that costs $1 each and a bouquet of sunflower that costs $10. If Faraday earned $95 from the sunflower and $30 from the bouquet per day, and if each bouquet has 1 sunflowers, how many sunflowers was Faraday able to sell after 1 days?",
+        "solution": "Faraday sold $30 / $10 = <<30/10=3>>3 bouquets of sunflower.\nSo he was able to sell a total of 1 x 3 = <<1*3=3>>3 sunflowers from the bouquets.\nAnd he was able to sell a total of $95/$1= <<95/1=95>>95 Sunflowers.\nThe sum of sunflowers Faraday was able to sell is 3 + 95 = <<3+95=98>>98.\nTherefore, the total of sunflowers he sold after 1 days is 98 x 1 = <<98*1=98>>98.\n#### 98"
+    },
+    {
+        "id": 1180,
+        "problem": "A company sold 2656 gallons of milk in jars to Mr. Marcellus's store at the cost of $5 per gallon. However, Mr. Marcellus later realized 1/8 of the amount of milk he purchased had passed the expiry date and could not be sold. He returned the sour milk to the company and ordered a refund. Calculate how much he got in refunds.",
+        "solution": "If he purchased 2656 gallons, the number of gallons expired is 1/8 * 2656 gallons = <<1/8*2656=332>>332 gallons.\nIf each gallon costs $5, and he returned 332 gallons for refund, the total amount he got from the refund is $5/gallon * 332 gallons = $<<5*332=1660>>1660\n#### 1660"
+    },
+    {
+        "id": 1235,
+        "problem": "Michael is traveling on the interstate at an average speed of 48 km/hr (taking into account all the necessary stops for gas, relaxation, etc.). If Michael goes on like this for 3 days, and the distance between Alaska and Texas is 4800 km, what percentage of this distance has Michael covered?",
+        "solution": "There are 24 hours in each day, so Michael has been traveling for a total of 3 * 24 = <<3*24=72>>72 hours.\nAt a rate of 48 km/hr, Michael has covered 48 * 72 = <<48*72=3456>>3456 km.\n3456 km as a percentage of 4800 km is (3456/4800)*100% = <<(3456/4800)*100=72>>72%\n#### 72"
+    },
+    {
+        "id": 1244,
+        "problem": "Audrey has to take two math tests to pass 6 grade. They must correctly answer 64% of the total questions to move on to the next grade. The first test has 68 questions, and they get 69% of them correct. The second test has 35 questions. How many questions do they need to get right on the second test to pass?",
+        "solution": "There are 68 + 35 = <<68+35=103>>103 questions in total.\nAudrey needs to get 103 * 64% = <<103*64/100=65.92>>65.92 questions correct to pass.\nThey got 68 * 69% = <<68*69/100=46.92>>46.92 questions correct on the first test.\nThey need 65.92 - 46.92 = <<65.92-46.92=19>>19 questions correct on the second test.\n#### 19"
+    },
+    {
+        "id": 1254,
+        "problem": "Louise is an artist and needs to apply a coat of varnish to her latest paintings. Usually it takes 11 minutes for the coat of varnish to dry on one painting. However, today she is using a new varnish and it takes 24 minutes for the coat to dry. How much longer will it take for the coat of varnish on 10 paintings with the new varnish to dry as it would with the old varnish?",
+        "solution": "Usually, the varnish on all 10 paintings would be dry in 11*10=<<11*10=110>>110 minutes\nWith the new varnish, all 10 paintings would be dry in 24*10=<<24*10=240>>240 minutes\nWith the new varnish, it will take 240-110=<<240-110=130>>130 more minutes\n#### 130"
+    }
+]

@@ -1,7 +1,7 @@
 [
     {
         "id": 3,
-        "problem": "{name_m_0} decides to run {x} sprints {y} times a week.  He runs {z} meters each sprint.  How many total meters does he run a week?",
+        "problem": "{name_m_0} decides to run {x} sprints {y} times a week. He runs {z} meters each sprint. How many total meters does he run a week?",
         "variables": {
             "numerical": {
                 "x":[2,7],
@@ -17,11 +17,17 @@
             "sprints_per_week": "x*y",
             "ans": "sprints_per_week*z"
         },
-        "solution": "He sprints {x}*{y}=<<{x}*{y}={sprints_per_week}>>{sprints_per_week} times\nSo he runs {sprints_per_week}*{z}=<<{sprints_per_week}*{z}={ans}>>{ans} meters\n#### {ans}"
+        "solution": "He sprints {x}*{y}=<<{x}*{y}={sprints_per_week}>>{sprints_per_week} times\nSo he runs {sprints_per_week}*{z}=<<{sprints_per_week}*{z}={ans}>>{ans} meters\n#### {ans}",
+        "default_values": {
+            "name_m_0_default": "James",
+            "x_default": 3,
+            "y_default": 3,
+            "z_default": 60
+        }
         },
         {
             "id": 27,
-            "problem": "{name_f_0} eats one serving of ice cream every night. They buy cartons of ice cream with {servings_per_carton} servings per carton at a cost of ${carton_cost} per carton. After {days} days, how much will they spend on ice cream?",
+            "problem": "{name_f_0} eats one serving of ice cream every night. She buys cartons of ice cream with {servings_per_carton} servings of ice cream per carton at a cost of ${carton_cost} per carton. After {days} days, how much will she spend on ice cream?",
             "variables": {
             "numerical": {
                 "servings_per_carton": [10, 20],  
@@ -37,11 +43,17 @@
             "cartons_needed": "days / servings_per_carton",
             "ans": "cartons_needed * carton_cost"
             },
-            "solution": "Each carton has {servings_per_carton} servings, and {name_f_0} eats 1 serving a night. So after {days} days, they will need {days} / {servings_per_carton} = <<{days}/{servings_per_carton}={cartons_needed}>>{cartons_needed} cartons of ice cream.\nIf each carton costs ${carton_cost}, then the total cost is {cartons_needed} * {carton_cost} = $<<{cartons_needed}*{carton_cost}={ans}>>{ans}.\n#### {ans}"
+            "solution": "Each container of ice cream has {servings_per_carton} servings, and {name_f_0} eats 1 serving a night. So after {days} days, they will need {days}/{servings_per_carton} = <<{days}/{servings_per_carton}={cartons_needed}>>{cartons_needed} cartons of ice cream.\nIf each carton costs ${carton_cost} and she needs {cartons_needed} containers, then it will cost her {cartons_needed}*{carton_cost} = $<<{cartons_needed}*{carton_cost}={ans}>>{ans}.\n#### {ans}",
+            "default_values": {
+                "name_f_0_default": "Cynthia",
+                "servings_per_carton_default": 15,
+                "carton_cost_default": 4.00,
+                "days_default": 60
+            }
         },
         {
             "id": 32,
-            "problem": "{name_m_0} takes care of {x} dogs.  Each dog takes {y} hours a day to walk and take care of their business.  How many hours a week does he spend taking care of dogs?",
+            "problem": "{name_m_0} takes care of {x} dogs. Each dog takes {y} hours a day to walk and take care of their business. How many hours a week does he spend taking care of dogs?",
             "variables":{
                 "numerical":{
                     "x":[2, 6],
@@ -56,11 +68,16 @@
                 "h_per_d":"x*y",
                 "ans":"h_per_d*7"
             },
-            "solution": "He spends {x}*{y}=<<{x}*{y}={h_per_d}>>{h_per_d} hours per day\nThat means he spends {h_per_d}*7=<<{h_per_d}*7={ans}>>{ans} hours per week\n#### {ans}"
+            "solution": "He spends {x}*{y}=<<{x}*{y}={h_per_d}>>{h_per_d} hours per day\nThat means he spends {h_per_d}*7=<<{h_per_d}*7={ans}>>{ans} hours per week\n#### {ans}",
+            "default_values": {
+                "name_m_0_default": "John",
+                "x_default": 10,
+                "y_default": 0.5
+            }
         },
         {
             "id": 65,
-            "problem": "{name_m_0} spends {x} hours watching TV and then decides to go to bed and reads for half as long.  He does this {y} times a week.  How many hours does he spend on TV and reading in {z} weeks?",
+            "problem": "{name_m_0} spends {x} hours watching TV and then decides to go to bed and reads for half as long. He does this {y} times a week. How many hours does he spend on TV and reading in {z} weeks?",
             "variables": {
                 "numerical": {
                     "x": [2, 8],
@@ -80,16 +97,21 @@
                 "t_week": "t_total*y",
                 "ans": "t_week*z"
             },
-            "solution": "He reads for {x}/2=<<{x}/2={t_read}>>{t_read} hour a night\nSo he spends {x}+{t_read}=<<{x}+{t_read}={t_total}>>{t_total} hours on these activities\nThat means he spends {t_total}*{y}=<<{t_total}*{y}={t_week}>>{t_week} hours a week on them\nSo in {z} weeks, he spends {t_week}*{z}=<<{t_week}*{z}={ans}>>{ans} hours on these activities\n#### {ans}"
+            "solution": "He reads for {x}/2=<<{x}/2={t_read}>>{t_read} hour a night\nSo he spends {x}+{t_read}=<<{x}+{t_read}={t_total}>>{t_total} hours on these activities\nThat means he spends {t_total}*{y}=<<{t_total}*{y}={t_week}>>{t_week} hours a week on them\nSo in {z} weeks, he spends {t_week}*{z}=<<{t_week}*{z}={ans}>>{ans} hours on these activities\n#### {ans}",
+            "default_values": {
+                "name_m_0_default": "Jim",
+                "x_default": 2,
+                "y_default": 3,
+                "z_default": 4
+            }
+
         },
         {
             "id": 104,
-            "problem": "{name_f_0} is solving a {x}-piece jigsaw puzzle. She places 1/{y} of the pieces on the board, then her mom places 1/{z} of the remaining pieces. How many jigsaw pieces are left to be placed?",
+            "problem": "{name_f_0} is solving a {x}-piece jigsaw puzzle. She places a quarter of the pieces on the board, then her mom places a third of the remaining pieces. How many jigsaw pieces are left to be placed?",
             "variables":{
                 "numerical":{
-                    "x":[100, 10000],
-                    "y":[1, 10],
-                    "z":[1, 10]
+                    "x":[100, 10000]
                 }
             },
             "conditions":{
@@ -99,16 +121,20 @@
                 "ans":[1, 10000]
             },
             "calculations":{
-                "pop_pieces":"x/y",
+                "pop_pieces":"x/4",
                 "rest":"x-pop_pieces",
-                "mom_pieces":"rest/z",
+                "mom_pieces":"rest/3",
                 "ans":"rest-mom_pieces"
             },
-            "solution": "{name_f_0} has placed {x} pieces / {y} = <<{x}/{y}={pop_pieces}>>{pop_pieces} pieces.\nThis means there are {x} \u2013 {pop_pieces} = <<{x}-{pop_pieces}={rest}>>{rest} pieces remaining.\nHer mom therefore places {rest} / {z} = <<{rest}/{z}={mom_pieces}>>{mom_pieces} pieces.\nThis leaves a total of {rest} \u2013 {mom_pieces} = <<{rest}-{mom_pieces}={ans}>>{ans} jigsaw pieces left to be placed.\n#### {ans}"
+            "solution": "{name_f_0} has placed {x} pieces / 4 = <<{x}/4={pop_pieces}>>{pop_pieces} pieces.\nThis means there are {x} \u2013 {pop_pieces} = <<{x}-{pop_pieces}={rest}>>{rest} pieces remaining.\nHer mom therefore places {rest} / 3 = <<{rest}/3={mom_pieces}>>{mom_pieces} pieces.\nThis leaves a total of {rest} \u2013 {mom_pieces} = <<{rest}-{mom_pieces}={ans}>>{ans} jigsaw pieces left to be placed.\n#### {ans}",
+            "default_values": {
+                "name_f_0_default": "Poppy",
+                "x_default": 1000
+            }
         },
         {
             "id": 117,
-            "problem": "{name_m_0} buys {number_per_person} shoes for each of his {number_of_people} children. They cost ${item_cost} each. How much did {name_m_0} pay?",
+            "problem": "{name_m_0} buys {number_per_person} pairs of shoes for each of his {number_of_people} children. They cost ${item_cost} each. How much did {name_m_0} pay?",
             "variables": {
                 "numerical": {
                     "number_per_person": [2, 5],
@@ -126,15 +152,20 @@
                 "total_cost": "total_items * item_cost",
                 "ans": "total_cost"
             },
-            "solution": "{name_m_0} bought {number_of_people} * {number_per_person} = <<{number_of_people}*{number_per_person}={total_items}>>{total_items}pairs of shoes.\nSo {name_m_0} spent {item_cost} * {total_items} = $<<{item_cost}*{total_items}={total_cost}>>{total_cost}.\n#### {ans}"
+            "solution": "{name_m_0} bought {number_of_people}*{number_per_person}=<<{number_of_people}*{number_per_person}={total_items}>>{total_items} pairs of shoes.\nSo {name_m_0} spent {item_cost}*{total_items}=$<<{item_cost}*{total_items}={total_cost}>>{total_cost}.\n#### {ans}",
+            "default_values": {
+                "name_m_0_default": "John",
+                "number_per_person_default": 2,
+                "number_of_people_default": 3,
+                "item_cost_default": 60
+            }
         },
         {
             "id": 170,
-            "problem": "The marching band is ordering new uniforms. Each uniform comes with a hat that costs {x}, a jacket that costs {a} times as much as the hat, and pants that cost the average of the costs of the hat and jacket. How much does each uniform cost total?",
+            "problem": "The marching band is ordering new uniforms. Each uniform comes with a hat that costs {x}, a jacket that costs three times as much as the hat, and pants that cost the average of the costs of the hat and jacket. How much does each uniform cost total?",
             "variables": {
             "numerical": {
-                "x": [10, 200], 
-                "a": [2, 4]
+                "x": [10, 200]
             }
             },
             "conditions": {
@@ -143,11 +174,14 @@
             "total_cost": [20, 2000]    
             },
             "calculations": {
-            "jacket_cost": "x * a",
+            "jacket_cost": "x * 3",
             "pants_cost": "(x + jacket_cost) / 2",
             "total_cost": "x + jacket_cost + pants_cost"
             },
-            "solution": "The cost of the jacket is {x} * {a} = <<{x}*{a}={jacket_cost}>>{jacket_cost}.\nThe cost of the pants is the average of the hat and jacket: ({x} + {jacket_cost}) / 2 = <<({x}+{jacket_cost})/2={pants_cost}>>{pants_cost}.\nThe total cost of the uniform is {x} + {jacket_cost} + {pants_cost} = <<{x}+{jacket_cost}+{pants_cost}={total_cost}>>{total_cost}.\n#### {total_cost}"
+            "solution": "The cost of the jacket is {x} * 3 = <<{x}*3={jacket_cost}>>{jacket_cost}.\nThe cost of the pants is the average of the hat and jacket: ({x} + {jacket_cost}) / 2 = <<({x}+{jacket_cost})/2={pants_cost}>>{pants_cost}.\nThe total cost of the uniform is {x} + {jacket_cost} + {pants_cost} = <<{x}+{jacket_cost}+{pants_cost}={total_cost}>>{total_cost}.\n#### {total_cost}",
+            "default_values": {
+                "x_default": 25
+            }
         },
         {
             "id": 249,
@@ -174,11 +208,20 @@
                 "total_calories_difference": "difference_in_items * calories_per_item",
                 "ans": "total_calories_difference"
             },
-            "solution": "{name_f_0}'s Monday cookie intake is {multiplier_monday} * {name2_monday} = <<{multiplier_monday}*{name2_monday}={name1_monday}>>{name1_monday}.\n{name_f_0}'s Tuesday cookie intake is {multiplier_tuesday} * {name2_tuesday} = <<{multiplier_tuesday}*{name2_tuesday}={name1_tuesday}>>{name1_tuesday}.\nTotal cookie {name_f_0} consumed is {name1_monday} + {name1_tuesday} = <<{name1_monday}+{name1_tuesday}={name1_total}>>{name1_total}.\n{name_f_1} ate a total of {name2_monday} + {name2_tuesday} = <<{name2_monday}+{name2_tuesday}={name2_total}>>{name2_total} cookies.\n{name_f_0} ate {name1_total} - {name2_total} = <<{name1_total}-{name2_total}={difference_in_items}>>{difference_in_items} more cookies.\n{name_f_0} consumed {difference_in_items} * {calories_per_item} = <<{difference_in_items}*{calories_per_item}={total_calories_difference}>>{total_calories_difference} more calories.\n#### {ans}"
+            "solution": "{name_f_0}'s Monday cookie intake is {multiplier_monday} * {name2_monday} = <<{multiplier_monday}*{name2_monday}={name1_monday}>>{name1_monday}.\n{name_f_0}'s Tuesday cookie intake is {multiplier_tuesday} * {name2_tuesday} = <<{multiplier_tuesday}*{name2_tuesday}={name1_tuesday}>>{name1_tuesday}.\nTotal cookie {name_f_0} consumed is {name1_monday} + {name1_tuesday} = <<{name1_monday}+{name1_tuesday}={name1_total}>>{name1_total}.\n{name_f_1} ate a total of {name2_monday} + {name2_tuesday} = <<{name2_monday}+{name2_tuesday}={name2_total}>>{name2_total} cookies.\n{name_f_0} ate {name1_total} - {name2_total} = <<{name1_total}-{name2_total}={difference_in_items}>>{difference_in_items} more cookies.\n{name_f_0} consumed {difference_in_items} * {calories_per_item} = <<{difference_in_items}*{calories_per_item}={total_calories_difference}>>{total_calories_difference} more calories.\n#### {ans}",
+            "default_values": {
+                "name_f_0_default": "Sue",
+                "name_f_1_default": "her sister",
+                "multiplier_monday_default": 4,
+                "multiplier_tuesday_default": 2,
+                "name2_monday_default": 5,
+                "name2_tuesday_default": 13,
+                "calories_per_item_default": 200
+            }
         },
         {
             "id": 314,
-            "problem": "A football team has {x} members.  There are twice as many players on the offense as there is on the defense. There is half the number of players on the special teams as there is on the defense.  How many players are on the defense?",
+            "problem": "A football team has {x} members. There are twice as many players on the offense as there is on the defense. There is half the number of players on the special teams as there is on the defense. How many players are on the defense?",
             "variables": {
                 "numerical": {
                     "x": [2, 200]
@@ -190,29 +233,10 @@
             "calculations": {
                 "ans":"2/7*x"
             },
-            "solution": "Let x represent the number of players on the defense\nOffense:2x\nSpecial Teams:(1/2)x\nTotal:x+2x+(1/2)x={x}\n(7/2)x={x}\nx={x}(2/7)={ans} players\n#### {ans}"
-            },
-            {
-            "id": 621,
-            "problem": "{name_m_0} injured his back and needs to go to physical therapy.  He went to physical therapy for {x} weeks.  Each week he went twice for {z} hours at a time.  If the sessions cost ${y} per hour how much did the physical therapy cost?",
-            "variables": {
-                "numerical": {
-                    "x":[2, 40],
-                    "y":[100, 1000],
-                    "z": [2, 6]
-                }
-            },
-            "conditions": {
-                "hours_per_week":[4, 12],
-                "price_per_week":[400, 12000],
-                "ans":[800, 500000]
-            },
-            "calculations": {
-                "hours_per_week": "2*z",
-                "price_per_week": "hours_per_week*y",
-                "ans": "price_per_week*x"
-            },
-            "solution": "Each week he did 2*{z}=<<2*{z}={hours_per_week}>>{hours_per_week} hours of physical therapy\nSo it cost {hours_per_week}*{y}=$<<{hours_per_week}*{y}={price_per_week}>>{price_per_week} per week\nThis means he spent {price_per_week}*{x}=$<<{price_per_week}*{x}={ans}>>{ans}\n#### {ans}"
+            "solution": "Let x represent the number of players on the defense\nOffense:2x\nSpecial Teams:(1/2)x\nTotal:x+2x+(1/2)x={x}\n(7/2)x={x}\nx={x}(2/7)={ans} players\n#### {ans}",
+            "default_values": {
+                "x_default": 105
+            }
         },
         {
             "id": 367,
@@ -235,7 +259,12 @@
                 "violence": [1, 300],
                 "others": [0, 100]
             },
-            "solution": "First quadruple the number of customers kicked out for not wearing masks: 4 * {initial_customers} customers = <<4*{initial_customers}={shoplifters_initial}>>{shoplifters_initial} customers\nThen subtract {subtract_value} from this number: {shoplifters_initial} customers - {subtract_value} customers = <<{shoplifters_initial}-{subtract_value}={shoplifters}>>{shoplifters} customers\nThen triple that number to find the number of people kicked out for violence: {shoplifters} customers * 3 = <<{shoplifters}*3={violence}>>{violence} customers\nThen subtract the number of customers kicked out for each known reason to find the number kicked out for other reasons: {total_customers} customers - {initial_customers} customers - {shoplifters} customers - {violence} customers = <<{total_customers}-{initial_customers}-{shoplifters}-{violence}={others}>>{others} customers\n#### {others}"
+            "solution": "First quadruple the number of customers kicked out for not wearing masks: 4 * {initial_customers} customers = <<4*{initial_customers}={shoplifters_initial}>>{shoplifters_initial} customers\nThen subtract {subtract_value} from this number: {shoplifters_initial} customers - {subtract_value} customers = <<{shoplifters_initial}-{subtract_value}={shoplifters}>>{shoplifters} customers\nThen triple that number to find the number of people kicked out for violence: {shoplifters} customers * 3 = <<{shoplifters}*3={violence}>>{violence} customers\nThen subtract the number of customers kicked out for each known reason to find the number kicked out for other reasons: {total_customers} customers - {initial_customers} customers - {shoplifters} customers - {violence} customers = <<{total_customers}-{initial_customers}-{shoplifters}-{violence}={others}>>{others} customers\n#### {others}",
+            "default_values": {
+                "initial_customers_default": 3,
+                "subtract_value_default": 5,
+                "total_customers_default": 50
+            }
         },
         {
             "id": 376,
@@ -256,7 +285,10 @@
                 "like_green": [1, 100],
                 "like_yellow": [1, 100]
             },
-            "solution": "There are {total_pupils}/2 = <<{total_pupils}/2={like_blue}>>{like_blue} pupils who like blue.\nSo, there are now {total_pupils} - {like_blue} = <<{total_pupils}-{like_blue}={remaining_after_blue}>>{remaining_after_blue} pupils who like either green or yellow.\nHence, {remaining_after_blue}/4 = <<{remaining_after_blue}/4={like_green}>>{like_green} pupils like green.\nThus, {remaining_after_blue} - {like_green} = <<{remaining_after_blue}-{like_green}={like_yellow}>>{like_yellow} pupils like yellow.\n#### {like_yellow}"
+            "solution": "There are {total_pupils}/2 = <<{total_pupils}/2={like_blue}>>{like_blue} pupils who like blue.\nSo, there are now {total_pupils} - {like_blue} = <<{total_pupils}-{like_blue}={remaining_after_blue}>>{remaining_after_blue} pupils who like either green or yellow.\nHence, {remaining_after_blue}/4 = <<{remaining_after_blue}/4={like_green}>>{like_green} pupils like green.\nThus, {remaining_after_blue} - {like_green} = <<{remaining_after_blue}-{like_green}={like_yellow}>>{like_yellow} pupils like yellow.\n#### {like_yellow}",
+            "default_values": {
+                "total_pupils_default": 40
+            }
         },
         {
             "id": 424,
@@ -283,11 +315,19 @@
                 "van":"c*b",
                 "ans":"bus+mini+van"
             },
-            "solution": "{y} x {x} = <<{y}*{x}={bus}>>{bus} employees can ride on the bus.\n{a} x {z} = <<{a}*{z}={mini}>>{mini} employees can ride on the minibusses.\n{c} x {b} = <<{c}*{b}={van}>>{van} employees can ride on the minivans.\nTherefore {bus} + {mini} + {van} = <<{bus}+{mini}+{van}={ans}>>{ans} employees can join the day trip.\n#### {ans}"
-        }
+            "solution": "{y} x {x} = <<{y}*{x}={bus}>>{bus} employees can ride on the bus.\n{a} x {z} = <<{a}*{z}={mini}>>{mini} employees can ride on the minibusses.\n{c} x {b} = <<{c}*{b}={van}>>{van} employees can ride on the minivans.\nTherefore {bus} + {mini} + {van} = <<{bus}+{mini}+{van}={ans}>>{ans} employees can join the day trip.\n#### {ans}",
+            "default_values": {
+                "x_default": 4,
+                "y_default": 60,
+                "z_default": 6,
+                "a_default": 30,
+                "b_default": 10,
+                "c_default": 15
+            }
+        },
         {
             "id": 550,
-            "problem": "A shop  sells school supplies. One notebook is sold at ${item1_price} each, a pen at ${item2_price} each, a calculator at ${item3_price} each, and a geometry set at ${item4_price} each. {name_m_0} is a engineering student, and {name_m_0} wants to buy {item1_quantity} notebooks, {item2_quantity} pens, {item3_quantity} calculator, and {item4_quantity} geometry set. The shop gives a {discount_percentage}% discount on all the purchased items. How much does {name_m_0} have to spend on all the items {name_m_0} wants to buy?",
+            "problem": "A shop sells school supplies. One notebook is sold at ${item1_price} each, a pen at ${item2_price} each, a calculator at ${item3_price} each, and a geometry set at ${item4_price} each. {name_m_0} is a engineering student, and {name_m_0} wants to buy {item1_quantity} notebooks, {item2_quantity} pens, {item3_quantity} calculator, and {item4_quantity} geometry set. The shop gives a {discount_percentage}% discount on all the purchased items. How much does {name_m_0} have to spend on all the items {name_m_0} wants to buy?",
             "variables": {
                 "numerical": {
                     "item1_price": [1, 5],
@@ -317,7 +357,19 @@
                 "total_cost_after_discount": "total_cost_before_discount - total_discount",
                 "ans": "total_cost_after_discount"
             },
-            "solution": "{item1_quantity} notebooks cost {item1_quantity} x ${item1_price} = $<<{item1_quantity}*{item1_price}={item1_total}>>{item1_total}.\n{item2_quantity} pens cost {item2_quantity} x ${item2_price} = $<<{item2_quantity}*{item2_price}={item2_total}>>{item2_total}.\nThe total cost is ${item1_total} + ${item2_total} = $<<{item1_total}+{item2_total}={total_cost_before_discount}>>{total_cost_before_discount}.\nThe total discount is {discount_percentage}% of ${total_cost_before_discount} = $<<{discount_percentage}*{total_cost_before_discount}/100={total_discount}>>{total_discount}.\nTherefore, {name_m_0} has to spend ${total_cost_before_discount} - ${total_discount} = $<<{total_cost_before_discount}-{total_discount}={total_cost_after_discount}>>{total_cost_after_discount} on all the items {name_m_0} wants to buy.\n#### {ans}"
+            "solution": "{item1_quantity} notebooks cost {item1_quantity} x ${item1_price} = $<<{item1_quantity}*{item1_price}={item1_total}>>{item1_total}.\n{item2_quantity} pens cost {item2_quantity} x ${item2_price} = $<<{item2_quantity}*{item2_price}={item2_total}>>{item2_total}.\nThe total cost is ${item1_total} + ${item2_total} = $<<{item1_total}+{item2_total}={total_cost_before_discount}>>{total_cost_before_discount}.\nThe total discount is {discount_percentage}% of ${total_cost_before_discount} = $<<{discount_percentage}*{total_cost_before_discount}/100={total_discount}>>{total_discount}.\nTherefore, {name_m_0} has to spend ${total_cost_before_discount} - ${total_discount} = $<<{total_cost_before_discount}-{total_discount}={total_cost_after_discount}>>{total_cost_after_discount} on all the items {name_m_0} wants to buy.\n#### {ans}",
+            "default_values": {
+                "name_m_0_default": "Daniel",
+                "item1_price_default": 1.50,
+                "item2_price_default": 0.25,
+                "item3_price_default": 12,
+                "item4_price_default": 10,
+                "item1_quantity_default": 5,
+                "item2_quantity_default": 2,
+                "item3_quantity_default": 1,
+                "item4_quantity_default": 1,
+                "discount_percentage_default": 10
+            }
         },
         {
             "id": 741,
@@ -339,7 +391,13 @@
                 "birds_remaining":"x-birds_scared",
                 "ans":"birds_remaining+z"
             },
-            "solution": "The total number of birds scared away after he threw the stone at them is 1/{y} * {x} = <<1/{y}*{x}={birds_scared}>>{birds_scared} birds.\nThe total number of birds remaining is {x} - {birds_scared} = <<{x}-{birds_scared}={birds_remaining}>>{birds_remaining} birds.\nIf {z} more birds joined, the total number of birds in the backyard will become {birds_remaining} + {z} = <<{birds_remaining}+{z}={ans}>>{ans} birds.\n#### {ans}"
+            "solution": "The total number of birds scared away after he threw the stone at them is 1/{y} * {x} = <<1/{y}*{x}={birds_scared}>>{birds_scared} birds.\nThe total number of birds remaining is {x} - {birds_scared} = <<{x}-{birds_scared}={birds_remaining}>>{birds_remaining} birds.\nIf {z} more birds joined, the total number of birds in the backyard will become {birds_remaining} + {z} = <<{birds_remaining}+{z}={ans}>>{ans} birds.\n#### {ans}",
+            "default_values": {
+                "name_m_0_default": "Jeremy",
+                "x_default": 12,
+                "y_default": 3,
+                "z_default": 20
+            }
         },
         {
             "id": 835,
@@ -364,8 +422,13 @@
             "turtle_time": "kangaroo_time * 2",
             "ans": "num_turtles * turtle_time"
             },
-            "solution": "If it takes {x} kangaroos traveling at the same speed a total of {total_kangaroo_time} hours to travel across the highway, one kangaroo takes {total_kangaroo_time} / {x} = <<{total_kangaroo_time}/{x}={kangaroo_time}>>{kangaroo_time} hours to cross the highway.\nA turtle traveling at half the speed of a kangaroo will take 2 * {kangaroo_time} = <<2*{kangaroo_time}={turtle_time}>>{turtle_time} hours to cross the highway.\nThus, {num_turtles} turtles will take a total of {num_turtles} * {turtle_time} = <<{num_turtles}*{turtle_time}={ans}>>{ans} hours to travel across the highway.\n#### {ans}"
-        }
+            "solution": "If it takes {x} kangaroos traveling at the same speed a total of {total_kangaroo_time} hours to travel across the highway, one kangaroo takes {total_kangaroo_time} / {x} = <<{total_kangaroo_time}/{x}={kangaroo_time}>>{kangaroo_time} hours to cross the highway.\nA turtle traveling at half the speed of a kangaroo will take 2 * {kangaroo_time} = <<2*{kangaroo_time}={turtle_time}>>{turtle_time} hours to cross the highway.\nThus, {num_turtles} turtles will take a total of {num_turtles} * {turtle_time} = <<{num_turtles}*{turtle_time}={ans}>>{ans} hours to travel across the highway.\n#### {ans}",
+            "default_values": {
+                "x_default": 3,
+                "total_kangaroo_time_default": 18,
+                "num_turtles_default": 4
+            }
+        },
         {
             "id": 1145,
             "problem": "{name_m_0} owns a flower shop. He sells a sunflower that costs ${x} each and a bouquet of sunflower that costs ${y}. If {name_m_0} earned ${z} from the sunflower and ${a} from the bouquet per day, and if each bouquet has {b} sunflowers, how many sunflowers was {name_m_0} able to sell after {c} days?",
@@ -393,7 +456,16 @@
                 "tot_sun":"num_sun+sun",
                 "ans":"tot_sun*c"
             },
-            "solution": "{name_m_0} sold ${a} / ${y} = <<{a}/{y}={num_boq}>>{num_boq} bouquets of sunflower.\nSo he was able to sell a total of {b} x {num_boq} = <<{b}*{num_boq}={num_sun}>>{num_sun} sunflowers from the bouquets.\nAnd he was able to sell a total of ${z}/${x}= <<{z}/{x}={sun}>>{sun} Sunflowers.\nThe sum of sunflowers {name_m_0} was able to sell is {num_sun} + {sun} = <<{num_sun}+{sun}={tot_sun}>>{tot_sun}.\nTherefore, the total of sunflowers he sold after {c} days is {tot_sun} x {c} = <<{tot_sun}*{c}={ans}>>{ans}.\n#### {ans}"
+            "solution": "{name_m_0} sold ${a} / ${y} = <<{a}/{y}={num_boq}>>{num_boq} bouquets of sunflower.\nSo he was able to sell a total of {b} x {num_boq} = <<{b}*{num_boq}={num_sun}>>{num_sun} sunflowers from the bouquets.\nAnd he was able to sell a total of ${z}/${x}= <<{z}/{x}={sun}>>{sun} Sunflowers.\nThe sum of sunflowers {name_m_0} was able to sell is {num_sun} + {sun} = <<{num_sun}+{sun}={tot_sun}>>{tot_sun}.\nTherefore, the total of sunflowers he sold after {c} days is {tot_sun} x {c} = <<{tot_sun}*{c}={ans}>>{ans}.\n#### {ans}",
+            "default_values": {
+                "name_m_0_default": "Faraday",
+                "x_default": 2,
+                "y_default": 8,
+                "z_default": 26,
+                "a_default": 56,
+                "b_default": 12,
+                "c_default": 3
+            }
         },
         {
             "id": 1180,
@@ -415,13 +487,19 @@
                 "expired_gallons": [1, 1000],
                 "refund_amount": [1, 5000]
             },
-            "solution": "If he purchased {total_gallons} gallons, the number of gallons expired is {expired_fraction_numerator}/{expired_fraction_denominator} * {total_gallons} gallons = <<{expired_fraction_numerator}/{expired_fraction_denominator}*{total_gallons}={expired_gallons}>>{expired_gallons} gallons.\nIf each gallon costs ${price_per_gallon}, and he returned {expired_gallons} gallons for refund, the total amount he got from the refund is ${price_per_gallon}/gallon * {expired_gallons} gallons = $<<{price_per_gallon}*{expired_gallons}={refund_amount}>>{refund_amount}\n#### {refund_amount}"
+            "solution": "If he purchased {total_gallons} gallons, the number of gallons expired is {expired_fraction_numerator}/{expired_fraction_denominator} * {total_gallons} gallons = <<{expired_fraction_numerator}/{expired_fraction_denominator}*{total_gallons}={expired_gallons}>>{expired_gallons} gallons.\nIf each gallon costs ${price_per_gallon}, and he returned {expired_gallons} gallons for refund, the total amount he got from the refund is ${price_per_gallon}/gallon * {expired_gallons} gallons = $<<{price_per_gallon}*{expired_gallons}={refund_amount}>>{refund_amount}\n#### {refund_amount}",
+            "default_values": {
+                "name_m_0_default": "Marcellus",
+                "total_gallons_default": 4000,
+                "price_per_gallon_default": 3.5,
+                "expired_fraction_numerator_default": 2,
+                "expired_fraction_denominator_default": 5
+            }
         },
         {
             "id": 1235,
             "problem": "{name_m_0} is traveling on the interstate at an average speed of {speed} km/hr (taking into account all the necessary stops for gas, relaxation, etc.). If {name_m_0} goes on like this for {days} days, and the distance between Alaska and Texas is {total_distance} km, what percentage of this distance has {name_m_0} covered?",
             "variables": {
-                "place2": ["Texas", "Los Angeles", "Seattle", "Houston", "San Francisco", "Denver"],
                 "numerical": {
                     "total_distance": [1750, 6000],
                     "speed": [40, 80],
@@ -439,18 +517,24 @@
                 "percentage_covered": "(distance_covered / total_distance) * 100",
                 "ans": "percentage_covered"
             },
-            "solution": "There are 24 hours in each day, so {name_m_0} has been traveling for a total of {days} * 24 = <<{days}*24={total_hours}>>{total_hours} hours.\nAt a rate of {speed} km/hr, {name_m_0} has covered {speed} * {total_hours} = <<{speed}*{total_hours}={distance_covered}>>{distance_covered} km.\n{distance_covered} km as a percentage of {total_distance} km is ({distance_covered}/{total_distance})*100% = <<({distance_covered}/{total_distance})*100={percentage_covered}>>{percentage_covered}%\n#### {ans}"
+            "solution": "There are 24 hours in each day, so {name_m_0} has been traveling for a total of {days} * 24 = <<{days}*24={total_hours}>>{total_hours} hours.\nAt a rate of {speed} km/hr, {name_m_0} has covered {speed} * {total_hours} = <<{speed}*{total_hours}={distance_covered}>>{distance_covered} km.\n{distance_covered} km as a percentage of {total_distance} km is ({distance_covered}/{total_distance})*100% = <<({distance_covered}/{total_distance})*100={percentage_covered}>>{percentage_covered}%\n#### {ans}",
+            "default_values": {
+                "name_m_0_default": "Michael",
+                "speed_default": 50,
+                "days_default": 3,
+                "total_distance_default": 6000
+            }
         },
         {
             "id": 1244,
             "problem": "{name_f_0} has to take two math tests to pass {grade} grade. They must correctly answer {pass_rate}% of the total questions to move on to the next grade. The first test has {test1_questions} questions, and they get {test1_accuracy}% of them correct. The second test has {test2_questions} questions. How many questions do they need to get right on the second test to pass?",
             "variables": {
-            "grade": [6, 7],
             "numerical": {
                 "pass_rate": [60, 80],          
                 "test1_questions": [50, 80],   
                 "test1_accuracy": [50, 70],    
-                "test2_questions": [30, 50]     
+                "test2_questions": [30, 50],
+                "grade": [6, 7]
             }
             },
             "conditions": {
@@ -465,7 +549,15 @@
             "test1_correct": "test1_questions * test1_accuracy / 100",
             "ans": "required_correct - test1_correct"
             },
-            "solution": "There are {test1_questions} + {test2_questions} = <<{test1_questions}+{test2_questions}={total_questions}>>{total_questions} questions in total.\n{name_f_0} needs to get {total_questions} * {pass_rate}% = <<{total_questions}*{pass_rate}/100={required_correct}>>{required_correct} questions correct to pass.\nThey got {test1_questions} * {test1_accuracy}% = <<{test1_questions}*{test1_accuracy}/100={test1_correct}>>{test1_correct} questions correct on the first test.\nThey need {required_correct} - {test1_correct} = <<{required_correct}-{test1_correct}={ans}>>{ans} questions correct on the second test.\n#### {ans}"
+            "solution": "There are {test1_questions} + {test2_questions} = <<{test1_questions}+{test2_questions}={total_questions}>>{total_questions} questions in total.\n{name_f_0} needs to get {total_questions} * {pass_rate}% = <<{total_questions}*{pass_rate}/100={required_correct}>>{required_correct} questions correct to pass.\nThey got {test1_questions} * {test1_accuracy}% = <<{test1_questions}*{test1_accuracy}/100={test1_correct}>>{test1_correct} questions correct on the first test.\nThey need {required_correct} - {test1_correct} = <<{required_correct}-{test1_correct}={ans}>>{ans} questions correct on the second test.\n#### {ans}",
+            "default_values": {
+                "name_f_0_default": "Audrey",
+                "grade_default": 6,
+                "pass_rate_default": 70,
+                "test1_questions_default": 70,
+                "test1_accuracy_default": 60,
+                "test2_questions_default": 40
+            }
         },
         {
             "id": 1254,
@@ -485,6 +577,12 @@
             "conditions": {
                 "extra_time": [1, 300]
             },
-            "solution": "Usually, the varnish on all {number_of_paintings} paintings would be dry in {old_time} * {number_of_paintings} = <<{old_time}*{number_of_paintings}={total_old_time}>>{total_old_time} minutes\nWith the new varnish, all {number_of_paintings} paintings would be dry in {new_time} * {number_of_paintings} = <<{new_time}*{number_of_paintings}={total_new_time}>>{total_new_time} minutes\nWith the new varnish, it will take {total_new_time} - {total_old_time} = <<{total_new_time}-{total_old_time}={extra_time}>>{extra_time} more minutes\n#### {extra_time}"
+            "solution": "Usually, the varnish on all {number_of_paintings} paintings would be dry in {old_time}*{number_of_paintings}=<<{old_time}*{number_of_paintings}={total_old_time}>>{total_old_time} minutes\nWith the new varnish, all {number_of_paintings} paintings would be dry in {new_time}*{number_of_paintings}=<<{new_time}*{number_of_paintings}={total_new_time}>>{total_new_time} minutes\nWith the new varnish, it will take {total_new_time}-{total_old_time}=<<{total_new_time}-{total_old_time}={extra_time}>>{extra_time} more minutes\n#### {extra_time}",
+            "default_values": {
+                "name_f_0_default": "Louise",
+                "old_time_default": 7,
+                "new_time_default": 12,
+                "number_of_paintings_default": 6
+            }
         }   
 ]
