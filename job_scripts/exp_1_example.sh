@@ -6,7 +6,9 @@
 #BSUB -R "span[hosts=1]"
 #BSUB -R "rusage[mem=40GB]"
 #BSUB -u s233498@dtu.dk
-#BSUB -W 05:00
+#BSUB -B
+#BSUB -N
+#BSUB -W 04:00
 #BSUB -o hpc_outputs/exp_1_names_variation_5%J.out
 #BSUB -e hpc_outputs/exp_1_names_variation_5%J.err
 
@@ -25,8 +27,8 @@ source /dtu/blackhole/0a/203690/miniconda3/bin/activate
 conda activate rStar_new
 
 CUDA_VISIBLE_DEVICES=0 python run_src/do_generate.py \
-    --dataset_name GSMSymbolic \
-    --test_json_filename variations/exp_1_names/variation_5 \
+    --dataset_name GSM8K \
+    --test_json_filename GSMSymbolic/variations/exp_1_names/variation_5 \
     --model_ckpt mistralai/Mistral-7B-v0.1 \
     --note exp_1_names_variation_5 \
     --num_rollouts 32 \
