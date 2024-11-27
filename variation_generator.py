@@ -7,7 +7,7 @@ def main():
     parser = argparse.ArgumentParser(description="Generate variations for templates.")
     parser.add_argument('--input', type=str, required=True, help="Input JSON template file")
     parser.add_argument('--output', type=str, required=True, help="Output JSON file")
-    parser.add_argument('--type', type=str, choices=['name', 'numbers', 'combined'], required=True, help="Type of variation: 'name', 'numbers', or 'combined'")
+    parser.add_argument('--type', type=str, choices=['name', 'numbers', 'combined', 'irrelevant'], required=True, help="Type of variation: 'name', 'numbers', 'combined', or 'irrelevant'")
     parser.add_argument('--num_variations', type=int, required=True, help="Number of variations per template")
 
     args = parser.parse_args()
@@ -67,6 +67,15 @@ def generate_variation(template, variation_type):
         name_context = get_name_context(variation, default=False)
         if name_context is None:
             return None
+    elif variation_type == 'irrelevant':
+        # Use default numerical values
+        numerical_context = get_numerical_context(variation, default=True)
+        if numerical_context is None:
+            return None
+        # Use default names
+        name_context = get_name_context(variation, default=True)
+        if name_context is None:
+            return None
     else:
         raise ValueError("Invalid variation type")
 
@@ -82,6 +91,10 @@ def generate_variation(template, variation_type):
         return None  
 
     variation = evaluate_expressions(variation, context)
+
+    # If type is 'irrelevant', insert an irrelevant sentence into the problem
+    if variation_type == 'irrelevant':
+        variation['problem'] = insert_irrelevant_sentence(variation['problem'])
 
     if not final_answer_is_integer(variation['solution']):
         return None  # Discard and try again
@@ -259,6 +272,39 @@ def final_answer_is_integer(solution_text):
             return False
     else:
         return False
+
+def insert_irrelevant_sentence(problem_text):
+    irrelevant_sentences = [
+        "The sun is approximately 149.6 million kilometers away from the Earth.",
+        "There are 206 bones in the adult human body.",
+        "Mount Everest is 8,848 meters tall.",
+        "Light travels at a speed of about 299,792 kilometers per second.",
+        "The Great Wall of China is over 21,000 kilometers long.",
+        "A year on Mercury lasts 88 Earth days.",
+        "The tallest building in the world is 828 meters high.",
+        "The Earth's atmosphere is composed of 78% nitrogen.",
+        "The average human heart beats about 100,000 times per day.",
+        "There are 9.461 trillion kilometers in a light-year.",
+        "Water boils at 100 degrees Celsius.",
+        "The Pacific Ocean covers about 165 million square kilometers.",
+        "The moon is about 384,400 kilometers away from Earth.",
+        "There are 365 days in a non-leap year.",
+        "The Eiffel Tower is 324 meters tall.",
+        "An adult blue whale can weigh up to 150,000 kilograms.",
+        "The human eye blinks approximately 4,200,000 times a year.",
+        "There are about 7.8 billion people on Earth.",
+        "A marathon is 42.195 kilometers long.",
+        "The Amazon River is approximately 6,400 kilometers long."
+    ]
+
+    sentences = re.split('(?<=[.!?]) +', problem_text)
+    # Choose a random position to insert the irrelevant sentence
+    insert_position = random.randint(0, len(sentences))
+    irrelevant_sentence = random.choice(irrelevant_sentences)
+    sentences.insert(insert_position, irrelevant_sentence)
+    # Reconstruct the problem text
+    new_problem_text = ' '.join(sentences)
+    return new_problem_text
 
 if __name__ == "__main__":
     main()
