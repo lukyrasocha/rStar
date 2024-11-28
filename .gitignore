@@ -6,5 +6,6 @@ tmp
 **/keys
 lukyscript.sh
 lukyscript2.sh
+luky*
 hpc_outputs
 venv/
