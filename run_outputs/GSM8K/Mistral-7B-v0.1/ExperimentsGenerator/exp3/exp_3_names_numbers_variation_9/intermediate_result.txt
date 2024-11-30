@@ -1,0 +1,2 @@
+Total calls: 3618, Avg calls: 180.90
+Total tokens: 8198311, Avg tokens: 409915.55
