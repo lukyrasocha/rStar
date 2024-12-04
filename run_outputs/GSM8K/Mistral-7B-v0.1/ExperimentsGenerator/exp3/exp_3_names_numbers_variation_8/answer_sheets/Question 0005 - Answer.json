@@ -1,0 +1,1 @@
+{"id": 117, "problem": "Matthew buys 2 pairs of shoes for each of his 2 children. They cost $42 each. How much did Matthew pay?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "Matthew bought 2*2=<<2*2=4>>4 pairs of shoes.\nSo Matthew spent 42*4=$<<42*4=168>>168.\n#### 168", "gold_answer": "168"}
