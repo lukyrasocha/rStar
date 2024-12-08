@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "problem": "Alex, Stan, and Adelwolfe are trying to catch them all, Pokemon that is. Together they have caught 445 Pokemon. Alex has caught 10 more than Stan, and Stan has caught 19 less than 5 times as many as Adelwolfe has caught. How many Pokemon has Stan caught?",
+        "solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 5x-19\nAlex: 10+(5x-19)=5x-9\nTotal: x+5x-19+5x-9=445\n11x-28=445\n11x=473\nx=<<43=43>>43 Pokemon\nStan:5(43)-19=196 Pokemon\n#### 196"
+    },
+    {
+        "id": 2,
+        "problem": "Alex, Stan, and Adelwolfe are trying to catch them all, Pokemon that is. Together they have caught 261 Pokemon. Alex has caught 4 more than Stan, and Stan has caught 20 less than 4 times as many as Adelwolfe has caught. How many Pokemon has Stan caught?",
+        "solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 4x-20\nAlex: 4+(4x-20)=4x-16\nTotal: x+4x-20+4x-16=261\n9x-36=261\n9x=297\nx=<<33=33>>33 Pokemon\nStan:4(33)-20=112 Pokemon\n#### 112"
+    },
+    {
+        "id": 3,
+        "problem": "Alex, Stan, and Adelwolfe are trying to catch them all, Pokemon that is. Together they have caught 236 Pokemon. Alex has caught 6 more than Stan, and Stan has caught 10 less than 2 times as many as Adelwolfe has caught. How many Pokemon has Stan caught?",
+        "solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 2x-10\nAlex: 6+(2x-10)=2x-4\nTotal: x+2x-10+2x-4=236\n5x-14=236\n5x=250\nx=<<50=50>>50 Pokemon\nStan:2(50)-10=90 Pokemon\n#### 90"
+    },
+    {
+        "id": 4,
+        "problem": "Alex, Stan, and Adelwolfe are trying to catch them all, Pokemon that is. Together they have caught 372 Pokemon. Alex has caught 7 more than Stan, and Stan has caught 11 less than 4 times as many as Adelwolfe has caught. How many Pokemon has Stan caught?",
+        "solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 4x-11\nAlex: 7+(4x-11)=4x-4\nTotal: x+4x-11+4x-4=372\n9x-15=372\n9x=387\nx=<<43=43>>43 Pokemon\nStan:4(43)-11=161 Pokemon\n#### 161"
+    },
+    {
+        "id": 5,
+        "problem": "Alex, Stan, and Adelwolfe are trying to catch them all, Pokemon that is. Together they have caught 452 Pokemon. Alex has caught 10 more than Stan, and Stan has caught 14 less than 2 times as many as Adelwolfe has caught. How many Pokemon has Stan caught?",
+        "solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 2x-14\nAlex: 10+(2x-14)=2x-4\nTotal: x+2x-14+2x-4=452\n5x-18=452\n5x=470\nx=<<94=94>>94 Pokemon\nStan:2(94)-14=174 Pokemon\n#### 174"
+    },
+    {
+        "id": 6,
+        "problem": "Alex, Stan, and Adelwolfe are trying to catch them all, Pokemon that is. Together they have caught 500 Pokemon. Alex has caught 4 more than Stan, and Stan has caught 18 less than 3 times as many as Adelwolfe has caught. How many Pokemon has Stan caught?",
+        "solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 3x-18\nAlex: 4+(3x-18)=3x-14\nTotal: x+3x-18+3x-14=500\n7x-32=500\n7x=532\nx=<<76=76>>76 Pokemon\nStan:3(76)-18=210 Pokemon\n#### 210"
+    },
+    {
+        "id": 7,
+        "problem": "Alex, Stan, and Adelwolfe are trying to catch them all, Pokemon that is. Together they have caught 498 Pokemon. Alex has caught 4 more than Stan, and Stan has caught 14 less than 4 times as many as Adelwolfe has caught. How many Pokemon has Stan caught?",
+        "solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 4x-14\nAlex: 4+(4x-14)=4x-10\nTotal: x+4x-14+4x-10=498\n9x-24=498\n9x=522\nx=<<58=58>>58 Pokemon\nStan:4(58)-14=218 Pokemon\n#### 218"
+    },
+    {
+        "id": 8,
+        "problem": "Alex, Stan, and Adelwolfe are trying to catch them all, Pokemon that is. Together they have caught 234 Pokemon. Alex has caught 10 more than Stan, and Stan has caught 7 less than 3 times as many as Adelwolfe has caught. How many Pokemon has Stan caught?",
+        "solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 3x-7\nAlex: 10+(3x-7)=3x+3\nTotal: x+3x-7+3x+3=234\n7x-4=234\n7x=238\nx=<<34=34>>34 Pokemon\nStan:3(34)-7=95 Pokemon\n#### 95"
+    },
+    {
+        "id": 9,
+        "problem": "Alex, Stan, and Adelwolfe are trying to catch them all, Pokemon that is. Together they have caught 414 Pokemon. Alex has caught 4 more than Stan, and Stan has caught 15 less than 5 times as many as Adelwolfe has caught. How many Pokemon has Stan caught?",
+        "solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 5x-15\nAlex: 4+(5x-15)=5x-11\nTotal: x+5x-15+5x-11=414\n11x-26=414\n11x=440\nx=<<40=40>>40 Pokemon\nStan:5(40)-15=185 Pokemon\n#### 185"
+    },
+    {
+        "id": 10,
+        "problem": "Alex, Stan, and Adelwolfe are trying to catch them all, Pokemon that is. Together they have caught 381 Pokemon. Alex has caught 5 more than Stan, and Stan has caught 8 less than 3 times as many as Adelwolfe has caught. How many Pokemon has Stan caught?",
+        "solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 3x-8\nAlex: 5+(3x-8)=3x-3\nTotal: x+3x-8+3x-3=381\n7x-11=381\n7x=392\nx=<<56=56>>56 Pokemon\nStan:3(56)-8=160 Pokemon\n#### 160"
+    }
+]
