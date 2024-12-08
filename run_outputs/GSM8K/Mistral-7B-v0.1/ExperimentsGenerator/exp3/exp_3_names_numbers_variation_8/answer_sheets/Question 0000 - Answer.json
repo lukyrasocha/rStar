@@ -1,0 +1,1 @@
+{"id": 3, "problem": "James decides to run 4 sprints 6 times a week. He runs 54 meters each sprint. How many total meters does he run a week?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "He sprints 4*6=<<4*6=24>>24 times\nSo he runs 24*54=<<24*54=1296>>1296 meters\n#### 1296", "gold_answer": "1296"}
