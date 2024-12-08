@@ -1,0 +1,1 @@
+{"id": 117, "problem": "There are about 7.8 billion people on Earth. John buys 2 pairs of shoes for each of his 3 children. They cost $60 each. How much did John pay?", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "John bought 3*2=<<3*2=6>>6 pairs of shoes.\nSo John spent 60*6=$<<60*6=360>>360.\n#### 360", "gold_answer": "360"}
