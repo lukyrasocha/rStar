@@ -25,7 +25,7 @@ For more information please refer to our report.
 
 Prerequisites
 
--   Python 3.8 or later
+-   Python 3.10 or later
 -   CUDA-enabled GPU (e.g., NVIDIA Tesla A100)
 -   Libraries listed in `requirements.txt`
 
