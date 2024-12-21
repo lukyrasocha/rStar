@@ -13,6 +13,7 @@ from eval_src import Evaluator
 class Node_Type(Enum):
     USER_QUESTION = "USER_QUESTION"
     REPHRASED_USER_QUESTION = "REPHRASED_USER_QUESTION"
+    FILTERED_USER_QUESTION = "FILTERED_USER_QUESTION"  # Action 6 node type
     DIRECT_ANSWER = "DIRECT_ANSWER"
     SUBQUESTION = "SUBQUESTION"
     RE_SUBANSWER = "RE_SUBANSWER"
@@ -98,6 +99,8 @@ def print_tree_from_root(mcts_searcher, rollout_id, root_node, chosen_node=None,
             node_details += f"User: {node.user_question}" + "\n" + space + " " * len(node_info) + f"Ground truth: {gt}"
         elif node.node_type is Node_Type.REPHRASED_USER_QUESTION:
             node_details += f"Reph-User: {node.user_question}"
+        elif node.node_type is Node_Type.FILTERED_USER_QUESTION:
+            node_details += f"Filtered-User: {node.user_question}"
         elif node.node_type is Node_Type.DIRECT_ANSWER:
             node_details += f"Ans: {node.direct_answer}"
         elif node.node_type is Node_Type.SUBQUESTION:
@@ -159,47 +162,6 @@ def concat_ost_steps(solution_trace: Dict[int, Dict[str, str]]) -> Tuple[str, in
 
 def concat_subqs_subas_as_ost_steps(solution_trace: Dict[int, Dict[str, str]]) -> Tuple[str, int]:
     """Return: concatenated subqs and subas as one-step thought steps, next one-step thought step id"""
-    """Example solution trace (subq suba):
-    {
-        "0": {
-            "user_question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
-            "ost_step": {}
-        },
-        "1": {
-            "subquestion": " How many eggs do the ducks lay each day?",
-            "subanswer": {
-                "text": "The ducks lay 16 eggs per day. The answer is 16.",
-                "value": 1.0
-            },
-            "ost_step": {}
-        },
-        "2": {
-            "subquestion": " How many eggs does Janet eat or use for baking muffins?",
-            "subanswer": {
-                "text": "Janet eats 3 eggs for breakfast and uses 4 eggs for baking muffins. That's a total of 3 + 4 = 7 eggs. The answer is 7.",
-                "value": 1.0
-            },
-            "ost_step": {}
-        },
-        "3": {
-            "subquestion": " Now we can answer the question: How much in dollars does she make every day at the farmers' market?",
-            "subanswer": {
-                "text": "Since the ducks lay 16 eggs per day and Janet eats/use 7 eggs, she has 16 - 7 = 9 eggs left to sell at the market. Each egg is sold for $2, so she makes 9 * 2 = 18 dollars. The answer is 18.",
-                "value": 1.0
-            },
-            "ost_step": {}
-        }
-    },
-
-    Expected output:
-        subqs_subas_as_ost_steps_str:
-
-            Step 1: The ducks lay 16 eggs per day.
-            Step 2: Janet eats 3 eggs for breakfast and uses 4 eggs for baking muffins. That's a total of 3 + 4 = 7 eggs.
-            Step 3: Since the ducks lay 16 eggs per day and Janet eats/use 7 eggs, she has 16 - 7 = 9 eggs left to sell at the market. Each egg is sold for $2, so she makes 9 * 2 = 18 dollars.
-
-        next_ost_step_id: 4
-    """
     subqs_subas_as_ost_steps_str = ""
     step_id = 1
     while step_id in solution_trace:
@@ -259,7 +221,6 @@ def concat_solution_trace(solution_trace: Dict[int, Dict[str, str]]):
         elif 0 < item_idx < len(solution_trace) - 1:
             intermediate_step = solution_step["subanswer"]["text"].split("The answer is")[0].strip()
             solution_trace_str += intermediate_step + " "
-            # concat trace for one-step thought step after subquestion
             if len(solution_step["ost_step"]) > 0 and "direct_answer" in solution_step.keys():
                 for step_id, step_text in solution_step["ost_step"].items():
                     solution_trace_str += step_text.strip() + " "
@@ -282,7 +243,6 @@ def concat_solution_trace(solution_trace: Dict[int, Dict[str, str]]):
                 end_node_type = Node_Type.OST_STEP
         elif item_idx == len(solution_trace) - 1:
             assert item_idx > 0
-            # 1. subq-suba
             if (
                 "subanswer" in solution_step.keys()
                 and len(solution_step["ost_step"]) == 0
@@ -294,7 +254,6 @@ def concat_solution_trace(solution_trace: Dict[int, Dict[str, str]]):
                 reward_value = solution_step["subanswer"]["value"] if "value" in solution_step["subanswer"] else 0.0
                 end_node_type = Node_Type.SUBQUESTION
                 break
-            # 2. subq-suba-ost
             elif (
                 "subanswer" in solution_step.keys()
                 and len(solution_step["ost_step"]) > 0
@@ -310,7 +269,6 @@ def concat_solution_trace(solution_trace: Dict[int, Dict[str, str]]):
                         reward_value = 0.0
                 solution_trace_str = solution_trace_str.strip()
                 end_node_type = Node_Type.OST_STEP
-            # 3. subq-suba-ost-diranswer
             elif (
                 "subanswer" in solution_step.keys()
                 and len(solution_step["ost_step"]) > 0
@@ -328,7 +286,6 @@ def concat_solution_trace(solution_trace: Dict[int, Dict[str, str]]):
                 )
                 end_node_type = Node_Type.DIRECT_ANSWER
                 break
-            # 4. subq-suba-diranswer
             elif (
                 "subanswer" in solution_step.keys()
                 and len(solution_step["ost_step"]) == 0
@@ -344,7 +301,6 @@ def concat_solution_trace(solution_trace: Dict[int, Dict[str, str]]):
                 )
                 end_node_type = Node_Type.DIRECT_ANSWER
                 break
-            # 5. diranswer
             elif "direct_answer" in solution_step.keys():
                 assert len(solution_step["ost_step"]) == 0
                 assert "subanswer" not in solution_step.keys()
@@ -381,7 +337,6 @@ def concat_rap_solution_trace(solution_trace: str):
 
 
 def concat_subq_suba_trace(solution_trace: Dict[int, Dict[str, str]]):
-    """Note that the solution trace might be subqs-subas and also one-step thought steps."""
     solution_trace_str = ["Let's think step by step."]
     final_step_str = ""
     end_node_type = None
@@ -395,26 +350,8 @@ def concat_subq_suba_trace(solution_trace: Dict[int, Dict[str, str]]):
             solution_trace_str.append(
                 {"subq": solution_step["subquestion"], "suba": solution_step["subanswer"]["text"]}
             )
-            # # concat trace for one-step thought step after subquestion
-            # if len(solution_step["ost_step"]) > 0 and "direct_answer" in solution_step.keys():
-            #     for step_id, step_text in solution_step["ost_step"].items():
-            #         solution_trace_str += step_text.strip() + " "
-            #     solution_trace_str += "Now we can answer the question: "
-            #     solution_trace_str += solution_step["direct_answer"]["text"].strip()
-            #     final_step_str = solution_step["direct_answer"]["text"].strip()
-            #     end_node_type = Node_Type.DIRECT_ANSWER
-            #     break
-            # elif len(solution_step["ost_step"]) > 0 and "direct_answer" not in solution_step.keys():
-            #     final_step_str = None
-            #     for i, (step_id, step_text) in enumerate(solution_step["ost_step"].items()):
-            #         solution_trace_str += step_text.strip() + " "
-            #         if i == len(solution_step["ost_step"].items()) - 1:
-            #             final_step_str = step_text.strip()
-            #     solution_trace_str = solution_trace_str.strip()
-            #     end_node_type = Node_Type.OST_STEP
         elif item_idx == len(solution_trace) - 1:
             assert item_idx > 0
-            # 1. subq-suba
             if (
                 "subanswer" in solution_step.keys()
                 and len(solution_step["ost_step"]) == 0
@@ -426,21 +363,6 @@ def concat_subq_suba_trace(solution_trace: Dict[int, Dict[str, str]]):
                 final_step_str = solution_step["subanswer"]["text"].strip()
                 end_node_type = Node_Type.SUBQUESTION
                 break
-            # 2. subq-suba-ost
-            elif (
-                "subanswer" in solution_step.keys()
-                and len(solution_step["ost_step"]) > 0
-                and "direct_answer" not in solution_step.keys()
-            ):
-                assert False
-            # 3. subq-suba-ost-diranswer
-            elif (
-                "subanswer" in solution_step.keys()
-                and len(solution_step["ost_step"]) > 0
-                and "direct_answer" in solution_step.keys()
-            ):
-                assert False
-            # 4. subq-suba-diranswer
             elif (
                 "subanswer" in solution_step.keys()
                 and len(solution_step["ost_step"]) == 0
@@ -453,7 +375,6 @@ def concat_subq_suba_trace(solution_trace: Dict[int, Dict[str, str]]):
                 final_step_str = solution_step["direct_answer"]["text"].strip()
                 end_node_type = Node_Type.DIRECT_ANSWER
                 break
-            # 5. diranswer
             elif "direct_answer" in solution_step.keys():
                 assert len(solution_step["ost_step"]) == 0
                 assert "subanswer" not in solution_step.keys()
@@ -475,8 +396,6 @@ def concat_subq_suba_trace(solution_trace: Dict[int, Dict[str, str]]):
 def mask_solution_trace(
     solution_trace_str: str, num_return: int, left_boundary: float, right_boundary: float
 ) -> list[str]:
-    # opasdjifpoaisdfjpoasidfjapsodifj, num_return: 4, left: 0.2, right: 0.8
-    # return: opasd, opasdjifp, opasdjifpoaisdfj, opasdjifpoaisdfjpoasidfjaps
     if num_return == 1:
         interval = 0
     else:
@@ -486,7 +405,6 @@ def mask_solution_trace(
 
     words_in_solution_trace = solution_trace_str.split(" ")
     ost_len = len(words_in_solution_trace)
-    # Mask the solution trace string from least to most
     masked_solution_traces = []
     for i in range(num_return):
         prefix_part_ratio = left_boundary + i * interval
@@ -498,15 +416,11 @@ def mask_solution_trace(
 
 
 def mask_subq_suba_trace(solution_trace_str: list, num_return: int, evaluator: Evaluator) -> list[str]:
-    # opasdjifpoaisdfjpoasidfjapsodifj, num_return: 4, left: 0.2, right: 0.8
-    # return: opasd, opasdjifp, opasdjifpoaisdfj, opasdjifpoaisdfjpoasidfjaps
     if num_return == 1:
         interval = 0
     else:
         assert num_return > 1
-    # TODO: num_return > 1
 
-    # Mask the solution trace string from least to most
     masked_solution_traces = []
     for i in range(1, len(solution_trace_str)):
         if "subq" in solution_trace_str[i]:
@@ -583,7 +497,7 @@ def make_response_prefix(
 ) -> str:
     if node_type in [Node_Type.SUBQUESTION, Node_Type.RE_SUBANSWER]:
         response_prefix = ""
-        answer_marker = "The answer is"  # todo: hard code "The answer is"
+        answer_marker = "The answer is"
 
         for subquestion_id, solution_step in solution_trace.items():
             if subquestion_id == 0:
@@ -641,10 +555,6 @@ def find_valid_solution_nodes(root_node):
 
 
 def find_best_solution(root_node, evaluator, enable_potential_score=False):
-    # todo: what strategy do we use to select best node?
-    """The function finds the best solution from the solution nodes in the MCTS tree.
-    Return: top answer, top solution, confidence of the top answer, the corresponding node of the answer, all solution nodes
-    """
     solution_nodes = find_valid_solution_nodes(root_node)
 
     if len(solution_nodes) == 0:
@@ -662,7 +572,7 @@ def find_best_solution(root_node, evaluator, enable_potential_score=False):
 
     def calculate_potential_score_for_solution_node(node):
         model_answer = evaluator.extract_answer_from_model_completion(extract_solution_from_node(node))
-        potential_answers_history = node.potential_answers_history  # {depth -> [potential answers]}
+        potential_answers_history = node.potential_answers_history
         assert potential_answers_history[node.depth] is None
 
         potential_score = 1
@@ -692,10 +602,6 @@ def stochastic_find_best_solution(
     evaluator,
     enable_potential_score,
 ):
-    # todo: what strategy do we use to select best node?
-    """The function finds the best solution from the solution nodes in the MCTS tree.
-    Return: top answer, top solution, confidence of the top answer, the corresponding node of the answer, all solution nodes
-    """
     solution_nodes = find_valid_solution_nodes(root_node)
 
     if len(solution_nodes) == 0:
@@ -713,7 +619,7 @@ def stochastic_find_best_solution(
 
     def calculate_potential_score_for_solution_node(node):
         model_answer = evaluator.extract_answer_from_model_completion(extract_solution_from_node(node))
-        potential_answers_history = node.potential_answers_history  # {depth -> [potential answers]}
+        potential_answers_history = node.potential_answers_history
         assert potential_answers_history[node.depth] is None
 
         potential_score = 1

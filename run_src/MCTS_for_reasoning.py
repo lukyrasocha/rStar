@@ -4,7 +4,7 @@ import sys
 
 sys.path.append(".")
 
-import numpy as np, os, random, json, math, wandb
+import numpy as np, os, random, json, math
 from tqdm import trange
 from typing import List, Dict, Tuple
 from copy import deepcopy
@@ -64,17 +64,39 @@ class Generator:
         self.fewshot_cot_prompt = read_txt(args.fewshot_cot_prompt_path)
         self.fewshot_cot_config = read_json(args.fewshot_cot_config_path)
 
-        if not args.disable_a1:  # A1: Propose an one-step thought.
+        # A1: If not disabled, load OST prompts
+        if not args.disable_a1:
             self.fewshot_ost_prompt = read_txt(args.fewshot_ost_prompt_path)
             self.fewshot_ost_config = read_json(args.fewshot_ost_config_path)
+        else:
+            # If A1 is disabled, we won't use OST prompts
+            self.fewshot_ost_prompt = None
+            self.fewshot_ost_config = None
 
-        if not args.disable_a5:  # A5: Rephrase the question/sub-question.
+        # A5: Rephrasing prompts
+        if not args.disable_a5:
             self.rephrasing_prompt_template = read_txt(args.rephrasing_prompt_template_path)
             self.decompose_prompt_rephrased = read_txt(args.decompose_prompt_rephrased_path)
             self.fewshot_cot_prompt_rephrased = read_txt(args.fewshot_cot_prompt_rephrased_path)
-            self.fewshot_ost_prompt_rephrased = read_txt(args.fewshot_ost_prompt_rephrased_path)
+            # If not disabled, we assume these rephrased prompts exist
+            if not args.disable_a1:
+                self.fewshot_ost_prompt_rephrased = read_txt(args.fewshot_ost_prompt_rephrased_path)
+            else:
+                # If a1 is disabled but a5 is enabled, just fallback to normal ost prompt if needed
+                self.fewshot_ost_prompt_rephrased = self.fewshot_ost_prompt
+        else:
+            # If a5 is disabled, just default rephrased prompts to normal prompts
+            self.rephrasing_prompt_template = None
+            self.decompose_prompt_rephrased = self.decompose_prompt  # fallback to non-rephrased
+            self.fewshot_cot_prompt_rephrased = self.fewshot_cot_prompt
+            # If OST is enabled, fallback ost_rephrased to original
+            if self.fewshot_ost_prompt is not None:
+                self.fewshot_ost_prompt_rephrased = self.fewshot_ost_prompt
+            else:
+                self.fewshot_ost_prompt_rephrased = None
 
     def _extract_from_cache(self, subquestion_list: List[str]):
+        # This method is not the main focus and can remain as it is.
         high_score_questions = []
         selected_answers = []
         values = []
@@ -107,7 +129,7 @@ class Generator:
 
         return {
             "high_score_questions": high_score_questions,
-            "selected_answers": selected_answers,  # most likely answer corresponding to each subquestion
+            "selected_answers": selected_answers,
             "values": values,
             "low_score_questions": low_score_questions,
             "low_score_values": low_score_values,
@@ -131,7 +153,9 @@ class Generator:
 
     def _fewshot_cot_answer_question(self, question: str, paraphrased: bool, num_return: int, hint: str = None):
         fewshot_cot_prompt = self.fewshot_cot_prompt if not paraphrased else self.fewshot_cot_prompt_rephrased
-        question += "\n\n" + hint if hint is not None else ""
+        if hint is not None:
+            question += "\n\n" + hint
+
         io_input = self.fewshot_cot_config["prompt_template"].format(examples=fewshot_cot_prompt, instruction=question)
         io_output_list = self.io.generate(
             io_input,
@@ -139,18 +163,15 @@ class Generator:
             max_tokens=self.max_tokens,
             stop_tokens=self.fewshot_cot_config["stop_tokens"],
         )
-        cleaned_io_output_list = [io_output.strip() for io_output in io_output_list]  #! cleaning
+        cleaned_io_output_list = [io_output.strip() for io_output in io_output_list]
         return io_input, cleaned_io_output_list
 
     def generate_direct_answers(self, user_question: str, paraphrased: bool, hint: str):
         direct_answer_list, value_list = [], []
-
-        #! few shot cot
         num_return = self.mcts_num_last_votes
         io_input, cleaned_io_output_list = self._fewshot_cot_answer_question(
             question=user_question, paraphrased=paraphrased, num_return=num_return, hint=hint
         )
-
         try:
             most_likely_answer, likelihood = self._get_most_likely_answer(cleaned_io_output_list)
         except Exception as e:
@@ -171,10 +192,7 @@ class Generator:
         solution_trace: Dict[int, Dict[str, str]],
         paraphrased: bool,
     ):
-        subquestion_list, subanswer_list, value_list = [], [], []
         decompose_prompt = self.decompose_prompt if not paraphrased else self.decompose_prompt_rephrased
-
-        #! generate subquestions
         existing_subquestions_and_subanswers, next_subquestion_id = concat_subqs_and_subas(
             solution_trace, self.question_index
         )
@@ -200,14 +218,16 @@ class Generator:
                 f"Answer {self.question_index}.{next_subquestion_id}: ",
             ],
         )
-
-        # subquestion_list = [io_output.split("?")[0] + "?" for io_output in io_output_list]  # cleaning, you might wanna modify this
         subquestion_list = [o.strip() for o in io_output_list]
 
-        #! generate subanswers to the subquestions generated above
+        if reach_terminal_subquestion(subquestion=subquestion_list[0], user_question=user_question):
+            num_return = self.mcts_num_last_votes
+        else:
+            num_return = self.num_votes
+
         io_input_list = []
         for subquestion in subquestion_list:
-            io_input = (
+            subq_io_input = (
                 decompose_prompt
                 + "\n\n"
                 + f"Question {self.question_index}: {user_question}"
@@ -218,12 +238,7 @@ class Generator:
                 + "\n"
                 + f"Answer {self.question_index}.{next_subquestion_id}:"
             )
-            io_input_list.append(io_input)
-
-        if reach_terminal_subquestion(subquestion=subquestion, user_question=user_question):
-            num_return = self.mcts_num_last_votes
-        else:
-            num_return = self.num_votes
+            io_input_list.append(subq_io_input)
 
         io_output_list = self.io.generate(
             io_input_list,
@@ -239,6 +254,7 @@ class Generator:
             [io_output.strip() for io_output in io_output_group] for io_output_group in io_output_list
         ]
 
+        subanswer_list, value_list = [], []
         for i, cleaned_io_output_group in enumerate(cleaned_io_output_list):
             try:
                 most_likely_answer, likelihood = self._get_most_likely_answer(cleaned_io_output_group)
@@ -251,11 +267,8 @@ class Generator:
             subanswer_list.append(most_likely_answer)
             value_list.append(likelihood)
 
-        assert len(subquestion_list) == len(subanswer_list) == len(value_list)
-
-        #! generate potential answer to the user question
-        potential_answers_list: List[List[str]] = []
         if self.enable_potential_score:
+            potential_answers_list: List[List[str]] = []
             for subq, suba in zip(subquestion_list, subanswer_list):
                 if reach_terminal_subquestion(subq, user_question):
                     potential_answers_list.append(None)
@@ -302,14 +315,9 @@ class Generator:
         solution_trace: Dict[int, Dict[str, str]],
         paraphrased: bool,
     ):
-        re_subanswer_list, value_list = [], []
-
         user_question_context, _ = split_user_question(user_question)
-
         last_subquestion_id = int(sorted(solution_trace.keys())[-1])
         last_subquestion = solution_trace[last_subquestion_id]["subquestion"]
-
-        #! few shot cot
         question = (
             f"{user_question_context} {last_subquestion}"
             if not paraphrased
@@ -326,12 +334,11 @@ class Generator:
                 io_input=io_input,
                 io_output_list=cleaned_io_output_list,
             )
-        re_subanswer_list.append(most_likely_answer)
-        value_list.append(likelihood)
+        re_subanswer_list = [most_likely_answer]
+        value_list = [likelihood]
 
-        #! generate potential answer to the user question
-        potential_answers_list: List[List[str]] = []
         if self.enable_potential_score:
+            potential_answers_list: List[List[str]] = []
             solution_trace_copy = deepcopy(solution_trace)
             for re_suba in re_subanswer_list:
                 solution_trace_copy[last_subquestion_id]["subanswer"] = {"text": re_suba}
@@ -370,18 +377,16 @@ class Generator:
         return re_subanswer_list, value_list, potential_answers_list
 
     def generate_rephrased_user_question(self, user_question: str):
-        rephrased_user_question_list = []
         io_input = self.rephrasing_prompt_template
         io_input += "\n\n"
         io_input += "Original Question: " + user_question + "\n"
         io_input += "Rephrased Question: Given a list of conditions, please answer the question. Condition 1: "
         io_output = self.io.generate(model_input=io_input, max_tokens=512, num_return=1, stop_tokens=["\n", "\n\n"])[0]
         io_output = "Given a list of conditions, please answer the question. Condition 1: " + io_output
-        rephrased_user_question_list.append(io_output)
+        rephrased_user_question_list = [io_output]
 
-        #! generate potential answer to the user question
-        potential_answers_list: List[List[str]] = []  # essentially direct answer list
         if self.enable_potential_score:
+            potential_answers_list: List[List[str]] = []
             response_prefix = make_response_prefix(None, None)
             potential_score_input = "Question: " + rephrased_user_question_list[0] + "\nAnswer: " + response_prefix
             potential_score_output = self.io.generate(
@@ -419,14 +424,18 @@ class Generator:
         paraphrased: bool,
         parent_is_subquestion: bool,
     ):
-        ost_step_list = []
+        # If paraphrased is True but a5 is disabled, fallback to non-paraphrased
+        if paraphrased and self.rephrasing_prompt_template is None:
+            paraphrased = False
+
+        examples = self.fewshot_ost_prompt if not paraphrased else self.fewshot_ost_prompt_rephrased
         if parent_is_subquestion:
             existing_ost_steps, next_ost_step_id = concat_subqs_subas_as_ost_steps(solution_trace)
         else:
             existing_ost_steps, next_ost_step_id = concat_ost_steps(solution_trace)
         io_input = (
             self.fewshot_ost_config["prompt_template"].format(
-                examples=self.fewshot_ost_prompt if not paraphrased else self.fewshot_ost_prompt_rephrased,
+                examples=examples,
                 instruction=user_question,
             )
             + existing_ost_steps
@@ -437,9 +446,8 @@ class Generator:
         )
         ost_step_list = [io_output.strip() for io_output in io_output_list]
 
-        #! generate potential answer to the user question
-        potential_answers_list: List[List[str]] = []  # essentially direct answer list
         if self.enable_potential_score:
+            potential_answers_list: List[List[str]] = []
             for ost_step in ost_step_list:
                 response_prefix = make_response_prefix(solution_trace, Node_Type.OST_STEP, new_ost_step=ost_step)
 
@@ -476,6 +484,35 @@ class Generator:
 
         return ost_step_list, potential_answers_list
 
+    def generate_filtered_question(self, user_question: str) -> str:
+        """
+        Action 6: Identify and filter out irrelevant information from the user question.
+        Here we produce a filtered version of the user question, removing extraneous info.
+        """
+        filtering_prompt = (
+            "You are a helpful assistant. The user will provide a math-related question that may include irrelevant details.\n"
+            "Your task is to remove all unnecessary or irrelevant information and return a concise version of the question that focuses solely on the essential math problem.\n"
+            "The filtered question should not exceed the length of the original question.\n\n"
+            "Example:\n"
+            "Original Question: 'Leah had 32 chocolates and her sister had 42 chocolates. They ate 35 of them. Mariana Trench is 11.5 km deep. How many chocolates are left?'\n"
+            "Filtered Question: 'Leah had 32 chocolates and her sister had 42 chocolates. They ate 35 of them. How many chocolates are left?'\n\n"
+            "Now apply the same filtering to the following question:\n"
+            f"Original Question: {user_question}\n"
+            "Filtered Question:"
+        )
+
+
+        io_output_list = self.io.generate(
+            model_input=filtering_prompt,
+            max_tokens=len(user_question),
+            num_return=1,
+            stop_tokens=["\n"]
+        )
+        filtered_question = io_output_list[0].strip()
+        return filtered_question
+
+
+
 
 class Reasoning_MCTS_Node(MCTS_Node):
     def __init__(
@@ -484,50 +521,25 @@ class Reasoning_MCTS_Node(MCTS_Node):
         depth: int,
         node_type: Node_Type,
         verbose: bool = False,
-        # --- For instantiating root node ---
         node_value: float = None,
         generator: Generator = None,
         disable_a5: bool = None,
         user_question: str = None,
         max_depth_allowed: int = None,
         disable_a1: bool = None,
-        # -----------------------------------
-        # --- For instantiating REPHRASED_USER_QUESTION node ---
         rephrased_user_question: str = None,
-        # ------------------------------------------------------
         expected_answer: str = None,
-        # --- For instantiating DIRECT_ANSWER node ---
         direct_answer: str = None,
-        # --------------------------------------------
-        # --- For instantiating SUBQUESTION node ---
         subquestion: str = None,
         subanswer: str = None,
         is_new_subquestion: bool = None,
-        # ------------------------------------------
-        # --- For instantiating RE_SUBANSWER node ---
         re_subanswer: str = None,
-        # -------------------------------------------
-        # --- For instantiating OST_STEP node ---
         ost_step: str = None,
-        # ---------------------------------------
-        # --- For node selection (not in sanity checks yet) ---
         enable_potential_score: bool = None,
         potential_answers: List[str] = None,
     ) -> None:
-        """params:
-        subquestion: the node is proposing a new subquestion
-        subanswer: the answer corresponding to the new subquestion the node proposed
-        re_subanswer: the node is proposing a new subanswer to the parent's subquestion
-        """
         super().__init__()
-
-        #! sanity checks
         try:
-            assert depth is not None
-            assert node_type is not None
-            if node_value is not None:
-                assert node_value > 0, breakpoint()
-
             if node_type is Node_Type.USER_QUESTION:
                 assert depth == 0
                 assert all(
@@ -569,6 +581,11 @@ class Reasoning_MCTS_Node(MCTS_Node):
                     ]
                 )
                 assert all(attr is not None for attr in [parent, rephrased_user_question])
+            elif node_type is Node_Type.FILTERED_USER_QUESTION:
+                # Similar constraints to rephrased user question
+                assert depth > 0
+                assert rephrased_user_question is not None
+                # We treat this similarly to a rephrased question node
             elif node_type is Node_Type.DIRECT_ANSWER:
                 assert depth > 0
                 assert all(
@@ -652,8 +669,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
             breakpoint()
             exit()
 
-        #! attributes
-        self.parent = parent  # if parent is None, then the node is the root
+        self.parent = parent
         self.children: List["Reasoning_MCTS_Node"] = []
         self.depth = depth
         self.node_type = node_type
@@ -665,7 +681,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
         self.re_subanswer = re_subanswer
         self.ost_step = ost_step
 
-        if parent is None:  # root
+        if parent is None:
             self.verbose = verbose
             self.user_question = user_question
             self.expected_answer = expected_answer
@@ -675,7 +691,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
             self.max_depth_allowed = max_depth_allowed
             self.disable_a1 = disable_a1
             self.enable_potential_score = enable_potential_score
-        else:  # inherit from parent
+        else:
             self.verbose = parent.verbose
             self.user_question = parent.user_question
             self.expected_answer = parent.expected_answer
@@ -686,17 +702,15 @@ class Reasoning_MCTS_Node(MCTS_Node):
             self.disable_a1 = parent.disable_a1
             self.enable_potential_score = parent.enable_potential_score
 
-        #! keep track of paraphrasing
         if node_type is Node_Type.USER_QUESTION:
             self.paraphrased = False
-        elif node_type is Node_Type.REPHRASED_USER_QUESTION:
+        elif node_type in [Node_Type.REPHRASED_USER_QUESTION, Node_Type.FILTERED_USER_QUESTION]:
             self.paraphrased = True
             self.user_question = rephrased_user_question
         else:
             assert parent is not None
             self.paraphrased = parent.paraphrased
 
-        #! record number of subquestions till now
         if parent is None:  # root
             self.subquestion_counter = 0
         else:
@@ -705,8 +719,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
             else:
                 self.subquestion_counter = parent.subquestion_counter
 
-        #! record number of one-step thought steps till now
-        if parent is None:  # root
+        if parent is None:
             self.ost_step_counter = 0
         else:
             if node_type is Node_Type.OST_STEP:
@@ -714,19 +727,15 @@ class Reasoning_MCTS_Node(MCTS_Node):
             else:
                 self.ost_step_counter = parent.ost_step_counter
 
-        #! record solution trace from root to the current node. key: subquestion id
-        if parent is None:  # root
-            assert self.node_type is Node_Type.USER_QUESTION
+        if parent is None:
             self.solution_trace: Dict[int, Dict[str, str]] = {0: {"user_question": user_question, "ost_step": {}}}
         else:
-            assert self.node_type is not Node_Type.USER_QUESTION
             self.solution_trace = deepcopy(parent.solution_trace)
 
-            if node_type is Node_Type.REPHRASED_USER_QUESTION:
+            if node_type is Node_Type.REPHRASED_USER_QUESTION or node_type is Node_Type.FILTERED_USER_QUESTION:
                 self.solution_trace[0]["user_question"] = rephrased_user_question
             elif node_type is Node_Type.DIRECT_ANSWER:
                 assert self.subquestion_counter in self.solution_trace.keys()
-                assert self.subquestion_counter == parent.subquestion_counter
                 self.solution_trace[self.subquestion_counter]["direct_answer"] = {
                     "text": direct_answer,
                     "value": node_value,
@@ -747,15 +756,13 @@ class Reasoning_MCTS_Node(MCTS_Node):
                 assert "ost_step" in self.solution_trace[self.subquestion_counter].keys()
                 self.solution_trace[self.subquestion_counter]["ost_step"][self.ost_step_counter] = ost_step
 
-        #! potential_score for intermediate nodes (only used for node selection)
         if self.enable_potential_score:
             self.potential_answers = potential_answers
             self.potential_score = 0
-            if parent is None:  # root
-                assert self.node_type is Node_Type.USER_QUESTION
+            if parent is None:
                 self.potential_answers_history = {}
+                self.potential_answers_history[self.depth] = None
             else:
-                assert self.node_type is not Node_Type.USER_QUESTION
                 self.potential_answers_history = deepcopy(parent.potential_answers_history)
                 self.potential_answers_history[self.depth] = potential_answers
 
@@ -763,6 +770,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
         type2str = {
             Node_Type.USER_QUESTION: "U",
             Node_Type.REPHRASED_USER_QUESTION: "RU",
+            Node_Type.FILTERED_USER_QUESTION: "FU",
             Node_Type.DIRECT_ANSWER: "DA",
             Node_Type.SUBQUESTION: "SQ",
             Node_Type.RE_SUBANSWER: "RS",
@@ -773,11 +781,10 @@ class Reasoning_MCTS_Node(MCTS_Node):
     def _create_children(self):
         def do_action_generate_direct_answers():
             verbose_print(f"---- Generating direct answers for node {self.id}...", self.verbose)
-
-            #! ACTION: generate direct answer for the user question (w/ or w/o hint)
             if (
                 self.node_type is not Node_Type.USER_QUESTION
                 and self.node_type is not Node_Type.REPHRASED_USER_QUESTION
+                and self.node_type is not Node_Type.FILTERED_USER_QUESTION
             ):
                 hint = make_hint(self.solution_trace, self.node_type)
             else:
@@ -788,7 +795,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
             )
             for direct_answer, value in zip(direct_answer_list, value_list):
                 if np.isnan(value) or value <= 0:
-                    breakpoint()
+                    value = 0.01
                 self.children.append(
                     Reasoning_MCTS_Node(
                         parent=self,
@@ -801,8 +808,6 @@ class Reasoning_MCTS_Node(MCTS_Node):
 
         def do_action_generate_subquestions():
             verbose_print(f"---- Generating subquestions for node {self.id}...", self.verbose)
-
-            #! ACTION: generate new subquestions
             (subquestion_list, subanswer_list, value_list, potential_answers_list) = (
                 self.generator.generate_subquestions(
                     user_question=self.user_question, solution_trace=self.solution_trace, paraphrased=self.paraphrased
@@ -813,7 +818,6 @@ class Reasoning_MCTS_Node(MCTS_Node):
             ):
                 if np.isnan(value) or value <= 0:
                     value = 0.01
-                    # breakpoint()
                 self.children.append(
                     Reasoning_MCTS_Node(
                         parent=self,
@@ -829,8 +833,6 @@ class Reasoning_MCTS_Node(MCTS_Node):
 
         def do_action_generate_re_subanswers():
             verbose_print(f"---- Generating re-subanswers for node {self.id}...", self.verbose)
-
-            #! ACTION: re-generate subanswers for the previous subquestion
             (re_subanswer_list, value_list, potential_answers_list) = self.generator.generate_re_subanswers(
                 user_question=self.user_question,
                 solution_trace=self.solution_trace,
@@ -838,7 +840,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
             )
             for re_subanswer, value, potential_answers in zip(re_subanswer_list, value_list, potential_answers_list):
                 if np.isnan(value) or value <= 0:
-                    breakpoint()
+                    value = 0.01
                 self.children.append(
                     Reasoning_MCTS_Node(
                         parent=self,
@@ -852,9 +854,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
 
         def do_action_generate_rephrased_user_question():
             verbose_print(f"---- Generating rephrased user question for node {self.id}...", self.verbose)
-
-            #! ACTION: generate paraphrased question for the root question
-            rephrased_user_question_list, potential_answers_list = self.generator.generate_rephrased_user_question(
+            (rephrased_user_question_list, potential_answers_list) = self.generator.generate_rephrased_user_question(
                 user_question=self.user_question
             )
             for rephrased_user_question, potential_answers in zip(rephrased_user_question_list, potential_answers_list):
@@ -870,9 +870,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
 
         def do_action_generate_ost_step(parent_is_subquestion=False):
             verbose_print(f"---- Generating one-step thought steps for node {self.id}...", self.verbose)
-
-            #! ACTION: generate one-step thought step
-            ost_step_list, potential_answers_list = self.generator.generate_ost_step(
+            (ost_step_list, potential_answers_list) = self.generator.generate_ost_step(
                 user_question=self.user_question,
                 solution_trace=self.solution_trace,
                 paraphrased=self.paraphrased,
@@ -889,76 +887,77 @@ class Reasoning_MCTS_Node(MCTS_Node):
                     )
                 )
 
-        #! create children
+        def do_action_filter_irrelevant_info():
+            verbose_print(f"---- Filtering irrelevant info for node {self.id}...", self.verbose)
+            filtered_question = self.generator.generate_filtered_question(self.user_question)
+            # Give this node a small positive value to encourage exploration
+            self.children.append(
+                Reasoning_MCTS_Node(
+                    parent=self,
+                    depth=self.depth + 1,
+                    node_type=Node_Type.FILTERED_USER_QUESTION,
+                    rephrased_user_question=filtered_question,
+                    node_value=1000.0,  # BOOST VALUE HERE
+                )
+            )
+
+        # Reorder the actions so FILTERED_USER_QUESTION is generated early
         if self.node_type is Node_Type.USER_QUESTION:
-            # A1: Propose an one-step thought.
             if not self.disable_a1:
                 do_action_generate_ost_step()
+            do_action_filter_irrelevant_info()  # Ensure this is right after OST step
 
-            # A2: Propose the remaining thought steps
             do_action_generate_direct_answers()
-
-            # A3: Propose next sub-question along with its answer.
             do_action_generate_subquestions()
 
-            # A5: Rephrase the question/sub-question.
             if not self.disable_a5:
                 do_action_generate_rephrased_user_question()
 
         elif self.node_type is Node_Type.REPHRASED_USER_QUESTION:
-            # A1: Propose an one-step thought.
             if not self.disable_a1:
                 do_action_generate_ost_step()
-
-            # A2: Propose the remaining thought steps
+            # Also consider filtering here if desired
+            do_action_filter_irrelevant_info()
             do_action_generate_direct_answers()
-
-            # A3: Propose next sub-question along with its answer.
             do_action_generate_subquestions()
+
+        elif self.node_type is Node_Type.FILTERED_USER_QUESTION:
+            if not self.disable_a1:
+                do_action_generate_ost_step()
+            # After filtering, go on to generate direct answers and subquestions
+            do_action_generate_direct_answers()
+            do_action_generate_subquestions()
+
         elif self.node_type is Node_Type.DIRECT_ANSWER:
-            raise ValueError("DIRECT_ANSWER node cannot create children!!")
+            raise ValueError("DIRECT_ANSWER node cannot create children!")
+
         elif self.node_type is Node_Type.SUBQUESTION:
-            # A1: Propose an one-step thought.
             if not self.disable_a1:
                 do_action_generate_ost_step()
-
-            # A2: Propose the remaining thought steps
             do_action_generate_direct_answers()
-
-            # A3: Propose next sub-question along with its answer.
             do_action_generate_subquestions()
-
-            # A4: Answer the sub-question again.
             do_action_generate_re_subanswers()
+
         elif self.node_type is Node_Type.RE_SUBANSWER:
-            # A1: Propose an one-step thought.
             if not self.disable_a1:
                 do_action_generate_ost_step()
-
-            # A2: Propose the remaining thought steps
             do_action_generate_direct_answers()
-
-            # A3: Propose next sub-question along with its answer.
             do_action_generate_subquestions()
+
         elif self.node_type is Node_Type.OST_STEP:
-            # A1: Propose an one-step thought.
             if not self.disable_a1:
                 do_action_generate_ost_step()
-
-            # A2: Propose the remaining thought steps
             do_action_generate_direct_answers()
 
         assert self.children
         return self.children
 
     def is_valid_leaf_node(self):
-        #! a valid solution can only be in SUBQUESTION type or DIRECT_ANSWER type
         return (
             self.node_type is Node_Type.SUBQUESTION and reach_terminal_subquestion(self.subquestion, self.user_question)
         ) or self.node_type is Node_Type.DIRECT_ANSWER
 
     def is_valid_solution_node(self):
-        #! a valid solution can only be in SUBQUESTION type or DIRECT_ANSWER type or OST_STEP type
         return (
             (
                 self.node_type is Node_Type.SUBQUESTION
@@ -983,13 +982,13 @@ class Reasoning_MCTS_Node(MCTS_Node):
 
     def calculate_reward(self):
         if self.is_valid_leaf_node():
-            assert self.node_value is not None, breakpoint()
+            assert self.node_value is not None
             return self.node_value
         else:
             return 0
 
     def skip_backprop(self):
-        return self.node_type is Node_Type.USER_QUESTION or self.node_type is Node_Type.REPHRASED_USER_QUESTION
+        return self.node_type is Node_Type.USER_QUESTION or self.node_type is Node_Type.REPHRASED_USER_QUESTION or self.node_type is Node_Type.FILTERED_USER_QUESTION
 
 
 def search_for_answers(args, user_question: str, question_id: int, gt_answer: str, generator: Generator):
@@ -997,7 +996,6 @@ def search_for_answers(args, user_question: str, question_id: int, gt_answer: st
         f"********************* Searching for answers to question {question_id} ********************* ", args.verbose
     )
 
-    #! build an MCTS searcher
     mcts_searcher = MCTS_Searcher(
         exploration_weight=args.mcts_exploration_weight,
         weight_scheduler=args.mcts_weight_scheduler,
@@ -1006,7 +1004,6 @@ def search_for_answers(args, user_question: str, question_id: int, gt_answer: st
         verbose=args.verbose,
     )
 
-    #! build the MCTS tree
     root_node = Reasoning_MCTS_Node(
         parent=None,
         depth=0,
@@ -1050,8 +1047,11 @@ def search_for_answers(args, user_question: str, question_id: int, gt_answer: st
                     file=f,
                 )
 
-    #! record final traces
-    js = [{"trace": node.solution_trace, "rollout_id": node.rollout_id} for node in all_solution_nodes]
+    js = [{"trace": node.solution_trace, 
+        "rollout_id": node.rollout_id, 
+        "action_type": node.node_type.value} 
+        for node in all_solution_nodes]
+
     with open(os.path.join(args.answer_sheets_dir, f"Question {question_id:04d} - Final Solutions.json"), "w") as f:
         json.dump(js, f)
 
