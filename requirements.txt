@@ -11,6 +11,7 @@ attrs
 click
 cloudpickle
 colorama
+seaborn
 compressed-tensors
 datasets
 dill
